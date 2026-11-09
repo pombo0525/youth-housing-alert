@@ -183,7 +183,7 @@ def fetch_lh(key: str) -> list[dict]:
         tname = clean(r.get("AIS_TP_CD_NM"))
         out[pid] = {
             "id": f"lh-{pid}", "panId": pid, "title": title, "source": "LH", "agency": "LH",
-            "type": tname, "category": category_of(tname, title),
+            "type": tname, "lhType": tname, "category": category_of(tname, title),
             "regionText": clean(r.get("CNP_CD_NM")), "sido": sido_of(r.get("CNP_CD_NM")),
             "noticeDate": ymd(r.get("PAN_NT_ST_DT")), "start": None, "end": end,
             "status": status, "url": clean(r.get("DTL_URL")),
@@ -284,7 +284,7 @@ def merge(lh: list[dict], myhome: list[dict]) -> list[dict]:
     for m in myhome:
         l = by_pan.pop(m.get("panId"), None) if m.get("panId") else None
         if l:
-            m = {**m, "source": "LH·마이홈", "status": l["status"] or m["status"],
+            m = {**m, "source": "LH·마이홈", "status": l["status"] or m["status"], "lhType": l.get("lhType"),
                  "end": m["end"] or l["end"], "agencyUrl": l["url"] or m.get("agencyUrl")}
             if not m["sido"]:
                 m["sido"] = l["sido"]
@@ -300,7 +300,7 @@ def merge(lh: list[dict], myhome: list[dict]) -> list[dict]:
         unique.append(n)
     merged = unique
     for n in merged:
-        n["youth"] = "청년" in n["title"] or n["category"] == "행복주택"
+        n["youth"] = "청년" in n["title"] or "청년" in (n.get("lhType") or "") or n["category"] == "행복주택"
     merged.sort(key=lambda n: (n.get("end") or "9999", n["title"]))
     return merged
 
