@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>놓침방지 청년주거 알리미</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   놓침방지 청년주거 알리미 — 시범판 (v0.1)
+   ※ 이 파일 하나만 더블클릭하면 열립니다.
+   ※ 영상 주소를 미리 넣어두고 싶으면 아래 <script> 맨 위의
+     MY_VIDEO_URL 따옴표 안에 주소를 붙여넣고 저장하세요.
+   ========================================================= */
+:root{
+  --bg:#f6f4ef; --card:#ffffff; --ink:#1d2330; --sub:#5b6474; --line:#e4e0d6;
+  --brand:#2f5bea; --brand-soft:#e8eefe; --accent:#ff7a45; --accent-soft:#fff0e8;
+  --ok:#1f9d6b; --ok-soft:#e5f6ef; --warn:#d98a00; --warn-soft:#fff6dd;
+  --danger:#d93838; --danger-soft:#fdeaea; --mute:#9aa1ad; --mute-soft:#f0f0f2;
+  --radius:16px; --shadow:0 1px 2px rgba(20,30,50,.06),0 6px 20px rgba(20,30,50,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#13161c; --card:#1c2029; --ink:#eef1f6; --sub:#a6aebd; --line:#2c3240;
+    --brand:#7c9bff; --brand-soft:#232d4a; --accent:#ff9466; --accent-soft:#3a271f;
+    --ok:#4cc595; --ok-soft:#173329; --warn:#f0b43c; --warn-soft:#352c14;
+    --danger:#ff6b6b; --danger-soft:#3a1d1d; --mute:#7d8494; --mute-soft:#262a33;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+.demo-banner{background:var(--accent-soft);color:var(--ink);font-size:13.5px;padding:8px 16px;text-align:center;border-bottom:1px solid var(--line)}
+.demo-banner b{color:var(--accent)}
+header.hero{padding:40px 0 24px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:4px 10px;border-radius:99px}
+h1{font-size:clamp(26px,5vw,38px);line-height:1.25;margin:14px 0 10px;font-weight:900;letter-spacing:-.02em}
+h1 .hl{background:linear-gradient(transparent 62%,var(--accent-soft) 62%)}
+.lead{color:var(--sub);margin:0;max-width:640px}
+h2{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.sec-desc{color:var(--sub);font-size:14.5px;margin:0 0 16px}
+.step{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--card);font-size:13px;font-weight:700;margin-right:8px;vertical-align:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+section{margin:22px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:680px){.grid2{grid-template-columns:1fr}}
+label.field{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+select,input[type=text],input[type=url]{width:100%;font:inherit;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+select:focus,input:focus{outline:2px solid var(--brand);outline-offset:1px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:8px 13px;border-radius:99px;border:1px solid var(--line);background:var(--bg);font-size:14px;cursor:pointer;user-select:none;transition:.15s}
+.chip input:checked + span{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:700}
+.chip input:focus-visible + span{outline:2px solid var(--brand);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+button,.btn{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:12px;padding:12px 18px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--mute-soft)}
+.btn-sm{padding:7px 12px;font-size:13.5px;border-radius:9px}
+.btn-ai{background:transparent;color:var(--sub);border:1.5px dashed var(--mute);font-weight:500}
+.btn-ai:hover{border-color:var(--brand);color:var(--brand)}
+.btn-ai .tag{font-size:11px;background:var(--mute-soft);padding:2px 6px;border-radius:6px}
+.hint{font-size:13px;color:var(--sub);margin-top:6px}
+.hidden{display:none!important}
+
+/* 체험 기록 바 */
+.testbar{position:sticky;top:0;z-index:20;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.testbar .wrap{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.testbar .who{font-size:14px;color:var(--sub)}
+.testbar .who b{color:var(--ink)}
+.timer{font-variant-numeric:tabular-nums;font-weight:900;font-size:18px;color:var(--brand)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mute);display:inline-block}
+.dot.on{background:var(--danger);animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+.testbar .spacer{flex:1}
+
+/* 알림 문구 */
+.alerts{display:flex;flex-direction:column;gap:10px}
+.alert{display:flex;gap:14px;align-items:flex-start;border-radius:14px;padding:14px 16px;border:1px solid var(--line);background:var(--bg)}
+.alert .badge{flex:none;min-width:64px;text-align:center;font-weight:900;font-size:15px;padding:6px 8px;border-radius:10px}
+.alert .msg{font-weight:700}
+.alert .meta{font-size:13px;color:var(--sub);margin-top:2px}
+.alert .acts{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.lv-urgent{background:var(--danger-soft);border-color:transparent}.lv-urgent .badge{background:var(--danger);color:#fff}
+.lv-open{background:var(--ok-soft);border-color:transparent}.lv-open .badge{background:var(--ok);color:#fff}
+.lv-soon{background:var(--warn-soft);border-color:transparent}.lv-soon .badge{background:var(--warn);color:#fff}
+.lv-later .badge{background:var(--brand-soft);color:var(--brand)}
+.lv-closed{opacity:.7}.lv-closed .badge{background:var(--mute-soft);color:var(--mute)}
+.status-box{margin-top:18px;font-size:14px;background:var(--ok-soft);border-radius:12px;padding:10px 14px;line-height:1.7}
+.status-box.warn{background:var(--warn-soft)}
+.src-line{font-size:12.5px;color:var(--sub)}
+.src-ok{color:var(--ok);font-weight:700}.src-bad{color:var(--danger);font-weight:700}
+.alert .meta a{font-weight:700}
+.check{display:inline-flex;align-items:center;gap:8px;font-size:14px;margin-top:14px;cursor:pointer}
+.check input{width:18px;height:18px;accent-color:var(--brand)}
+.rule-note{font-size:12.5px;color:var(--sub);background:var(--mute-soft);padding:8px 12px;border-radius:10px;margin-top:12px}
+
+/* 공고 확인처 */
+.src-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.src{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--bg);display:flex;flex-direction:column;gap:6px}
+.src .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.src h3{font-size:16px;margin:0}
+.src .org{font-size:12.5px;color:var(--sub)}
+.src .tip{font-size:13.5px;color:var(--sub)}
+.src .types{display:flex;flex-wrap:wrap;gap:5px}
+.src .types span{font-size:12px;padding:2px 8px;border-radius:99px;background:var(--mute-soft);color:var(--sub)}
+.src .types span.match{background:var(--brand-soft);color:var(--brand);font-weight:700}
+.src .go{margin-top:auto;padding-top:6px;font-size:14px;font-weight:700}
+.pill{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.pill.nat{background:var(--accent-soft);color:var(--accent)}
+.pill.loc{background:var(--ok-soft);color:var(--ok)}
+.pill.fit{background:var(--brand-soft);color:var(--brand)}
+
+/* 일정표 */
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:12.5px;color:var(--sub);font-weight:700}
+.tbl-wrap{overflow-x:auto}
+
+/* 영상 */
+.video-box{aspect-ratio:16/9;width:100%;border-radius:14px;overflow:hidden;background:repeating-linear-gradient(45deg,var(--mute-soft),var(--mute-soft) 12px,var(--bg) 12px,var(--bg) 24px);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.video-box iframe,.video-box video{width:100%;height:100%;border:0;background:#000}
+.video-empty{text-align:center;color:var(--sub);padding:20px}
+.video-empty .big{font-size:40px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row input{flex:1;min-width:200px}
+
+/* 통계 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px}
+@media (max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--bg);border-radius:12px;padding:14px;border:1px solid var(--line)}
+.stat .n{font-size:26px;font-weight:900;font-variant-numeric:tabular-nums}
+.stat .l{font-size:12.5px;color:var(--sub)}
+
+/* 모달 */
+.modal-bg{position:fixed;inset:0;background:rgba(10,15,25,.45);display:flex;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal{background:var(--card);border-radius:18px;max-width:460px;width:100%;padding:24px;box-shadow:var(--shadow)}
+.modal h3{margin:0 0 8px}
+.modal p{color:var(--sub);margin:0 0 14px;font-size:15px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--card);padding:10px 18px;border-radius:12px;font-size:14px;z-index:60;opacity:0;transition:.25s;pointer-events:none;max-width:calc(100% - 32px)}
+.toast.show{opacity:1}
+footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
+.empty{color:var(--sub);font-size:14px;padding:12px 0}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">📢 공고 정보는 <b>공공데이터포털(LH·마이홈포털)</b>에서 자동으로 받아와요. 신청 전에는 꼭 <b>공고문 원문</b>을 확인하세요.</div>
+
+<!-- 체험 기록 바 -->
+<div class="testbar">
+  <div class="wrap">
+    <span class="dot" id="recDot"></span>
+    <span class="who" id="testWho">체험 기록 꺼짐</span>
+    <span class="timer" id="timer">00:00</span>
+    <span class="spacer"></span>
+    <button class="btn-primary btn-sm" id="btnStart">▶ 체험 시작</button>
+    <button class="btn-ghost btn-sm hidden" id="btnEnd">■ 체험 끝내기</button>
+    <a class="btn-ghost btn-sm" href="#stats">📊 기록 보기</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <header class="hero">
+    <span class="eyebrow">청년 주거 공고 알리미</span>
+    <h1>청년임대주택 공고,<br><span class="hl">이제 놓치지 마세요</span></h1>
+    <p class="lead">관심 지역과 주택 종류만 고르면, 공고가 올라오는 곳과 접수 일정을 한 화면에 모아 보여드려요.</p>
+    <div class="status-box" id="dataStatus">⏳ 최신 공고를 불러오는 중이에요…</div>
+  </header>
+
+  <!-- STEP 1 입력 -->
+  <section class="card" id="formCard">
+    <h2><span class="step">1</span>내 관심 조건 고르기</h2>
+    <p class="sec-desc">진짜 이름이나 연락처는 넣지 않아도 돼요. 예시 사용자로 채워서 바로 써볼 수도 있어요.</p>
+    <div class="grid2">
+      <div>
+        <label class="field" for="nick">부를 이름 (선택)</label>
+        <input type="text" id="nick" placeholder="예: 김예시" maxlength="12">
+      </div>
+      <div>
+        <label class="field" for="region">관심 지역</label>
+        <select id="region"></select>
+      </div>
+    </div>
+    <div style="margin-top:16px">
+      <span class="field" style="display:block;font-weight:700;font-size:14px;margin-bottom:8px">관심 주택 종류 (여러 개 골라도 돼요)</span>
+      <div class="chips" id="typeChips"></div>
+      <label class="check"><input type="checkbox" id="youthOnly"> 제목에 ‘청년’이 들어간 공고와 행복주택만 보기</label>
+    </div>
+    <div style="margin-top:16px;max-width:320px">
+      <label class="field" for="lead">접수 며칠 전부터 미리 알려줄까요?</label>
+      <select id="lead">
+        <option value="3">3일 전부터</option>
+        <option value="7" selected>7일 전부터</option>
+        <option value="14">14일 전부터</option>
+      </select>
+    </div>
+    <div class="btns">
+      <button class="btn-primary" id="btnShow">내 맞춤 화면 보기 →</button>
+      <button class="btn-ghost" id="btnSample">🎲 예시 사용자로 채우기</button>
+      <button class="btn-ai" data-ai="조건 입력 도우미">🤖 AI에게 말로 설명하기 <span class="tag">연결 예정</span></button>
+    </div>
+  </section>
+
+  <div id="results">
+    <!-- STEP 2 알림 문구 -->
+    <section class="card">
+      <h2><span class="step">2</span><span id="greet">접수 알림</span></h2>
+      <p class="sec-desc" id="alertDesc">접수일이 다가오는 공고부터 보여드려요.</p>
+      <div class="alerts" id="alertList"></div>
+      <div class="rule-note">💡 공고 이름과 날짜는 공공데이터에서 받아온 실제 정보예요. 알림 문장은 정해 둔 규칙(마감 1일 이내 → 긴급, 접수 중 → 진행, 미리 알림 기간 안 → 곧 시작, 그 밖 → 여유)에 따라 골라 쓴 거예요. LH 공고 중 일부는 접수 시작일이 데이터에 없어서 마감일만 보여요.</div>
+      <div class="btns">
+        <button class="btn-ai" data-ai="알림 문구 다듬기">🤖 AI로 알림 문구 다듬기 <span class="tag">연결 예정</span></button>
+        <button class="btn-ai" data-ai="자격 요건 쉽게 설명">🤖 내가 신청 자격이 되는지 물어보기 <span class="tag">연결 예정</span></button>
+      </div>
+    </section>
+
+    <!-- STEP 3 공고 확인처 -->
+    <section class="card">
+      <h2><span class="step">3</span><span id="srcTitle">공고는 여기서 확인해요</span></h2>
+      <p class="sec-desc">파란 표시가 붙은 곳은 내가 고른 주택 종류를 다루는 곳이에요. SH·GH·지역 도시공사 공고는 자동 수집에 아직 포함되지 않으니 아래 사이트에서 직접 확인하세요.</p>
+      <div class="src-list" id="srcList"></div>
+    </section>
+
+    <!-- 공고 일정표 -->
+    <section class="card">
+      <h2>📅 진행 중인 공고 일정표</h2>
+      <p class="sec-desc" id="schedDesc">고른 지역과 주택 종류에 맞는 공고를 마감이 가까운 순서로 보여줘요.</p>
+      <div class="tbl-wrap"><table class="tbl" id="schedTbl"></table></div>
+    </section>
+  </div>
+
+  <!-- 영상 자리 -->
+  <section class="card" id="videoSec">
+    <h2>🎬 이렇게 쓰세요 — 소개 영상</h2>
+    <p class="sec-desc">직접 만든 모션그래픽 영상을 연결하는 자리예요. 유튜브·비메오 주소, mp4 주소, 또는 내 컴퓨터의 영상 파일을 넣을 수 있어요.</p>
+    <div class="video-box" id="videoBox">
+      <div class="video-empty"><div class="big">🎞️</div>아직 연결된 영상이 없어요<br><span style="font-size:13px">아래에 영상 주소를 넣거나 파일을 골라주세요</span></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <input type="url" id="videoUrl" placeholder="https://youtu.be/... 또는 https://.../intro.mp4">
+      <button class="btn-primary btn-sm" id="btnVideo">연결</button>
+      <label class="btn-ghost btn-sm" style="cursor:pointer">📁 내 파일 고르기<input type="file" id="videoFile" accept="video/*" class="hidden"></label>
+      <button class="btn-ghost btn-sm" id="btnVideoClear">지우기</button>
+    </div>
+    <p class="hint" id="videoHint">파일로 연 화면에서는 유튜브 영상이 막힐 때가 있어요. 그럴 땐 mp4 파일을 ‘내 파일 고르기’로 넣으면 가장 확실해요.</p>
+  </section>
+
+  <!-- 체험 기록 -->
+  <section class="card" id="stats">
+    <h2>📊 체험 기록</h2>
+    <p class="sec-desc">몇 명이 써봤는지, 한 번 써보는 데 얼마나 걸렸는지 자동으로 모아요. 기록은 <b>지금 이 컴퓨터의 이 브라우저</b>에만 저장돼요.</p>
+    <div class="stats">
+      <div class="stat"><div class="n" id="stCount">0</div><div class="l">써본 사람 (완료)</div></div>
+      <div class="stat"><div class="n" id="stAvg">-</div><div class="l">평균 걸린 시간</div></div>
+      <div class="stat"><div class="n" id="stMin">-</div><div class="l">가장 빠른 시간</div></div>
+      <div class="stat"><div class="n" id="stDrop">0</div><div class="l">중간에 그만둠</div></div>
+    </div>
+    <div class="tbl-wrap"><table class="tbl" id="logTbl"></table></div>
+    <div class="btns">
+      <button class="btn-ghost btn-sm" id="btnCsv">⬇ 엑셀용(CSV)으로 내려받기</button>
+      <button class="btn-ghost btn-sm" id="btnReset">기록 모두 지우기</button>
+      <button class="btn-ai btn-sm" data-ai="체험 기록 분석">🤖 AI로 기록 분석하기 <span class="tag">연결 예정</span></button>
+    </div>
+  </section>
+
+  <footer>놓침방지 청년주거 알리미 v0.2 · 공고 정보 출처: 공공데이터포털(한국토지주택공사 분양임대공고문 조회 서비스, 국토교통부 마이홈포털 공공주택 모집공고 조회 서비스) · 신청 전 공고문 원문을 꼭 확인하세요</footer>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== 여기만 바꾸면 돼요 =====================================
+   영상 주소를 미리 넣어두면 열자마자 영상이 보여요. 예:
+   const MY_VIDEO_URL = "https://youtu.be/abcdEFGhijk";
+   ============================================================ */
+const MY_VIDEO_URL = "youth-housing-intro.mp4";  // 이 HTML과 같은 폴더에 영상 파일을 두면 자동으로 보여요
+
+/* ---------- 저장소(브라우저가 막아도 화면은 동작) ---------- */
+const mem = {};
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v===null ? d : JSON.parse(v); }catch(e){ return k in mem ? mem[k] : d; } },
+  set(k, v){ mem[k] = v; try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
+  del(k){ delete mem[k]; try{ localStorage.removeItem(k); }catch(e){} }
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),2400); }
+
+/* ---------- 기본 데이터 ---------- */
+const TYPES = ['행복주택','매입임대','전세임대','국민·공공임대','청년안심주택(서울)','기타'];
+
+const srch = q => 'https://search.naver.com/search.naver?query=' + encodeURIComponent(q);
+
+// 전국 어디서나 보는 곳 (주소 확인: 2026.11)
+const NATIONAL = [
+  {name:'LH 청약플러스', org:'한국토지주택공사(LH)', url:'https://apply.lh.or.kr', types:['행복주택','매입임대','전세임대','국민·공공임대','기타'], tip:'전국 청년 매입·전세임대, 행복주택 공고 대부분이 올라와요. 신청도 여기(웹·앱)에서만 해요.'},
+  {name:'마이홈포털', org:'국토교통부', url:'https://www.myhome.go.kr', types:['행복주택','매입임대','전세임대','국민·공공임대'], tip:'여러 기관 공고를 한곳에 모아 보여주고, 내가 받을 수 있는 주택 자가진단도 돼요.'},
+  {name:'온통청년', org:'청년정책 통합 플랫폼', url:'https://www.youthcenter.go.kr', types:['전세임대','기타'], tip:'주거 말고도 월세 지원 같은 청년 정책을 같이 찾아볼 수 있어요.'}
+];
+
+// 지역별로 보는 곳. verified=true는 주소를 직접 확인한 곳, 나머지는 검색으로 연결
+const REGIONS = {
+  '서울':[
+    {name:'SH 인터넷청약', org:'서울주택도시공사', url:'https://www.i-sh.co.kr', verified:true, types:['행복주택','청년안심주택(서울)','국민·공공임대','매입임대'], tip:'서울 행복주택·청년안심주택(공공임대분) 공고가 올라와요.'},
+    {name:'청년안심주택', org:'서울특별시', url:'https://soco.seoul.go.kr/youth/main/main.do', verified:true, types:['청년안심주택(서울)'], tip:'역세권 청년안심주택 모집공고·단지 정보·공실 정보를 볼 수 있어요.'},
+    {name:'청년몽땅정보통', org:'서울특별시', url:'https://youth.seoul.go.kr', verified:true, types:['청년안심주택(서울)','매입임대'], tip:'서울 청년 정책과 주거 공고 소식을 모아 보여줘요.'}
+  ],
+  '경기':[
+    {name:'GH 주택청약·임대센터', org:'경기주택도시공사(GH)', url:'https://apply.gh.or.kr', verified:true, types:['행복주택','국민·공공임대','매입임대'], tip:'경기행복주택·매입임대 공고. 단지가 있는 시·군 거주자에게 우선순위를 주는 공고가 많아요.'}
+  ],
+  '인천':[{name:'인천도시공사(iH)', org:'인천광역시', q:'인천도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대','매입임대'], tip:'인천 지역 공공임대 공고가 올라와요.'}],
+  '부산':[{name:'부산도시공사(BMC)', org:'부산광역시', q:'부산도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대','매입임대'], tip:'부산 행복주택·매입임대 공고가 올라와요.'}],
+  '대구':[{name:'대구도시개발공사', org:'대구광역시', q:'대구도시개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'대구 지역 공공임대 공고가 올라와요.'}],
+  '광주':[{name:'광주도시공사', org:'광주광역시', q:'광주도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'광주 지역 공공임대 공고가 올라와요.'}],
+  '대전':[{name:'대전도시공사', org:'대전광역시', q:'대전도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대','매입임대'], tip:'대전 지역 공공임대 공고가 올라와요.'}],
+  '울산':[{name:'울산도시공사', org:'울산광역시', q:'울산도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'울산 지역 공공임대 공고가 올라와요.'}],
+  '세종':[{name:'LH 세종특별본부', org:'한국토지주택공사', q:'LH 세종 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'세종 공고는 대부분 LH 청약플러스에서 지역을 세종으로 골라 보면 돼요.'}],
+  '강원':[{name:'강원개발공사', org:'강원특별자치도', q:'강원개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'강원 지역 공공임대 공고가 올라와요.'}],
+  '충북':[{name:'충북개발공사', org:'충청북도', q:'충북개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'충북 지역 공공임대 공고가 올라와요.'}],
+  '충남':[{name:'충남개발공사', org:'충청남도', q:'충남개발공사 행복주택 모집공고', types:['행복주택','국민·공공임대'], tip:'충남 지역 공공임대 공고가 올라와요.'}],
+  '전북':[{name:'전북개발공사', org:'전북특별자치도', q:'전북개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'전북 지역 공공임대 공고가 올라와요.'}],
+  '전남':[{name:'전남개발공사', org:'전라남도', q:'전남개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'전남 지역 공공임대 공고가 올라와요.'}],
+  '경북':[{name:'경북개발공사', org:'경상북도', q:'경북개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'경북 지역 공공임대 공고가 올라와요.'}],
+  '경남':[{name:'경남개발공사', org:'경상남도', q:'경남개발공사 행복주택 모집공고', types:['행복주택','국민·공공임대'], tip:'경남 지역 공공임대 공고가 올라와요.'}],
+  '제주':[{name:'제주 공공임대 공고', org:'제주특별자치도', q:'제주 행복주택 모집공고', types:['행복주택','국민·공공임대'], tip:'제주 공고는 LH 청약플러스와 도청 공고를 함께 확인하세요.'}]
+};
+
+// 가짜 예시 사용자 (실존 인물 아님)
+const SAMPLE_USERS = [
+  {nick:'김예시', region:'서울', types:['청년안심주택(서울)','매입임대'], lead:7},
+  {nick:'박샘플', region:'경기', types:['행복주택','매입임대'], lead:14},
+  {nick:'이테스트', region:'부산', types:['행복주택','전세임대'], lead:7},
+  {nick:'최가짜', region:'대전', types:['매입임대','국민·공공임대'], lead:3}
+];
+
+function today0(){ const d=new Date(); d.setHours(0,0,0,0); return d; }
+function addDays(d,n){ const x=new Date(d); x.setDate(x.getDate()+n); return x; }
+const DAY = 86400000;
+function diffDays(a,b){ return Math.round((a-b)/DAY); }
+function fmt(d){ const w='일월화수목금토'[d.getDay()]; return `${d.getMonth()+1}월 ${d.getDate()}일(${w})`; }
+
+/* ---------- 실제 공고 데이터 (data/notices.json, 하루 4번 자동 갱신) ---------- */
+let DATA = null, DATA_ERR = null;
+function parseD(s){ if(!s) return null; const [y,m,d]=s.split('-').map(Number); return new Date(y,m-1,d); }
+async function loadData(){
+  try{
+    const r = await fetch('data/notices.json?t=' + Date.now(), {cache:'no-store'});
+    if (!r.ok) throw new Error('HTTP '+r.status);
+    DATA = await r.json();
+    DATA.notices.forEach(n=>{ n.startD = parseD(n.start); n.endD = parseD(n.end); });
+  }catch(e){ DATA_ERR = e; DATA = null; }
+  renderStatus(); render(true);
+}
+function noticesFor(p){
+  if (!DATA) return [];
+  return DATA.notices.filter(n =>
+    (n.sido.includes(p.region) || n.sido.includes('전국')) &&
+    (p.types.includes(n.category)) &&
+    (!p.youthOnly || n.youth));
+}
+function fmtTime(iso){ if(!iso) return '-'; const d=new Date(iso); return `${d.getMonth()+1}월 ${d.getDate()}일 ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; }
+function renderStatus(){
+  const box = $('#dataStatus');
+  if (DATA && !DATA.updatedAt){ DATA_ERR = 'empty'; DATA = null; box.className='status-box warn'; box.innerHTML='⏳ 아직 첫 자동 업데이트 전이에요. GitHub에서 첫 실행이 끝나면(보통 몇 분) 여기에 실제 공고가 나타나요.'; return; }
+  if (!DATA){
+    const local = location.protocol === 'file:';
+    box.className = 'status-box warn';
+    box.innerHTML = local
+      ? '📂 지금은 내 컴퓨터에서 파일로 열어서 실제 공고를 불러올 수 없어요. <b>GitHub에 올린 인터넷 주소</b>로 열면 실제 공고가 보여요.'
+      : '⏳ 아직 공고 데이터가 없어요. 첫 자동 업데이트가 끝나면 여기에 실제 공고가 나타나요.';
+    return;
+  }
+  const src = Object.entries(DATA.sources||{}).map(([k,v])=> v.ok
+      ? `<span class="src-ok">● ${esc(k)} 정상</span>`
+      : `<span class="src-bad" title="${esc(v.error||'')}">● ${esc(k)} 확인 실패${v.lastOkAt?` (${fmtTime(v.lastOkAt)} 데이터 표시 중)`:''}</span>`).join(' ');
+  const stale = (Date.now() - new Date(DATA.updatedAt)) > 2*DAY;
+  box.className = 'status-box' + (stale ? ' warn' : '');
+  box.innerHTML = `🔄 <b>마지막 업데이트 ${fmtTime(DATA.updatedAt)}</b> · 공공데이터(LH·마이홈포털)에서 하루 4번 자동으로 받아와요 · 진행 중 공고 ${DATA.count}건<br><span class="src-line">${src}</span>`
+    + (stale ? '<br>⚠️ 이틀 넘게 업데이트가 안 됐어요. 기관 사이트에서 직접 확인해 주세요.' : '');
+}
+
+/* ---------- 규칙 기반 알림 문구 (AI 흉내) ---------- */
+const PHRASES = {
+  urgentToday: ['🚨 오늘 마감이에요! 지금 바로 신청하세요.', '🚨 오늘이 마지막 날이에요. 마감 시간 직전엔 접속이 몰리니 서두르세요.'],
+  urgentTomorrow: ['⏰ 내일 마감! 인증서 로그인부터 미리 확인해 두세요.', '⏰ 마감까지 하루 남았어요. 오늘 안에 끝내 두는 걸 추천해요.'],
+  open: ['✅ 지금 접수 중이에요. 마감까지 {n}일 남았어요.', '✅ 접수가 열려 있어요. {end}까지 신청할 수 있어요.'],
+  startToday: ['🔔 오늘부터 접수 시작! {end}까지예요.', '🔔 접수 첫날이에요. 공고문의 자격 조건부터 확인해 보세요.'],
+  soon: ['🔔 {n}일 뒤 접수가 시작돼요. 공동인증서나 민간인증서를 미리 준비해 두세요.', '🔔 접수 D-{n}. 소득·자산 기준을 공고문에서 미리 확인해 두면 좋아요.', '🔔 {start}에 접수 시작이에요. 달력에 꼭 적어 두세요.'],
+  later: ['🗓️ 아직 여유가 있어요. {start}에 접수가 시작돼요.', '🗓️ {n}일 뒤 시작 예정이에요. 알림 기간이 되면 다시 알려드릴게요.'],
+  endSoon: ['📌 {end}에 마감돼요. 접수 시작일과 자격은 공고문에서 꼭 확인하세요.', '📌 마감까지 {n}일 남았어요. 지금 공고문을 열어 일정을 확인해 두세요.'],
+  endLater: ['🗓️ {end}까지 진행되는 공고예요. 접수 일정은 공고문에서 확인하세요.'],
+  unknown: ['📄 접수 일정이 공고문에만 나와 있어요. 원문을 확인하세요.'],
+  closed: ['마감된 공고예요. 비슷한 공고는 보통 다시 올라오니 확인처를 즐겨찾기 해 두세요.']
+};
+function pick(arr, seed){ let h=0; for(const c of seed) h=(h*31+c.charCodeAt(0))>>>0; return arr[h % arr.length]; }
+
+function classify(n, lead){
+  const t = today0();
+  const toStart = n.startD ? diffDays(n.startD, t) : null;
+  const toEnd = n.endD ? diffDays(n.endD, t) : null;
+  let lv, key, badge, order;
+  if (toEnd !== null && toEnd < 0){ lv='closed'; key='closed'; badge='마감'; order=5; }
+  else if ((toStart === null || toStart <= 0) && toEnd === 0){ lv='urgent'; key='urgentToday'; badge='오늘 마감'; order=0; }
+  else if ((toStart === null || toStart <= 0) && toEnd === 1){ lv='urgent'; key='urgentTomorrow'; badge='D-1 마감'; order=0; }
+  else if (toStart === null){
+    if (toEnd === null){ lv='later'; key='unknown'; badge='일정 확인'; order=4; }
+    else if (toEnd <= lead){ lv='soon'; key='endSoon'; badge='마감 D-'+toEnd; order=2; }
+    else { lv='later'; key='endLater'; badge='마감 D-'+toEnd; order=3; }
+  }
+  else if (toStart === 0){ lv='open'; key='startToday'; badge='오늘 시작'; order=1; }
+  else if (toStart < 0){ lv='open'; key='open'; badge='접수 중'; order=1; }
+  else if (toStart <= lead){ lv='soon'; key='soon'; badge='D-'+toStart; order=2; }
+  else { lv='later'; key='later'; badge='D-'+toStart; order=3; }
+  const n2 = (key==='open' && toEnd!==null) ? toEnd+1 : (toStart===null ? toEnd : toStart);
+  const msg = pick(PHRASES[key], n.id).replace('{n}', n2)
+    .replace('{end}', n.endD ? fmt(n.endD) : '마감일').replace('{start}', n.startD ? fmt(n.startD) : '시작일');
+  return {lv, msg, badge, order, sortKey: toStart ?? toEnd ?? 999};
+}
+function period(n){
+  if (n.startD && n.endD) return `${fmt(n.startD)} ~ ${fmt(n.endD)}`;
+  if (n.endD) return `${fmt(n.endD)} 마감 (시작일은 공고문 확인)`;
+  return '공고문 확인';
+}
+
+/* ---------- 화면 그리기 ---------- */
+function buildForm(){
+  $('#region').innerHTML = Object.keys(REGIONS).map(r=>`<option>${r}</option>`).join('');
+  $('#typeChips').innerHTML = TYPES.map((t,i)=>`<label class="chip"><input type="checkbox" value="${esc(t)}" ${i<2?'checked':''}><span>${esc(t)}</span></label>`).join('');
+  const saved = store.get('yh_prefs', null);
+  if (saved){ applyPrefs(saved); }
+}
+function getPrefs(){
+  return {
+    nick: $('#nick').value.trim(),
+    region: $('#region').value,
+    types: [...document.querySelectorAll('#typeChips input:checked')].map(i=>i.value),
+    lead: +$('#lead').value,
+    youthOnly: $('#youthOnly').checked
+  };
+}
+function applyPrefs(p){
+  $('#nick').value = p.nick || '';
+  $('#region').value = p.region;
+  document.querySelectorAll('#typeChips input').forEach(i=> i.checked = p.types.includes(i.value));
+  $('#lead').value = String(p.lead);
+  $('#youthOnly').checked = !!p.youthOnly;
+}
+
+function render(silent){
+  const p = getPrefs();
+  store.set('yh_prefs', p);
+  if (!p.types.length) p.types = TYPES.slice();   // 아무것도 안 고르면 모든 종류를 보여줘요
+  const who = p.nick ? esc(p.nick)+'님' : '회원님';
+  $('#greet').textContent = `${p.nick ? p.nick+'님' : '회원님'}의 ${p.region} 접수 알림`;
+  $('#srcTitle').textContent = `${p.region} 공고는 여기서 확인해요`;
+
+  // 알림
+  const notices = noticesFor(p);
+  const rows = notices.map(n => ({n, c:classify(n, p.lead)})).filter(r=>r.c.lv!=='closed')
+                      .sort((a,b)=> a.c.order-b.c.order || a.c.sortKey-b.c.sortKey);
+  const urgentCount = rows.filter(r=> r.c.lv==='urgent' || r.c.lv==='soon' || r.c.lv==='open').length;
+  const MAX = 30;
+  if (!DATA){
+    $('#alertDesc').innerHTML = DATA_ERR==='empty' ? '첫 자동 업데이트가 끝나면 여기에 실제 공고 알림이 나타나요.' : DATA_ERR ? '실제 공고를 불러오지 못했어요. 위의 안내를 확인해 주세요. 그동안 아래 확인처에서 직접 볼 수 있어요.' : '최신 공고를 불러오는 중이에요…';
+    $('#alertList').innerHTML = '';
+  } else {
+    $('#alertDesc').innerHTML = rows.length
+      ? `${who}이 고른 조건에 맞는 진행 중 공고 ${rows.length}건 중 <b>${urgentCount}건</b>이 지금 챙겨야 할 공고예요. (미리 알림: ${p.lead}일 전부터)`
+      : `${esc(p.region)}에서 고른 조건에 맞는 진행 중 공고가 지금은 없어요. 새 공고가 올라오면 여기에 나타나요. 주택 종류를 더 골라 보거나 아래 확인처도 살펴보세요.`;
+    $('#alertList').innerHTML = rows.slice(0, MAX).map(({n,c}) => `
+      <div class="alert lv-${c.lv}">
+        <div class="badge">${esc(c.badge)}</div>
+        <div style="flex:1">
+          <div class="msg">${esc(c.msg)}</div>
+          <div class="meta">${esc(n.title)} · ${esc(n.agency)} · ${esc(n.regionText||'')} · 접수 ${period(n)}</div>
+          <div class="acts">
+            ${n.url ? `<a class="btn-ghost btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">📄 공고문 보기 ↗</a>` : ''}
+            ${n.endD ? `<button class="btn-ghost btn-sm" data-ics="${esc(n.id)}">📅 내 달력에 넣기</button>` : ''}
+          </div>
+        </div>
+      </div>`).join('') + (rows.length > MAX ? `<div class="empty">그 밖에 ${rows.length-MAX}건은 아래 일정표에서 볼 수 있어요.</div>` : '');
+  }
+  window._notices = notices;
+
+  // 확인처
+  const local = (REGIONS[p.region]||[]).map(s=>({...s, scope:'loc'}));
+  const nat = NATIONAL.map(s=>({...s, scope:'nat', verified:true}));
+  const all = [...local, ...nat].map(s=>({...s, fit: s.types.some(t=>p.types.includes(t))}))
+                                .sort((a,b)=> (b.fit-a.fit) || (a.scope==='loc'? -1: 1));
+  $('#srcList').innerHTML = all.map(s=>{
+    const href = s.url || srch(s.q);
+    return `<div class="src">
+      <div class="top"><h3>${esc(s.name)}</h3>
+        <span class="pill ${s.scope}">${s.scope==='nat'?'전국':esc(p.region)}</span></div>
+      <div class="org">${esc(s.org)}</div>
+      <div class="tip">${esc(s.tip)}</div>
+      <div class="types">${s.types.map(t=>`<span class="${p.types.includes(t)?'match':''}">${esc(t)}</span>`).join('')}</div>
+      <a class="go" href="${esc(href)}" target="_blank" rel="noopener">${s.url ? '사이트 열기 ↗' : '검색으로 찾기 ↗'}</a>
+    </div>`;
+  }).join('');
+
+  // 일정표
+  $('#schedTbl').innerHTML = rows.length
+    ? `<tr><th>공고</th><th>종류</th><th>지역</th><th>접수 기간</th><th>상태</th></tr>` +
+      rows.map(({n,c})=>`<tr><td>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}<br><span style="color:var(--sub);font-size:12.5px">${esc(n.agency)} · ${esc(n.source)}</span></td><td>${esc(n.type||n.category)}</td><td>${esc(n.regionText||'')}</td><td>${period(n)}</td><td><b>${esc(c.badge)}</b></td></tr>`).join('')
+    : `<tr><td class="empty">${DATA ? '조건에 맞는 진행 중 공고가 없어요.' : '공고 데이터를 기다리는 중이에요.'}</td></tr>`;
+
+  $('#results').classList.remove('hidden');
+  if (silent) return;   // 다시 열었을 때는 화면만 보여주고 체험 기록은 시작하지 않아요
+  $('#results').scrollIntoView({behavior:'smooth', block:'start'});
+  T.mark('결과 확인');
+}
+
+/* ---------- 달력 파일(.ics) ---------- */
+function icsDate(d){ return d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0'); }
+function downloadIcs(id){
+  const n = (window._notices||[]).find(x=>x.id===id); if(!n) return;
+  const lead = +$('#lead').value;
+  const esc2 = v => String(v).replace(/[\\,;]/g, m=>'\\'+m);
+  const ev = (summary, d, alarmDays, tag) => [
+    'BEGIN:VEVENT','UID:'+id+'-'+tag+'@yh-alert','DTSTAMP:'+icsDate(new Date())+'T000000Z',
+    'DTSTART;VALUE=DATE:'+icsDate(d),'DTEND;VALUE=DATE:'+icsDate(addDays(d,1)),'SUMMARY:'+esc2(summary),
+    'DESCRIPTION:'+esc2(n.agency+' / '+(n.url||'')+' / 신청 전 공고문을 꼭 확인하세요.'),
+    'BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:'+summary,'TRIGGER:-P'+alarmDays+'D','END:VALARM','END:VEVENT'];
+  const body = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//yh-alert//KO','CALSCALE:GREGORIAN',
+    ...(n.startD ? ev('접수 시작 · '+n.title, n.startD, lead, 'start') : []), ...ev('접수 마감 · '+n.title, n.endD, 1, 'end'), 'END:VCALENDAR'].join('\r\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([body],{type:'text/calendar'}));
+  a.download = n.title.replace(/[^\w가-힣]+/g,'_') + '.ics';
+  a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+  toast('달력 파일을 내려받았어요. 열면 휴대폰·PC 달력에 들어가요');
+  T.mark('달력 저장');
+}
+
+/* ---------- 영상 ---------- */
+function videoEmbed(url){
+  const box = $('#videoBox');
+  url = (url||'').trim();
+  if (!url){ box.innerHTML = `<div class="video-empty"><div class="big">🎞️</div>아직 연결된 영상이 없어요<br><span style="font-size:13px">아래에 영상 주소를 넣거나 파일을 골라주세요</span></div>`; return; }
+  let m;
+  if ((m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{6,})/))){
+    box.innerHTML = `<iframe src="https://www.youtube.com/embed/${m[1]}?rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    $('#videoHint').innerHTML = `영상이 안 나오면 <a href="${esc(url)}" target="_blank" rel="noopener">유튜브에서 바로 열기 ↗</a> · 파일로 연 화면에서는 유튜브가 막힐 수 있어요.`;
+  } else if ((m = url.match(/vimeo\.com\/(\d+)/))){
+    box.innerHTML = `<iframe src="https://player.vimeo.com/video/${m[1]}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  } else {
+    box.innerHTML = `<video src="${esc(url)}" controls playsinline></video>`;
+  }
+  const v = box.querySelector('video'); if (v) v.addEventListener('play', ()=>T.mark('영상 재생'), {once:true});
+}
+
+/* ---------- 체험 기록 (몇 명이, 얼마나 걸렸나) ---------- */
+const T = {
+  cur: null, tick: null,
+  logs(){ return store.get('yh_logs', []); },
+  save(l){ store.set('yh_logs', l); },
+  start(){
+    if (this.cur) return;
+    const logs = this.logs();
+    const no = logs.length + 1;
+    this.cur = {id:'체험자 ' + String(no).padStart(3,'0'), start:Date.now(), steps:[]};
+    store.set('yh_active', this.cur);
+    this.ui(); toast(this.cur.id + ' 기록을 시작했어요');
+  },
+  mark(step){
+    if (!this.cur) this.start();
+    if (!this.cur.steps.includes(step)){ this.cur.steps.push(step); store.set('yh_active', this.cur); }
+  },
+  end(){
+    if (!this.cur) return;
+    const sec = Math.round((Date.now()-this.cur.start)/1000);
+    const p = getPrefs();
+    const logs = this.logs();
+    logs.push({id:this.cur.id, date:new Date(this.cur.start).toLocaleString('ko-KR'), sec, done:true, region:p.region, steps:this.cur.steps.join(', ')});
+    this.save(logs); store.del('yh_active');
+    toast(`${this.cur.id} 체험 완료 · ${mmss(sec)} 걸렸어요`);
+    this.cur = null; this.ui(); renderStats();
+  },
+  recoverDropped(){
+    const a = store.get('yh_active', null);
+    if (!a) return;
+    const logs = this.logs();
+    logs.push({id:a.id, date:new Date(a.start).toLocaleString('ko-KR'), sec:null, done:false, region:'-', steps:(a.steps||[]).join(', ')});
+    this.save(logs); store.del('yh_active');
+  },
+  ui(){
+    const on = !!this.cur;
+    $('#recDot').classList.toggle('on', on);
+    $('#btnStart').classList.toggle('hidden', on);
+    $('#btnEnd').classList.toggle('hidden', !on);
+    $('#testWho').innerHTML = on ? `<b>${esc(this.cur.id)}</b> 기록 중` : '체험 기록 꺼짐';
+    clearInterval(this.tick);
+    if (on){ const f=()=> $('#timer').textContent = mmss(Math.round((Date.now()-this.cur.start)/1000)); f(); this.tick=setInterval(f,1000); }
+    else $('#timer').textContent = '00:00';
+  }
+};
+function mmss(s){ if (s==null) return '-'; return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); }
+function renderStats(){
+  const logs = T.logs();
+  const done = logs.filter(l=>l.done);
+  $('#stCount').textContent = done.length;
+  $('#stDrop').textContent = logs.length - done.length;
+  $('#stAvg').textContent = done.length ? mmss(Math.round(done.reduce((a,b)=>a+b.sec,0)/done.length)) : '-';
+  $('#stMin').textContent = done.length ? mmss(Math.min(...done.map(l=>l.sec))) : '-';
+  $('#logTbl').innerHTML = logs.length
+    ? `<tr><th>체험자</th><th>날짜</th><th>걸린 시간</th><th>지역</th><th>해본 것</th></tr>` +
+      logs.slice().reverse().map(l=>`<tr><td>${esc(l.id)}</td><td>${esc(l.date)}</td><td>${l.done?mmss(l.sec):'<span style="color:var(--danger)">중단</span>'}</td><td>${esc(l.region)}</td><td>${esc(l.steps||'-')}</td></tr>`).join('')
+    : `<tr><td class="empty">아직 기록이 없어요. 위의 ‘체험 시작’을 누르거나 ‘내 맞춤 화면 보기’를 누르면 자동으로 기록이 시작돼요.</td></tr>`;
+}
+function downloadCsv(){
+  const logs = T.logs();
+  if (!logs.length){ toast('내려받을 기록이 없어요'); return; }
+  const head = ['체험자','날짜','걸린시간(초)','완료여부','지역','해본 것'];
+  const lines = [head, ...logs.map(l=>[l.id,l.date,l.sec??'',l.done?'완료':'중단',l.region,l.steps])]
+    .map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(','));
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob(['\uFEFF'+lines.join('\r\n')],{type:'text/csv'}));
+  a.download = '체험기록.csv'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+
+/* ---------- AI 자리 (버튼만) ---------- */
+function aiModal(what){
+  const bg = document.createElement('div'); bg.className='modal-bg';
+  bg.innerHTML = `<div class="modal" role="dialog" aria-modal="true">
+    <h3>🤖 ${esc(what)}</h3>
+    <p>여기는 나중에 실제 AI를 연결할 자리예요. 지금 시범판에서는 정해 둔 규칙과 예시 문구로 동작하고 있어요.</p>
+    <button class="btn-primary btn-sm">알겠어요</button></div>`;
+  bg.addEventListener('click', e=>{ if (e.target===bg || e.target.tagName==='BUTTON') bg.remove(); });
+  document.body.appendChild(bg);
+  T.mark('AI 버튼 눌러봄');
+}
+
+/* ---------- 연결 ---------- */
+buildForm();
+T.recoverDropped();
+T.ui(); renderStats();
+render(true);   // 처음 열 때부터 알림·사이트 목록을 항상 보여줘요
+loadData();     // 실제 공고 불러오기
+// 조건을 바꾸면 아래 화면이 바로 바뀌어요
+['#region','#lead'].forEach(s=> $(s).addEventListener('change', ()=> render(true)));
+$('#nick').addEventListener('input', ()=> render(true));
+$('#typeChips').addEventListener('change', ()=> render(true));
+$('#youthOnly').addEventListener('change', ()=> render(true));
+videoEmbed(store.get('yh_video', '') || MY_VIDEO_URL);
+$('#videoUrl').value = store.get('yh_video', '') || MY_VIDEO_URL;
+
+$('#btnStart').onclick = ()=> T.start();
+$('#btnEnd').onclick = ()=> T.end();
+$('#btnShow').onclick = ()=> { T.mark('조건 입력'); render(); };
+$('#btnSample').onclick = ()=> {
+  const cur = $('#nick').value;
+  const pool = SAMPLE_USERS.filter(u=>u.nick!==cur);
+  applyPrefs(pool[Math.floor(Math.random()*pool.length)]);
+  toast('가짜 예시 사용자로 채웠어요'); T.mark('예시 채우기');
+};
+$('#btnVideo').onclick = ()=> { const u=$('#videoUrl').value.trim(); if(!u){toast('영상 주소를 넣어주세요');return;} store.set('yh_video', u); videoEmbed(u); toast('영상을 연결했어요'); };
+$('#btnVideoClear').onclick = ()=> { store.del('yh_video'); $('#videoUrl').value=''; videoEmbed(''); };
+$('#videoFile').onchange = e=> { const f=e.target.files[0]; if(!f) return; videoEmbed(URL.createObjectURL(f)); toast('파일 영상을 띄웠어요 (새로고침하면 다시 골라야 해요)'); };
+$('#btnCsv').onclick = downloadCsv;
+$('#btnReset').onclick = ()=> { if (confirm('체험 기록을 모두 지울까요? 되돌릴 수 없어요.')){ store.set('yh_logs', []); renderStats(); toast('기록을 지웠어요'); } };
+document.addEventListener('click', e=>{
+  const ai = e.target.closest('[data-ai]'); if (ai){ aiModal(ai.dataset.ai); return; }
+  const ics = e.target.closest('[data-ics]'); if (ics){ downloadIcs(ics.dataset.ics); }
+});
+// 영상 iframe 클릭은 감지가 어려워서, 영상 영역에 마우스가 들어가면 '영상 봄'으로 기록
+$('#videoBox').addEventListener('pointerenter', ()=>{ if ($('#videoBox iframe')) T.mark('영상 재생'); });
+</script>
+</body>
+</html>
