@@ -127,6 +127,8 @@ button,.btn{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:1
 /* 영상 */
 .video-box{aspect-ratio:16/9;width:100%;border-radius:14px;overflow:hidden;background:repeating-linear-gradient(45deg,var(--mute-soft),var(--mute-soft) 12px,var(--bg) 12px,var(--bg) 24px);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
 .video-box iframe,.video-box video{width:100%;height:100%;border:0;background:#000}
+.video-edit{margin-top:10px;font-size:13.5px;color:var(--sub)}
+.video-edit summary{cursor:pointer;width:max-content}
 .video-empty{text-align:center;color:var(--sub);padding:20px}
 .video-empty .big{font-size:40px}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -174,6 +176,25 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
     <p class="lead">관심 지역과 주택 종류만 고르면, 공고가 올라오는 곳과 접수 일정을 한 화면에 모아 보여드려요.</p>
     <div class="status-box" id="dataStatus">⏳ 최신 공고를 불러오는 중이에요…</div>
   </header>
+
+  <!-- 영상 자리 -->
+  <section class="card" id="videoSec">
+    <h2>🎬 먼저 1분 사용법 영상을 보세요</h2>
+    <p class="sec-desc">조건 고르기 → 알림 보기 → 사이트 열기, 3단계로 끝나요. 영상을 다 보면 바로 아래에서 시작하세요.</p>
+    <div class="video-box" id="videoBox">
+      <div class="video-empty"><div class="big">🎞️</div>아직 연결된 영상이 없어요<br><span style="font-size:13px">아래에 영상 주소를 넣거나 파일을 골라주세요</span></div>
+    </div>
+    <details class="video-edit">
+      <summary>영상 바꾸기</summary>
+    <div class="row" style="margin-top:12px">
+      <input type="url" id="videoUrl" placeholder="https://youtu.be/... 또는 https://.../intro.mp4">
+      <button class="btn-primary btn-sm" id="btnVideo">연결</button>
+      <label class="btn-ghost btn-sm" style="cursor:pointer">📁 내 파일 고르기<input type="file" id="videoFile" accept="video/*" class="hidden"></label>
+      <button class="btn-ghost btn-sm" id="btnVideoClear">지우기</button>
+    </div>
+    <p class="hint" id="videoHint">파일로 연 화면에서는 유튜브 영상이 막힐 때가 있어요. 그럴 땐 mp4 파일을 ‘내 파일 고르기’로 넣으면 가장 확실해요.</p>
+    </details>
+  </section>
 
   <!-- STEP 1 입력 -->
   <section class="card" id="formCard">
@@ -236,22 +257,6 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
       <div class="tbl-wrap"><table class="tbl" id="schedTbl"></table></div>
     </section>
   </div>
-
-  <!-- 영상 자리 -->
-  <section class="card" id="videoSec">
-    <h2>🎬 이렇게 쓰세요 — 소개 영상</h2>
-    <p class="sec-desc">직접 만든 모션그래픽 영상을 연결하는 자리예요. 유튜브·비메오 주소, mp4 주소, 또는 내 컴퓨터의 영상 파일을 넣을 수 있어요.</p>
-    <div class="video-box" id="videoBox">
-      <div class="video-empty"><div class="big">🎞️</div>아직 연결된 영상이 없어요<br><span style="font-size:13px">아래에 영상 주소를 넣거나 파일을 골라주세요</span></div>
-    </div>
-    <div class="row" style="margin-top:12px">
-      <input type="url" id="videoUrl" placeholder="https://youtu.be/... 또는 https://.../intro.mp4">
-      <button class="btn-primary btn-sm" id="btnVideo">연결</button>
-      <label class="btn-ghost btn-sm" style="cursor:pointer">📁 내 파일 고르기<input type="file" id="videoFile" accept="video/*" class="hidden"></label>
-      <button class="btn-ghost btn-sm" id="btnVideoClear">지우기</button>
-    </div>
-    <p class="hint" id="videoHint">파일로 연 화면에서는 유튜브 영상이 막힐 때가 있어요. 그럴 땐 mp4 파일을 ‘내 파일 고르기’로 넣으면 가장 확실해요.</p>
-  </section>
 
   <!-- 체험 기록 -->
   <section class="card" id="stats">
@@ -554,7 +559,14 @@ function videoEmbed(url){
   } else {
     box.innerHTML = `<video src="${esc(url)}" controls playsinline></video>`;
   }
-  const v = box.querySelector('video'); if (v) v.addEventListener('play', ()=>T.mark('영상 재생'), {once:true});
+  const v = box.querySelector('video');
+  if (v){
+    v.preload = 'auto';
+    // 재생 전에는 첫 화면이 비어 보이지 않게 2.5초 지점을 미리 보여주고, 재생하면 처음부터 시작해요
+    const peek = ()=>{ if (!v._played) v.currentTime = 2.5; };
+    if (v.readyState >= 1) peek(); else v.addEventListener('loadedmetadata', peek, {once:true});
+    v.addEventListener('play', ()=>{ if (!v._played){ v._played = true; v.currentTime = 0; } T.mark('영상 재생'); }, {once:true});
+  }
 }
 
 /* ---------- 체험 기록 (몇 명이, 얼마나 걸렸나) ---------- */
