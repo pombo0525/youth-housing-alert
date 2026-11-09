@@ -108,6 +108,11 @@ def sido_of(text: str | None) -> list[str]:
             if word.startswith(prefix) and short not in found:
                 found.append(short)
                 break
+        # '전남광주통합특별시'처럼 두 지역이 합쳐진 이름은 양쪽 모두에 보여줘요
+        if word.endswith(("특별시", "광역시", "도")):
+            for short in ("서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "전남", "전북", "경남", "경북", "충남", "충북"):
+                if short in word and short not in found:
+                    found.append(short)
     return found
 
 
@@ -285,6 +290,15 @@ def merge(lh: list[dict], myhome: list[dict]) -> list[dict]:
                 m["sido"] = l["sido"]
         merged.append(m)
     merged += list(by_pan.values())
+    # 제목·일정·지역이 똑같은 공고가 따로 올라온 경우 화면에는 한 번만 보여줘요
+    seen, unique = set(), []
+    for n in merged:
+        k = (n["title"], n.get("start"), n.get("end"), n.get("regionText"))
+        if k in seen:
+            continue
+        seen.add(k)
+        unique.append(n)
+    merged = unique
     for n in merged:
         n["youth"] = "청년" in n["title"] or n["category"] == "행복주택"
     merged.sort(key=lambda n: (n.get("end") or "9999", n["title"]))
