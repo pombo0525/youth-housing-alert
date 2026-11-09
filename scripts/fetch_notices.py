@@ -128,6 +128,11 @@ def clean(s) -> str:
     return re.sub(r"\s+", " ", str(s or "")).strip()
 
 
+def is_closed_title(title: str) -> bool:
+    """제목에 '조기접수마감', '모집완료'처럼 이미 끝났다고 적힌 공고"""
+    return any(w in title for w in ("조기접수마감", "조기마감", "접수마감]", "모집완료", "모집마감]"))
+
+
 # ------------------------------------------------------------------ LH
 def fetch_lh(key: str) -> list[dict]:
     today = today_kst()
@@ -168,6 +173,8 @@ def fetch_lh(key: str) -> list[dict]:
             continue
         pid = clean(r.get("PAN_ID"))
         title = clean(r.get("PAN_NM"))
+        if is_closed_title(title):
+            continue
         tname = clean(r.get("AIS_TP_CD_NM"))
         out[pid] = {
             "id": f"lh-{pid}", "panId": pid, "title": title, "source": "LH", "agency": "LH",
@@ -221,11 +228,13 @@ def fetch_myhome(key: str) -> list[dict]:
     grouped: dict[str, dict] = {}
     for r in rows:
         pid = clean(r.get("pblancId"))
-        k = f"{pid}-{clean(r.get('houseSn'))}"
+        k = pid  # 한 공고에 단지(houseSn)가 여러 개여도 공고 하나로 묶어요
         end = ymd(r.get("endDe"))
         if end and end < today.isoformat():
             continue
         title = clean(r.get("pblancNm"))
+        if is_closed_title(title):
+            continue
         tname = clean(r.get("suplyTyNm"))
         sido_full, sigungu = clean(r.get("brtcNm")), clean(r.get("signguNm"))
         g = grouped.get(k)
@@ -240,6 +249,13 @@ def fetch_myhome(key: str) -> list[dict]:
                 "winnerDate": ymd(r.get("przwnerPresnatnDe")), "status": clean(r.get("sttusNm")),
                 "url": clean(r.get("pcUrl")) or lh_url, "agencyUrl": lh_url,
             }
+        else:
+            # 같은 공고의 다른 단지: 접수 기간은 가장 이른 시작 ~ 가장 늦은 마감으로 합쳐요
+            s2 = ymd(r.get("beginDe"))
+            if s2 and (not g["start"] or s2 < g["start"]):
+                g["start"] = s2
+            if end and (not g["end"] or end > g["end"]):
+                g["end"] = end
         for s in sido_of(sido_full):
             if s not in g["sido"]:
                 g["sido"].append(s)
