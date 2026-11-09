@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-09T18:23+09:00",
+ "updatedAt": "2026-11-09T18:28+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 52,
-   "checkedAt": "2026-11-09T18:23+09:00",
-   "lastOkAt": "2026-11-09T18:23+09:00"
+   "checkedAt": "2026-11-09T18:28+09:00",
+   "lastOkAt": "2026-11-09T18:28+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 127,
-   "checkedAt": "2026-11-09T18:23+09:00",
-   "lastOkAt": "2026-11-09T18:23+09:00"
+   "count": 77,
+   "checkedAt": "2026-11-09T18:28+09:00",
+   "lastOkAt": "2026-11-09T18:28+09:00"
   }
  },
- "count": 130,
+ "count": 80,
  "notices": [
   {
-   "id": "myhome-21467-1",
+   "id": "myhome-21467",
    "panId": "0000061188",
    "title": "광주선운 3블록 10년 공공임대주택 리츠 예비입주자 모집 공고",
    "source": "LH·마이홈",
@@ -39,7 +39,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21468-1",
+   "id": "myhome-21468",
    "panId": "2015122300020932",
    "title": "도청이전신도시 RH10-2BL 국민임대주택 자격완화 추가모집(2026.10.27)",
    "source": "LH·마이홈",
@@ -61,7 +61,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21486-",
+   "id": "myhome-21486",
    "panId": "2015122300020965",
    "title": "청주시 다자녀 매입임대주택 예비입주자 모집(261029공고)",
    "source": "LH·마이홈",
@@ -83,7 +83,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21491-",
+   "id": "myhome-21491",
    "panId": "2015122300020972",
    "title": "[부산] 2026년 2차 일반 매입임대주택 입주자 모집 공고",
    "source": "LH·마이홈",
@@ -105,29 +105,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21399-1",
-   "panId": "2015122300020898",
-   "title": "[조기접수마감]양산 삼성파크빌 자격완화 입주자 선착순 모집(2026.09.30)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경남"
-   ],
-   "noticeDate": "2026-09-30",
-   "start": "2026-10-12",
-   "end": "2026-11-12",
-   "winnerDate": "2027-01-15",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21399&houseSn=1",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020898&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "경상남도 양산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21483-1",
+   "id": "myhome-21483",
    "panId": "2015122300020960",
    "title": "과천지식정보타운 S12블록 행복주택 입주자 모집공고",
    "source": "LH·마이홈",
@@ -149,7 +127,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21466-1",
+   "id": "myhome-21466",
    "panId": "2015122300020936",
    "title": "구리갈매역세권 A-1BL 신혼희망타운 행복주택 최초 입주자 모집공고(‘26.10.27)",
    "source": "마이홈",
@@ -171,7 +149,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21366-1",
+   "id": "myhome-21366",
    "panId": "2015122300020825",
    "title": "양산 삼성파크빌 자격완화 입주자 선착순 모집(2026.09.30)",
    "source": "마이홈",
@@ -193,7 +171,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21434-1",
+   "id": "myhome-21434",
    "panId": "2015122300020897",
    "title": "여수미평1 영구임대주택 예비입주자 모집공고(모집공고일 : 2026.10.20.)",
    "source": "LH·마이홈",
@@ -215,7 +193,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21480-4",
+   "id": "myhome-21480",
    "panId": "2015122300020958",
    "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
    "source": "LH·마이홈",
@@ -232,160 +210,6 @@
    "winnerDate": "2026-12-09",
    "status": "공고중",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-7",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=7",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-8",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=8",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-9",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=9",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-10",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=10",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-11",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=11",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-12",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=12",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480-13",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=13",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "경기도 화성시 동탄구",
    "youth": true
@@ -410,7 +234,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21463-",
+   "id": "myhome-21463",
    "panId": "2015122300020933",
    "title": "경남 거창군 신원면 다자녀 매입임대주택 예비입주자 모집공고",
    "source": "LH·마이홈",
@@ -432,7 +256,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21464-",
+   "id": "myhome-21464",
    "panId": "2015122300020928",
    "title": "경남 의령군 화정면 다자녀 매입임대주택 예비입주자 모집공고",
    "source": "LH·마이홈",
@@ -454,7 +278,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21470-",
+   "id": "myhome-21470",
    "panId": "2015122300020944",
    "title": "경남 창원시 일반 매입임대주택 예비입주자 모집 공고",
    "source": "LH·마이홈",
@@ -476,7 +300,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21473-1",
+   "id": "myhome-21473",
    "panId": "2015122300020977",
    "title": "광주두암2 영구임대주택 예비입주자 모집공고(모집공고일:2026.10.27)",
    "source": "LH·마이홈",
@@ -498,7 +322,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21459-1",
+   "id": "myhome-21459",
    "panId": "2015122300020969",
    "title": "광주두암2 영구임대주택 예비입주자 모집공고(모집공고일:2026.10.27)",
    "source": "LH·마이홈",
@@ -520,7 +344,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21472-1",
+   "id": "myhome-21472",
    "panId": "2015122300020981",
    "title": "광주두암4 영구임대주택 예비입주자모집 공고(모집공고일 : 2026.10.27)",
    "source": "LH·마이홈",
@@ -542,7 +366,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21461-1",
+   "id": "myhome-21461",
    "panId": "2015122300020967",
    "title": "광주두암4 영구임대주택 예비입주자모집 공고(모집공고일 : 2026.10.27)",
    "source": "LH·마이홈",
@@ -564,7 +388,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21475-1",
+   "id": "myhome-21475",
    "panId": "2015122300020978",
    "title": "광주오치1 영구임대주택 예비입주자 표준모집공고문(2026.10.27. 공고)",
    "source": "LH·마이홈",
@@ -586,7 +410,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21460-1",
+   "id": "myhome-21460",
    "panId": "2015122300020968",
    "title": "광주오치1 영구임대주택 예비입주자 표준모집공고문(2026.10.27. 공고)",
    "source": "LH·마이홈",
@@ -608,7 +432,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21476-1",
+   "id": "myhome-21476",
    "panId": "2015122300020976",
    "title": "광주우산3 영구임대주택 예비입주자 모집 공고(모집공고일: 2026.10.27)",
    "source": "LH·마이홈",
@@ -630,7 +454,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21462-1",
+   "id": "myhome-21462",
    "panId": "2015122300020966",
    "title": "광주우산3 영구임대주택 예비입주자 모집 공고(모집공고일: 2026.10.27)",
    "source": "LH·마이홈",
@@ -652,7 +476,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21479-1",
+   "id": "myhome-21479",
    "panId": "2015122300020979",
    "title": "광주하남1 영구임대주택 그린리모델링 예비입주자 모집 공고(공고일 2026.10.27)",
    "source": "LH·마이홈",
@@ -674,7 +498,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21465-1",
+   "id": "myhome-21465",
    "panId": "2015122300020971",
    "title": "광주하남1 영구임대주택 그린리모델링 예비입주자 모집 공고(공고일 2026.10.27)",
    "source": "LH·마이홈",
@@ -696,7 +520,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21478-1",
+   "id": "myhome-21478",
    "panId": "2015122300020980",
    "title": "광주하남1 영구임대주택 예비입주자 모집공고(모집공고일:2026.10.27)",
    "source": "LH·마이홈",
@@ -718,7 +542,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21458-1",
+   "id": "myhome-21458",
    "panId": "2015122300020970",
    "title": "광주하남1 영구임대주택 예비입주자 모집공고(모집공고일:2026.10.27)",
    "source": "LH·마이홈",
@@ -740,7 +564,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21454-1",
+   "id": "myhome-21454",
    "panId": "2015122300020959",
    "title": "김제검산 영구임대주택 입주자격완화 예비입주자 모집",
    "source": "LH·마이홈",
@@ -762,7 +586,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21471-1",
+   "id": "myhome-21471",
    "panId": null,
    "title": "나라키움영등포복합청사 예비입주자 모집공고(21형)",
    "source": "마이홈",
@@ -784,7 +608,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21431-1",
+   "id": "myhome-21431",
    "panId": "2015122300020916",
    "title": "전주1산단(전주팔복) 행복주택 입주자격완화예비입주자 모집",
    "source": "LH·마이홈",
@@ -806,7 +630,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21508-2",
+   "id": "myhome-21508",
    "panId": "0000061206",
    "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
    "source": "LH·마이홈",
@@ -824,99 +648,11 @@
    "status": "공고중",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21508&houseSn=2",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 평택시",
+   "regionText": "경기도 평택시, 안성시",
    "youth": false
   },
   {
-   "id": "myhome-21508-3",
-   "panId": "0000061206",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21508&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 평택시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21508-4",
-   "panId": "0000061206",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21508&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 평택시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21508-5",
-   "panId": "0000061206",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21508&houseSn=5",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 안성시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21508-6",
-   "panId": "0000061206",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21508&houseSn=6",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 안성시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21506-2",
+   "id": "myhome-21506",
    "panId": "0000061201",
    "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
    "source": "LH·마이홈",
@@ -934,99 +670,11 @@
    "status": "정정공고중",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21506&houseSn=2",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061201&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 평택시",
+   "regionText": "경기도 평택시, 안성시",
    "youth": false
   },
   {
-   "id": "myhome-21506-3",
-   "panId": "0000061201",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21506&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061201&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 평택시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21506-4",
-   "panId": "0000061201",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21506&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061201&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 평택시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21506-5",
-   "panId": "0000061201",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21506&houseSn=5",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061201&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 안성시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21506-6",
-   "panId": "0000061201",
-   "title": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "10년임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-16",
-   "end": "2026-11-16",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21506&houseSn=6",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061201&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
-   "regionText": "경기도 안성시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21511-1",
+   "id": "myhome-21511",
    "panId": "2015122300021031",
    "title": "26년 11월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.11.05.)",
    "source": "LH·마이홈",
@@ -1048,7 +696,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21502-1",
+   "id": "myhome-21502",
    "panId": "2015122300020987",
    "title": "26년 11월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.11.05.)",
    "source": "LH·마이홈",
@@ -1070,7 +718,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21488-1",
+   "id": "myhome-21488",
    "panId": "2015122300020905",
    "title": "담양삼만 통합공공임대(일자리연계형 지원주택) 입주자 추가 모집(2026.10.29. 공고)",
    "source": "LH·마이홈",
@@ -1092,7 +740,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21499-1",
+   "id": "myhome-21499",
    "panId": "2015122300020996",
    "title": "연천전곡1단지 국민임대주택 예비입주자 모집공고(2026.11.05.)",
    "source": "LH·마이홈",
@@ -1133,7 +781,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21512-",
+   "id": "myhome-21512",
    "panId": null,
    "title": "2026년 청년매입임대주택 입주자모집 공고",
    "source": "마이홈",
@@ -1155,7 +803,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21495-1",
+   "id": "myhome-21495",
    "panId": "2015122300020962",
    "title": "공주시(덕성그린시티빌,신한1차) 국민임대 자격완화 입주자 모집공고(26.11.02)",
    "source": "LH·마이홈",
@@ -1177,29 +825,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21495-2",
-   "panId": "2015122300020962",
-   "title": "공주시(덕성그린시티빌,신한1차) 국민임대 자격완화 입주자 모집공고(26.11.02)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "충남"
-   ],
-   "noticeDate": "2026-11-02",
-   "start": "2026-11-16",
-   "end": "2026-11-18",
-   "winnerDate": "2026-12-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21495&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020962&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "충청남도 공주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21494-1",
+   "id": "myhome-21494",
    "panId": "2015122300020896",
    "title": "오산세교2 7단지(A-6BL) 영구임대 입주자격완화(소득150%완화) 예비입주자 모집공고(2026.11.02)",
    "source": "LH·마이홈",
@@ -1221,7 +847,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21487-1",
+   "id": "myhome-21487",
    "panId": "0000061193",
    "title": "울산 송정하우스디(B3블럭) 10년 공공임대리츠 예비입주자 모집공고",
    "source": "LH·마이홈",
@@ -1243,7 +869,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21477-1",
+   "id": "myhome-21477",
    "panId": null,
    "title": "제천 영천동 행복주택 추가(예비)입주자 모집공고",
    "source": "마이홈",
@@ -1265,7 +891,7 @@
    "youth": true
   },
   {
-   "id": "myhome-18430-1",
+   "id": "myhome-18430",
    "panId": null,
    "title": "제천 영천동 행복주택 추가(예비)입주자 모집공고",
    "source": "마이홈",
@@ -1287,7 +913,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21430-1",
+   "id": "myhome-21430",
    "panId": "2015122300020917",
    "title": "완주삼례A-1 행복주택 입주자격완화 예비입주자 모집",
    "source": "LH·마이홈",
@@ -1309,7 +935,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21504-1",
+   "id": "myhome-21504",
    "panId": "2015122300021026",
    "title": "인천논현2단지 국임임대주택 예비입주자 모집 공고",
    "source": "LH·마이홈",
@@ -1331,7 +957,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21501-1",
+   "id": "myhome-21501",
    "panId": "2015122300021024",
    "title": "인천논현2단지 국임임대주택 예비입주자 모집 공고",
    "source": "LH·마이홈",
@@ -1353,7 +979,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21492-1",
+   "id": "myhome-21492",
    "panId": "2015122300020993",
    "title": "평창장평 통합공공임대주택(고령자복지형) 입주자 모집",
    "source": "LH·마이홈",
@@ -1375,7 +1001,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21493-1",
+   "id": "myhome-21493",
    "panId": "2015122300020992",
    "title": "평창장평 통합공공임대주택(일반형) 입주자 모집",
    "source": "LH·마이홈",
@@ -1416,7 +1042,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21505-1",
+   "id": "myhome-21505",
    "panId": "2015122300021022",
    "title": "남원노암 공공임대 50년 예비입주자모집",
    "source": "LH·마이홈",
@@ -1438,7 +1064,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21510-1",
+   "id": "myhome-21510",
    "panId": "2015122300020975",
    "title": "제천장락1 50년공공임대주택 예비입주자 모집 공고[2026.11.09]",
    "source": "LH·마이홈",
@@ -1460,7 +1086,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21498-1",
+   "id": "myhome-21498",
    "panId": "2015122300021017",
    "title": "익산한스빌 국민임대주택 예비입주자 자격완화 모집 공고",
    "source": "LH·마이홈",
@@ -1482,7 +1108,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21513-1",
+   "id": "myhome-21513",
    "panId": "2015122300021011",
    "title": "원주시지역 영구임대주택 예비입주자 모집",
    "source": "LH·마이홈",
@@ -1504,51 +1130,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21513-2",
-   "panId": "2015122300021011",
-   "title": "원주시지역 영구임대주택 예비입주자 모집",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "영구임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-11-09",
-   "start": "2026-11-25",
-   "end": "2026-11-27",
-   "winnerDate": "2027-03-10",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21513&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021011&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
-   "regionText": "강원특별자치도 원주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21513-3",
-   "panId": "2015122300021011",
-   "title": "원주시지역 영구임대주택 예비입주자 모집",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "영구임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-11-09",
-   "start": "2026-11-25",
-   "end": "2026-11-27",
-   "winnerDate": "2027-03-10",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21513&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021011&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
-   "regionText": "강원특별자치도 원주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21497-1",
+   "id": "myhome-21497",
    "panId": "2015122300020995",
    "title": "정선사북 행복주택 입주자 추가모집",
    "source": "LH·마이홈",
@@ -1570,7 +1152,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21503-1",
+   "id": "myhome-21503",
    "panId": "2015122300020973",
    "title": "평택시 평택송화 국민임대 예비입주자 모집공고(2026.11.05)",
    "source": "LH·마이홈",
@@ -1592,7 +1174,7 @@
    "youth": false
   },
   {
-   "id": "myhome-20905-",
+   "id": "myhome-20905",
    "panId": null,
    "title": "2026년 칠곡군 천원주택(신혼·신생아 매입임대주택Ⅰ) 예비입주자 모집 공고",
    "source": "마이홈",
@@ -1614,7 +1196,7 @@
    "youth": false
   },
   {
-   "id": "myhome-20901-2",
+   "id": "myhome-20901",
    "panId": null,
    "title": "2026년 칠곡군 천원주택(청년 매입임대주택) 입주자 및 예비입주자 모집 공고",
    "source": "마이홈",
@@ -1636,73 +1218,7 @@
    "youth": true
   },
   {
-   "id": "myhome-20901-3",
-   "panId": null,
-   "title": "2026년 칠곡군 천원주택(청년 매입임대주택) 입주자 및 예비입주자 모집 공고",
-   "source": "마이홈",
-   "agency": "경상북도개발공사",
-   "type": "매입임대",
-   "category": "매입임대",
-   "houseType": "다가구주택",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-07-28",
-   "start": "2026-07-28",
-   "end": "2026-11-30",
-   "winnerDate": "2026-11-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20901&houseSn=3",
-   "agencyUrl": "https://www.gbdc.co.kr/boardview/boardview.do?seqId=0000003638&BBS_ID=4c9b3e75-2935-4bcd-96be-62fb07903949&IPDS_IDX=2e8989e9-02ae-48be-9591-f3c4c8e7fa39&BBS_TYPE=L&COLM1=notice&COLM1_CD=notice_02&COLM1_STATUS=&SEARCH_CONTITION=CPDS_SUBJECT_CONTENT&SEARCH_KEYWORD=&CURRENT_PAGE=1",
-   "regionText": "경상북도 칠곡군",
-   "youth": true
-  },
-  {
-   "id": "myhome-20901-",
-   "panId": null,
-   "title": "2026년 칠곡군 천원주택(청년 매입임대주택) 입주자 및 예비입주자 모집 공고",
-   "source": "마이홈",
-   "agency": "경상북도개발공사",
-   "type": "매입임대",
-   "category": "매입임대",
-   "houseType": "다가구주택",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-07-28",
-   "start": "2026-07-28",
-   "end": "2026-11-30",
-   "winnerDate": "2026-11-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20901",
-   "agencyUrl": "https://www.gbdc.co.kr/boardview/boardview.do?seqId=0000003638&BBS_ID=4c9b3e75-2935-4bcd-96be-62fb07903949&IPDS_IDX=2e8989e9-02ae-48be-9591-f3c4c8e7fa39&BBS_TYPE=L&COLM1=notice&COLM1_CD=notice_02&COLM1_STATUS=&SEARCH_CONTITION=CPDS_SUBJECT_CONTENT&SEARCH_KEYWORD=&CURRENT_PAGE=1",
-   "regionText": "경상북도 칠곡군",
-   "youth": true
-  },
-  {
-   "id": "myhome-20901-1",
-   "panId": null,
-   "title": "2026년 칠곡군 천원주택(청년 매입임대주택) 입주자 및 예비입주자 모집 공고",
-   "source": "마이홈",
-   "agency": "경상북도개발공사",
-   "type": "매입임대",
-   "category": "매입임대",
-   "houseType": "다가구주택",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-07-28",
-   "start": "2026-07-28",
-   "end": "2026-11-30",
-   "winnerDate": "2026-11-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20901&houseSn=1",
-   "agencyUrl": "https://www.gbdc.co.kr/boardview/boardview.do?seqId=0000003638&BBS_ID=4c9b3e75-2935-4bcd-96be-62fb07903949&IPDS_IDX=2e8989e9-02ae-48be-9591-f3c4c8e7fa39&BBS_TYPE=L&COLM1=notice&COLM1_CD=notice_02&COLM1_STATUS=&SEARCH_CONTITION=CPDS_SUBJECT_CONTENT&SEARCH_KEYWORD=&CURRENT_PAGE=1",
-   "regionText": "경상북도 칠곡군",
-   "youth": true
-  },
-  {
-   "id": "myhome-21507-1",
+   "id": "myhome-21507",
    "panId": "2015122300021025",
    "title": "‘26.11월 경주시, 영천시 국민임대주택 동호지정 입주자격 완화 입주자 모집(선계약 후검증)",
    "source": "LH·마이홈",
@@ -1720,77 +1236,11 @@
    "status": "공고중",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21507&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021025&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "경상북도 경주시",
+   "regionText": "경상북도 경주시, 영천시",
    "youth": false
   },
   {
-   "id": "myhome-21507-2",
-   "panId": "2015122300021025",
-   "title": "‘26.11월 경주시, 영천시 국민임대주택 동호지정 입주자격 완화 입주자 모집(선계약 후검증)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-24",
-   "end": "2026-12-01",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21507&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021025&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "경상북도 경주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21507-3",
-   "panId": "2015122300021025",
-   "title": "‘26.11월 경주시, 영천시 국민임대주택 동호지정 입주자격 완화 입주자 모집(선계약 후검증)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-24",
-   "end": "2026-12-01",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21507&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021025&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "경상북도 경주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21507-4",
-   "panId": "2015122300021025",
-   "title": "‘26.11월 경주시, 영천시 국민임대주택 동호지정 입주자격 완화 입주자 모집(선계약 후검증)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-11-05",
-   "start": "2026-11-24",
-   "end": "2026-12-01",
-   "winnerDate": "2026-11-23",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21507&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021025&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "경상북도 영천시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21485-1",
+   "id": "myhome-21485",
    "panId": "2015122300020963",
    "title": "포항블루밸리 행복주택 입주자모집(3개월분 임대료 면제, 선착순 동호지정)",
    "source": "LH·마이홈",
@@ -1812,7 +1262,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21496-1",
+   "id": "myhome-21496",
    "panId": "2015122300020974",
    "title": "충주연수2 영구임대주택 예비입주자 모집 공고[2026.11.04]",
    "source": "LH·마이홈",
@@ -1834,7 +1284,7 @@
    "youth": false
   },
   {
-   "id": "myhome-20571-1",
+   "id": "myhome-20571",
    "panId": "2015122300020042",
    "title": "포항블루밸리 행복주택 선착순 동호지정 상시모집(입주자격 완화, 통합공임 일반계층 추가, 선계약 후검증)",
    "source": "마이홈",
@@ -1856,7 +1306,7 @@
    "youth": true
   },
   {
-   "id": "myhome-20460-2",
+   "id": "myhome-20460",
    "panId": "2015122300020090",
    "title": "삼척시·정선군 국민임대 예비입주자 상시모집(26.6.10)",
    "source": "마이홈",
@@ -1874,55 +1324,11 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20460&houseSn=2",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020090&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 삼척시",
+   "regionText": "강원특별자치도 삼척시, 정선군",
    "youth": false
   },
   {
-   "id": "myhome-20460-8",
-   "panId": "2015122300020090",
-   "title": "삼척시·정선군 국민임대 예비입주자 상시모집(26.6.10)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-06-10",
-   "start": "2026-06-24",
-   "end": "2026-12-30",
-   "winnerDate": "2027-02-28",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20460&houseSn=8",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020090&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 삼척시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20460-9",
-   "panId": "2015122300020090",
-   "title": "삼척시·정선군 국민임대 예비입주자 상시모집(26.6.10)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-06-10",
-   "start": "2026-06-24",
-   "end": "2026-12-30",
-   "winnerDate": "2027-02-28",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20460&houseSn=9",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020090&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 정선군",
-   "youth": false
-  },
-  {
-   "id": "myhome-21374-1",
+   "id": "myhome-21374",
    "panId": "2015122300020850",
    "title": "익산제3일반산단 행복주택 입주자격완화 추가모집(동호지정,선계약후검증)",
    "source": "LH·마이홈",
@@ -1944,7 +1350,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21204-12",
+   "id": "myhome-21204",
    "panId": "2015122300020730",
    "title": "태백장성 국민임대주택 예비입주자 입주자격완화 상시모집",
    "source": "LH·마이홈",
@@ -1966,7 +1372,7 @@
    "youth": false
   },
   {
-   "id": "myhome-19834-",
+   "id": "myhome-19834",
    "panId": "2015122300019546",
    "title": "2026 다자녀 전세임대 입주자 수시모집 공고",
    "source": "마이홈",
@@ -2003,7 +1409,7 @@
    "youth": false
   },
   {
-   "id": "myhome-19833-",
+   "id": "myhome-19833",
    "panId": "2015122300019550",
    "title": "2026년 신혼·신생아 전세임대 I 입주자 수시모집 공고",
    "source": "마이홈",
@@ -2040,7 +1446,7 @@
    "youth": false
   },
   {
-   "id": "myhome-19832-",
+   "id": "myhome-19832",
    "panId": "2015122300019551",
    "title": "2026년 신혼·신생아 전세임대Ⅱ 입주자 수시모집 공고",
    "source": "마이홈",
@@ -2077,7 +1483,7 @@
    "youth": false
   },
   {
-   "id": "myhome-19631-",
+   "id": "myhome-19631",
    "panId": "2015122300019376",
    "title": "2026년 청년 전세임대 1순위 입주자 수시모집",
    "source": "마이홈",
@@ -2114,7 +1520,7 @@
    "youth": true
   },
   {
-   "id": "myhome-19696-",
+   "id": "myhome-19696",
    "panId": "2015122300019433",
    "title": "[청년신혼부부매입임대리츠주택] 충남당진 송산청광플러스원 입주자격완화 상시모집",
    "source": "마이홈",
@@ -2136,7 +1542,7 @@
    "youth": true
   },
   {
-   "id": "myhome-19677-1",
+   "id": "myhome-19677",
    "panId": "2015122300019412",
    "title": "김제검산1단지 영구임대주택 예비입주자 모집 공고(상시모집)",
    "source": "마이홈",
@@ -2158,7 +1564,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21161-1",
+   "id": "myhome-21161",
    "panId": "2015122300020649",
    "title": "남원노암단지 영구임대주택 입주자격완화 예비입주자 모집공고",
    "source": "마이홈",
@@ -2180,7 +1586,7 @@
    "youth": false
   },
   {
-   "id": "myhome-19575-1",
+   "id": "myhome-19575",
    "panId": "2015122300019312",
    "title": "동해유성,태백철암장미 입주자격완화 예비입주자 상시모집(26.02.02 공고)",
    "source": "마이홈",
@@ -2198,33 +1604,11 @@
    "status": "정정공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19575&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019312&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 동해시",
+   "regionText": "강원특별자치도 동해시, 태백시",
    "youth": false
   },
   {
-   "id": "myhome-19575-2",
-   "panId": "2015122300019312",
-   "title": "동해유성,태백철암장미 입주자격완화 예비입주자 상시모집(26.02.02 공고)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-02-02",
-   "start": "2026-02-12",
-   "end": "2026-12-31",
-   "winnerDate": "2026-12-31",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19575&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019312&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 태백시",
-   "youth": false
-  },
-  {
-   "id": "myhome-19573-1",
+   "id": "myhome-19573",
    "panId": "2015122300019308",
    "title": "동해유성,태백철암장미 입주자격완화 예비입주자 상시모집(26.02.02 공고)",
    "source": "마이홈",
@@ -2242,33 +1626,11 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19573&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019308&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 동해시",
+   "regionText": "강원특별자치도 동해시, 태백시",
    "youth": false
   },
   {
-   "id": "myhome-19573-2",
-   "panId": "2015122300019308",
-   "title": "동해유성,태백철암장미 입주자격완화 예비입주자 상시모집(26.02.02 공고)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-02-02",
-   "start": "2026-02-12",
-   "end": "2026-12-31",
-   "winnerDate": "2026-12-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19573&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019308&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 태백시",
-   "youth": false
-  },
-  {
-   "id": "myhome-19585-2",
+   "id": "myhome-19585",
    "panId": "2015122300019241",
    "title": "전주시(전주평화1,전주평화4) 영구임대주택 예비입주자 모집 공고(공고일:2026.02.10.)",
    "source": "마이홈",
@@ -2290,29 +1652,7 @@
    "youth": false
   },
   {
-   "id": "myhome-19585-3",
-   "panId": "2015122300019241",
-   "title": "전주시(전주평화1,전주평화4) 영구임대주택 예비입주자 모집 공고(공고일:2026.02.10.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "영구임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-02-10",
-   "start": "2026-03-03",
-   "end": "2026-12-31",
-   "winnerDate": "2027-03-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19585&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019241&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
-   "regionText": "전북특별자치도 전주시 완산구",
-   "youth": false
-  },
-  {
-   "id": "myhome-19574-1",
+   "id": "myhome-19574",
    "panId": "2015122300019307",
    "title": "태백궁전 국민임대 입주자격완화 예비입주자 상시모집(26.02.02 공고)",
    "source": "마이홈",
@@ -2334,7 +1674,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21083-1",
+   "id": "myhome-21083",
    "panId": "2015122300020581",
    "title": "삼척도계·정선신동 국민임대주택 예비입주자 입주자격완화 공고",
    "source": "마이홈",
@@ -2352,33 +1692,11 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21083&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020581&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 삼척시",
+   "regionText": "강원특별자치도 삼척시, 정선군",
    "youth": false
   },
   {
-   "id": "myhome-21083-2",
-   "panId": "2015122300020581",
-   "title": "삼척도계·정선신동 국민임대주택 예비입주자 입주자격완화 공고",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "강원"
-   ],
-   "noticeDate": "2026-08-25",
-   "start": "2026-09-15",
-   "end": "2027-01-29",
-   "winnerDate": "2027-01-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21083&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020581&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "강원특별자치도 정선군",
-   "youth": false
-  },
-  {
-   "id": "myhome-21332-",
+   "id": "myhome-21332",
    "panId": null,
    "title": "2026년 영주시 드림주택(신혼신생아 매입임대주택1) 입주자 및 예비입주자 모집 공고",
    "source": "마이홈",
@@ -2400,29 +1718,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21332-1",
-   "panId": null,
-   "title": "2026년 영주시 드림주택(신혼신생아 매입임대주택1) 입주자 및 예비입주자 모집 공고",
-   "source": "마이홈",
-   "agency": "경상북도개발공사",
-   "type": "매입임대",
-   "category": "매입임대",
-   "houseType": "연립주택",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-09-22",
-   "start": "2026-09-22",
-   "end": "2027-01-31",
-   "winnerDate": "2027-01-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21332&houseSn=1",
-   "agencyUrl": "https://www.gbdc.co.kr/boardview/boardview.do?seqId=0000003638&BBS_ID=4c9b3e75-2935-4bcd-96be-62fb07903949&IPDS_IDX=11c991e5-1799-44a9-81bb-46ec039a129e&BBS_TYPE=L&COLM1=notice&COLM1_CD=notice_02&COLM1_STATUS=&SEARCH_CONTITION=CPDS_SUBJECT_CONTENT&SEARCH_KEYWORD=&CURRENT_PAGE=1",
-   "regionText": "경상북도 영주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-21328-",
+   "id": "myhome-21328",
    "panId": null,
    "title": "2026년 영주시 드림주택(청년 매입임대주택) 입주자 및 예비입주자 모집 공고",
    "source": "마이홈",
@@ -2444,29 +1740,7 @@
    "youth": true
   },
   {
-   "id": "myhome-21328-1",
-   "panId": null,
-   "title": "2026년 영주시 드림주택(청년 매입임대주택) 입주자 및 예비입주자 모집 공고",
-   "source": "마이홈",
-   "agency": "경상북도개발공사",
-   "type": "매입임대",
-   "category": "매입임대",
-   "houseType": "연립주택",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-09-22",
-   "start": "2026-09-22",
-   "end": "2027-01-31",
-   "winnerDate": "2027-01-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21328&houseSn=1",
-   "agencyUrl": "https://www.gbdc.co.kr/boardview/boardview.do?seqId=0000003638&BBS_ID=4c9b3e75-2935-4bcd-96be-62fb07903949&IPDS_IDX=a909c7bf-c6d5-4501-9cb5-3e511fefee38&BBS_TYPE=L&COLM1=notice&COLM1_CD=notice_02&COLM1_STATUS=&SEARCH_CONTITION=CPDS_SUBJECT_CONTENT&SEARCH_KEYWORD=&CURRENT_PAGE=1",
-   "regionText": "경상북도 영주시",
-   "youth": true
-  },
-  {
-   "id": "myhome-21333-",
+   "id": "myhome-21333",
    "panId": null,
    "title": "2026년 영주시 일반 매입임대주택 입주자 및 예비입주자 모집 공고",
    "source": "마이홈",
@@ -2488,29 +1762,7 @@
    "youth": false
   },
   {
-   "id": "myhome-21333-1",
-   "panId": null,
-   "title": "2026년 영주시 일반 매입임대주택 입주자 및 예비입주자 모집 공고",
-   "source": "마이홈",
-   "agency": "경상북도개발공사",
-   "type": "매입임대",
-   "category": "매입임대",
-   "houseType": "연립주택",
-   "sido": [
-    "경북"
-   ],
-   "noticeDate": "2026-09-22",
-   "start": "2026-09-22",
-   "end": "2027-01-31",
-   "winnerDate": "2027-01-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21333&houseSn=1",
-   "agencyUrl": "https://www.gbdc.co.kr/boardview/boardview.do?seqId=0000003638&BBS_ID=4c9b3e75-2935-4bcd-96be-62fb07903949&IPDS_IDX=65ece228-0c1f-4cbb-b8d7-55dd68eb4405&BBS_TYPE=L&COLM1=notice&COLM1_CD=notice_02&COLM1_STATUS=&SEARCH_CONTITION=CPDS_SUBJECT_CONTENT&SEARCH_KEYWORD=&CURRENT_PAGE=1",
-   "regionText": "경상북도 영주시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20935-1",
+   "id": "myhome-20935",
    "panId": "2015122300020453",
    "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
    "source": "마이홈",
@@ -2532,139 +1784,7 @@
    "youth": false
   },
   {
-   "id": "myhome-20935-2",
-   "panId": "2015122300020453",
-   "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-07-30",
-   "start": "2026-08-12",
-   "end": "2027-07-31",
-   "winnerDate": "2027-07-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20935&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020453&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "전북특별자치도 군산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20935-3",
-   "panId": "2015122300020453",
-   "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-07-30",
-   "start": "2026-08-12",
-   "end": "2027-07-31",
-   "winnerDate": "2027-07-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20935&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020453&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "전북특별자치도 군산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20935-4",
-   "panId": "2015122300020453",
-   "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-07-30",
-   "start": "2026-08-12",
-   "end": "2027-07-31",
-   "winnerDate": "2027-07-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20935&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020453&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "전북특별자치도 군산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20935-5",
-   "panId": "2015122300020453",
-   "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-07-30",
-   "start": "2026-08-12",
-   "end": "2027-07-31",
-   "winnerDate": "2027-07-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20935&houseSn=5",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020453&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "전북특별자치도 군산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20935-6",
-   "panId": "2015122300020453",
-   "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-07-30",
-   "start": "2026-08-12",
-   "end": "2027-07-31",
-   "winnerDate": "2027-07-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20935&houseSn=6",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020453&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "전북특별자치도 군산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-20935-7",
-   "panId": "2015122300020453",
-   "title": "군산시 국민임대주택 입주자 선착순 상시 모집(경암부향 등 7개 단지)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "전북"
-   ],
-   "noticeDate": "2026-07-30",
-   "start": "2026-08-12",
-   "end": "2027-07-31",
-   "winnerDate": "2027-07-31",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=20935&houseSn=7",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020453&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "전북특별자치도 군산시",
-   "youth": false
-  },
-  {
-   "id": "myhome-18977-1",
+   "id": "myhome-18977",
    "panId": "2015122300018799",
    "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
    "source": "마이홈",
@@ -2682,121 +1802,11 @@
    "status": "정정공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18977&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018799&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 울주군",
+   "regionText": "울산광역시 울주군, 북구, 동구",
    "youth": false
   },
   {
-   "id": "myhome-18977-2",
-   "panId": "2015122300018799",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18977&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018799&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 울주군",
-   "youth": false
-  },
-  {
-   "id": "myhome-18977-3",
-   "panId": "2015122300018799",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18977&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018799&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 북구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18977-4",
-   "panId": "2015122300018799",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18977&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018799&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 북구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18977-5",
-   "panId": "2015122300018799",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18977&houseSn=5",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018799&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 동구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18977-6",
-   "panId": "2015122300018799",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "정정공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18977&houseSn=6",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018799&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 북구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18976-1",
+   "id": "myhome-18976",
    "panId": "2015122300018780",
    "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
    "source": "마이홈",
@@ -2814,117 +1824,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18976&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018780&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 울주군",
-   "youth": false
-  },
-  {
-   "id": "myhome-18976-2",
-   "panId": "2015122300018780",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18976&houseSn=2",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018780&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 울주군",
-   "youth": false
-  },
-  {
-   "id": "myhome-18976-3",
-   "panId": "2015122300018780",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18976&houseSn=3",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018780&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 북구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18976-4",
-   "panId": "2015122300018780",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18976&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018780&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 북구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18976-5",
-   "panId": "2015122300018780",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18976&houseSn=5",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018780&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 동구",
-   "youth": false
-  },
-  {
-   "id": "myhome-18976-6",
-   "panId": "2015122300018780",
-   "title": "울산광역시 국민임대주택 예비입주자 정례모집 공고(2025.09.15.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "국민임대",
-   "category": "국민·공공임대",
-   "houseType": "아파트",
-   "sido": [
-    "울산"
-   ],
-   "noticeDate": "2025-09-15",
-   "start": "2025-09-29",
-   "end": "2029-10-01",
-   "winnerDate": "2026-01-30",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=18976&houseSn=6",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018780&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-   "regionText": "울산광역시 북구",
+   "regionText": "울산광역시 울주군, 북구, 동구",
    "youth": false
   }
  ]
