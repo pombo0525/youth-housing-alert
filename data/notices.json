@@ -1,17 +1,17 @@
 {
- "updatedAt": "2026-11-09T22:02+09:00",
+ "updatedAt": "2026-11-09T22:51+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 52,
-   "checkedAt": "2026-11-09T22:02+09:00",
-   "lastOkAt": "2026-11-09T22:02+09:00"
+   "checkedAt": "2026-11-09T22:51+09:00",
+   "lastOkAt": "2026-11-09T22:51+09:00"
   },
   "마이홈": {
    "ok": true,
    "count": 77,
-   "checkedAt": "2026-11-09T22:02+09:00",
-   "lastOkAt": "2026-11-09T22:02+09:00"
+   "checkedAt": "2026-11-09T22:51+09:00",
+   "lastOkAt": "2026-11-09T22:51+09:00"
   }
  },
  "count": 69,
@@ -37,6 +37,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21467&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061188&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
    "regionText": "전남광주통합특별시 광산구",
+   "lhType": "공공임대",
    "youth": false
   },
   {
@@ -59,6 +60,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21468&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020932&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "충청남도 홍성군",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -81,6 +83,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21486",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020965&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
    "regionText": "충청북도 청주시 흥덕구, 청주시 청원구, 청주시 상당구",
+   "lhType": "매입임대",
    "youth": false
   },
   {
@@ -103,6 +106,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21491",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020972&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
    "regionText": "부산광역시 금정구, 수영구, 해운대구",
+   "lhType": "매입임대",
    "youth": false
   },
   {
@@ -125,6 +129,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21483&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020960&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "경기도 과천시",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -192,6 +197,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21434&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020897&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 여수시",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -214,6 +220,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=4",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "경기도 화성시 동탄구",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -223,6 +230,7 @@
    "source": "LH",
    "agency": "LH",
    "type": "국민임대",
+   "lhType": "국민임대",
    "category": "국민·공공임대",
    "regionText": "부산광역시",
    "sido": [
@@ -255,6 +263,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21463",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020933&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
    "regionText": "경상남도 거창군",
+   "lhType": "매입임대",
    "youth": false
   },
   {
@@ -277,6 +286,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21464",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020928&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
    "regionText": "경상남도 의령군",
+   "lhType": "매입임대",
    "youth": false
   },
   {
@@ -299,6 +309,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21470",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020944&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
    "regionText": "경상남도",
+   "lhType": "매입임대",
    "youth": false
   },
   {
@@ -322,6 +333,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21473&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020977&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 북구",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -345,6 +357,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21472&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020981&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 북구",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -368,6 +381,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21475&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020978&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 북구",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -391,6 +405,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21476&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020976&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 북구",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -414,6 +429,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21479&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020979&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 광산구",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -437,6 +453,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21478&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020980&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전남광주통합특별시 광산구",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -459,6 +476,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21454&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020959&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "전북특별자치도 김제시",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -503,6 +521,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21431&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020916&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "전북특별자치도 전주시 덕진구",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -525,6 +544,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21508&houseSn=2",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
    "regionText": "경기도 평택시, 안성시",
+   "lhType": "공공임대",
    "youth": false
   },
   {
@@ -547,6 +567,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21511&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021031&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "인천광역시 남동구",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -570,6 +591,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21488&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020905&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=48&mi=1026",
    "regionText": "전남광주통합특별시 담양군",
+   "lhType": "통합공공임대",
    "youth": false
   },
   {
@@ -592,6 +614,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21499&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020996&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "경기도 연천군",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -601,6 +624,7 @@
    "source": "LH",
    "agency": "LH",
    "type": "행복주택",
+   "lhType": "행복주택",
    "category": "행복주택",
    "regionText": "경기도",
    "sido": [
@@ -655,6 +679,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21495&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020962&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "충청남도 공주시",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -677,6 +702,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21494&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020896&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "경기도 오산시",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -699,6 +725,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21487&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061193&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026",
    "regionText": "울산광역시 북구",
+   "lhType": "공공임대",
    "youth": false
   },
   {
@@ -765,6 +792,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21430&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020917&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "전북특별자치도 완주군",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -787,6 +815,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21504&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021026&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "인천광역시 남동구",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -809,6 +838,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21492&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020993&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=48&mi=1026",
    "regionText": "강원특별자치도 평창군",
+   "lhType": "통합공공임대",
    "youth": false
   },
   {
@@ -831,6 +861,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21493&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020992&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=48&mi=1026",
    "regionText": "강원특별자치도 평창군",
+   "lhType": "통합공공임대",
    "youth": false
   },
   {
@@ -840,6 +871,7 @@
    "source": "LH",
    "agency": "LH",
    "type": "가정어린이집",
+   "lhType": "가정어린이집",
    "category": "기타",
    "regionText": "인천광역시",
    "sido": [
@@ -872,6 +904,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21505&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021022&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026",
    "regionText": "전북특별자치도 남원시",
+   "lhType": "공공임대",
    "youth": false
   },
   {
@@ -894,6 +927,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21510&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020975&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026",
    "regionText": "충청북도 제천시",
+   "lhType": "공공임대",
    "youth": false
   },
   {
@@ -916,6 +950,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21498&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021017&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "전북특별자치도 익산시",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -938,6 +973,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21513&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021011&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "강원특별자치도 원주시",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -960,6 +996,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21497&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020995&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "강원특별자치도 정선군",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -982,6 +1019,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21503&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020973&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "경기도 평택시",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -1048,6 +1086,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21507&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021025&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "경상북도 경주시, 영천시",
+   "lhType": "국민임대",
    "youth": false
   },
   {
@@ -1070,6 +1109,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21485&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020963&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "경상북도 포항시 남구",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -1092,6 +1132,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21496&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020974&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
    "regionText": "충청북도 충주시",
+   "lhType": "영구임대",
    "youth": false
   },
   {
@@ -1158,6 +1199,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21374&houseSn=1",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020850&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "전북특별자치도 익산시",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -1180,6 +1222,7 @@
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21204&houseSn=12",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020730&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
    "regionText": "강원특별자치도 태백시",
+   "lhType": "국민임대",
    "youth": false
   },
   {
