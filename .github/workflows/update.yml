@@ -1,0 +1,55 @@
+name: 공고 자동 업데이트
+
+on:
+  schedule:
+    # 한국 시간 06:13, 12:13, 18:13, 00:13 (GitHub 사정으로 조금 늦게 시작될 수 있어요)
+    - cron: "13 21,3,9,15 * * *"
+  workflow_dispatch:   # Actions 탭에서 'Run workflow' 버튼으로 바로 실행
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/**"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: update-notices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 공고 받아오기
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: python scripts/fetch_notices.py
+
+      - name: 바뀐 공고 저장
+        if: always()
+        run: |
+          if [ -z "$(git status --porcelain -- data/notices.json)" ]; then
+            echo "바뀐 내용 없음"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/notices.json
+          git commit -m "공고 업데이트 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      # 60일 동안 저장소에 변화가 없으면 GitHub가 예약 실행을 멈추는 걸 막아요
+      - name: 예약 실행 유지
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${{ github.repository }}/actions/workflows/update.yml/enable" --silent || true
