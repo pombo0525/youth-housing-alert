@@ -1,0 +1,82 @@
+{
+ "savedAt": "2026-11-10T12:22+09:00",
+ "pages": [
+  {
+   "name": "youth_list",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/list.do?menuNo=400008",
+   "status": 200,
+   "finalUrl": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/list.do?menuNo=400008",
+   "bytes": 45530,
+   "note": "",
+   "foundLinks": []
+  },
+  {
+   "name": "sh_housing_01",
+   "url": "https://housing.seoul.go.kr/site/main/sh/publicLease/01/list",
+   "status": 200,
+   "finalUrl": "https://housing.seoul.go.kr/site/main/sh/publicLease/01/list",
+   "bytes": 55783,
+   "note": ""
+  },
+  {
+   "name": "sh_housing_02",
+   "url": "https://housing.seoul.go.kr/site/main/sh/publicLease/02/list",
+   "status": 200,
+   "finalUrl": "https://housing.seoul.go.kr/site/main/sh/publicLease/02/list",
+   "bytes": 65477,
+   "note": ""
+  },
+  {
+   "name": "sh_housing_03",
+   "url": "https://housing.seoul.go.kr/site/main/sh/publicLease/03/list",
+   "status": 200,
+   "finalUrl": "https://housing.seoul.go.kr/site/main/sh/publicLease/03/list",
+   "bytes": 69224,
+   "note": ""
+  },
+  {
+   "name": "sh_housing_04",
+   "url": "https://housing.seoul.go.kr/site/main/sh/publicLease/04/list",
+   "status": 200,
+   "finalUrl": "https://housing.seoul.go.kr/site/main/sh/publicLease/04/list",
+   "bytes": 69556,
+   "note": "",
+   "foundLinks": []
+  },
+  {
+   "name": "sh_ish_list",
+   "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do",
+   "status": 200,
+   "finalUrl": "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do",
+   "bytes": 221849,
+   "note": "",
+   "foundLinks": []
+  },
+  {
+   "name": "gh_main",
+   "url": "https://apply.gh.or.kr/co/coa/selectMainView.do",
+   "status": 200,
+   "finalUrl": "https://apply.gh.or.kr/co/coa/selectMainView.do",
+   "bytes": 106200,
+   "note": "",
+   "foundLinks": [
+    "javascript:$net.href('/sb/sr/sr7150/selectPbancRentHouseList.do');",
+    "javascript:$net.href('/sb/sr/sr7170/selectPbancRentSopsrtList.do');",
+    "javascript:$net.href('/sb/sr/sr7155/selectPbancRentHouseList.do');",
+    "javascript:$net.href('/sr/sr7940/selectRentGuideList.do');",
+    "javascript:$net.href('/sb/sr/sr7310/selectPbancList.do');",
+    "javascript:$net.href('/sb/sr/sr7320/selectPaprSbmsnPbancList.do');"
+   ]
+  },
+  {
+   "name": "gh_main_view1",
+   "url": "javascript:$net.href('/sb/sr/sr7150/selectPbancRentHouseList.do');",
+   "error": "<urlopen error unknown url type: javascript>"
+  },
+  {
+   "name": "gh_main_view2",
+   "url": "javascript:$net.href('/sb/sr/sr7170/selectPbancRentSopsrtList.do');",
+   "error": "<urlopen error unknown url type: javascript>"
+  }
+ ]
+}
