@@ -2,6 +2,7 @@
 
 - LH 분양임대공고문 조회 서비스 (한국토지주택공사)
 - 마이홈포털 공공주택 모집공고 조회 서비스 (국토교통부)
+- 청년안심주택(서울시), SH(서울주거포털), GH 청약센터의 공개 공고 목록 페이지
 
 GitHub Actions 가 하루 여러 번 이 파일을 실행합니다.
 인증키는 저장소 비밀값(Secrets) DATA_GO_KR_KEY 에서만 읽고, 화면이나 파일에 남기지 않습니다.
@@ -10,6 +11,8 @@ GitHub Actions 가 하루 여러 번 이 파일을 실행합니다.
 """
 from __future__ import annotations
 
+import hashlib
+import html
 import json
 import os
 import re
@@ -35,23 +38,16 @@ KEEP_CLOSED_DAYS = 0  # 마감일이 지난 공고는 바로 뺍니다
 TARGET_SIDO = {"서울", "경기", "전국"}
 EXCLUDE_WORDS = ("기관공급", "기업체", "신혼부부", "신혼희망", "신생아", "고령자", "다자녀", "분양", "상가")
 
-# 다음 단계 준비: 자동 수집을 만들기 위해 세 기관의 공고 목록 페이지를 저장해 둬요(사이트 화면에는 안 보여요)
-SAMPLE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "debug")
-SAMPLE_PAGES = [
-    ("youth_list", "https://soco.seoul.go.kr/youth/bbs/BMSR00015/list.do?menuNo=400008"),
-    ("sh_housing_01", "https://housing.seoul.go.kr/site/main/sh/publicLease/01/list"),
-    ("sh_housing_02", "https://housing.seoul.go.kr/site/main/sh/publicLease/02/list"),
-    ("sh_housing_03", "https://housing.seoul.go.kr/site/main/sh/publicLease/03/list"),
-    ("sh_housing_04", "https://housing.seoul.go.kr/site/main/sh/publicLease/04/list"),
-    ("sh_ish_list", "https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do"),
-    ("gh_main", "https://apply.gh.or.kr/co/coa/selectMainView.do"),
-]
-SAMPLE_LINK_PATTERNS = {
-    "youth_list": r'href="([^"]*BMSR00015/view\.do[^"]*)"',
-    "sh_housing_04": r'href="([^"]*publicLease/04/view[^"]*)"',
-    "sh_ish_list": r'href="([^"]*m_247/view\.do[^"]*)"',
-    "gh_main": r'(?:href|data-url)="([^"]*(?:Pbanc|pbanc|Rent|rent)[^"]*)"',
-}
+# 공식 데이터가 없는 곳은 공개된 공고 목록 페이지를 하루 4번 읽어 와요(robots.txt 허용 확인: 2026.11)
+YOUTH_HOME_JSON = "https://soco.seoul.go.kr/youth/pgm/home/yohome/bbsListJson.json"   # 청년안심주택 모집공고 목록
+YOUTH_HOME_VIEW = "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId={id}&menuNo=400008"
+SH_LIST = "https://housing.seoul.go.kr/site/main/sh/publicLease/{code}/list"            # 서울주거포털의 SH 공공임대 목록
+SH_CODES = ("01", "02", "03", "04", "05", "06")
+GH_PAGES = ("https://apply.gh.or.kr/co/coa/selectMainView.do",
+            "https://apply.gh.or.kr/sb/sr/sr7150/selectPbancRentHouseList.do",
+            "https://apply.gh.or.kr/sb/sr/sr7155/selectPbancRentHouseList.do")
+GH_LIST_URL = "https://apply.gh.or.kr/sb/sr/sr7150/selectPbancRentHouseList.do"
+SAMPLE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "debug")  # 1단계 임시 복사본(이제 지워요)
 BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
 SIDO = [
@@ -160,7 +156,7 @@ def is_target(n: dict) -> bool:
     if not (set(n.get("sido") or []) & TARGET_SIDO):
         return False
     s = f"{n.get('title', '')} {n.get('lhType') or ''}"
-    young = "청년" in s
+    young = "청년" in s or n.get("category") == "청년안심주택(서울)"
     if not young and any(w in s for w in EXCLUDE_WORDS):
         return False
     return young or n.get("category") == "행복주택"
@@ -327,9 +323,13 @@ def merge(lh: list[dict], myhome: list[dict]) -> list[dict]:
                 m["sido"] = l["sido"]
         merged.append(m)
     merged += list(by_pan.values())
+    return merged
+
+
+def finalize(notices: list[dict]) -> list[dict]:
     # 제목·일정·지역이 똑같은 공고가 따로 올라온 경우 화면에는 한 번만 보여줘요
     seen, unique = set(), []
-    for n in merged:
+    for n in notices:
         k = (n["title"], n.get("start"), n.get("end"), n.get("regionText"))
         if k in seen:
             continue
@@ -337,86 +337,216 @@ def merge(lh: list[dict], myhome: list[dict]) -> list[dict]:
         unique.append(n)
     merged = [n for n in unique if is_target(n)]
     for n in merged:
-        n["youth"] = "청년" in n["title"] or "청년" in (n.get("lhType") or "") or n["category"] == "행복주택"
+        n["youth"] = True
     merged.sort(key=lambda n: (n.get("end") or "9999", n["title"]))
     return merged
 
 
-def _get_raw(url: str):
-    req = urllib.request.Request(url, headers={"User-Agent": BROWSER_UA, "Accept-Language": "ko-KR,ko;q=0.9"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return r.status, r.geturl(), r.read(), ""
-    except urllib.error.HTTPError as e:
-        return e.code, url, e.read() or b"", f"HTTP {e.code}"
-    except Exception as e:
-        if "CERTIFICATE_VERIFY_FAILED" in str(e):  # 인증서 설정이 덜 된 공공 사이트용: 읽기만 하므로 한 번 더 시도
-            ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
-            with urllib.request.urlopen(req, timeout=30, context=ctx) as r:
-                return r.status, r.geturl(), r.read(), "인증서 확인 생략"
-        raise
-
-
-def save_sample_pages():
-    """세 기관의 공고 목록(과 첫 공고 몇 개)을 data/debug 에 저장해요. 실패해도 공고 업데이트에는 영향 없어요."""
-    os.makedirs(SAMPLE_DIR, exist_ok=True)
-    report = {"savedAt": datetime.now(KST).isoformat(timespec="minutes"), "pages": []}
-    todo = list(SAMPLE_PAGES)
-    done = 0
-    while todo and done < 16:
-        name, url = todo.pop(0)
-        done += 1
-        item = {"name": name, "url": url}
+def http_raw(url: str, data: dict | None = None) -> str:
+    body = urllib.parse.urlencode(data).encode() if data is not None else None
+    headers = {"User-Agent": BROWSER_UA, "Accept-Language": "ko-KR,ko;q=0.9"}
+    if data is not None:
+        headers.update({"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+                        "X-Requested-With": "XMLHttpRequest", "Accept": "application/json, text/javascript, */*"})
+    req = urllib.request.Request(url, data=body, headers=headers)
+    last = None
+    for _ in range(3):
         try:
-            status, final, body, note = _get_raw(url)
-            item.update(status=status, finalUrl=final, bytes=len(body), note=note)
-            with open(os.path.join(SAMPLE_DIR, f"{name}.html"), "wb") as f:
-                f.write(body)
-            pat = SAMPLE_LINK_PATTERNS.get(name)
-            if pat:
-                text = body.decode("utf-8", "ignore")
-                links = []
-                for href in re.findall(pat, text):
-                    full = urllib.parse.urljoin(final, href.replace("&amp;", "&"))
-                    if full not in links:
-                        links.append(full)
-                item["foundLinks"] = links[:10]
-                for i, link in enumerate(links[:2], 1):
-                    todo.append((f"{name}_view{i}", link))
+            try:
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    raw = r.read()
+            except Exception as e:
+                if "CERTIFICATE_VERIFY_FAILED" not in str(e):
+                    raise
+                ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
+                with urllib.request.urlopen(req, timeout=30, context=ctx) as r:  # 공개 페이지를 읽기만 해요
+                    raw = r.read()
+            return raw.decode("utf-8", "replace")
         except Exception as e:
-            item["error"] = str(e)[:300]
-        report["pages"].append(item)
-        print(f"  페이지 저장 {name}: {item.get('status', '')} {item.get('error', '')}")
-    with open(os.path.join(SAMPLE_DIR, "report.json"), "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=1)
-    try:  # 공고 목록과 함께 저장소에 올라가도록 미리 담아 둬요
-        subprocess.run(["git", "add", SAMPLE_DIR], check=False, capture_output=True)
-    except Exception:
-        pass
+            last = e
+    raise ApiError(f"접속 실패: {last}")
+
+
+def strip_tags(h: str) -> str:
+    h = re.sub(r"<!--.*?-->", "", h, flags=re.S)
+    return clean(html.unescape(re.sub(r"<[^>]+>", " ", h)))
+
+
+def dates_in(text: str) -> tuple[str | None, str | None]:
+    """'2026-11-05 ~ 2026-11-06', '2026.11.05(수)~11.06(목)', '2026.11.05' → (시작, 마감)"""
+    text = text or ""
+    m = re.search(r"(20\d\d)[.\-/년]\s*(\d{1,2})[.\-/월]\s*(\d{1,2})", text)
+    if not m:
+        return None, None
+    y = int(m.group(1))
+    try:
+        start = date(y, int(m.group(2)), int(m.group(3)))
+    except ValueError:
+        return None, None
+    end = start
+    rest = text[m.end():]
+    if "~" in rest:
+        after = rest.split("~", 1)[1]
+        m2 = re.search(r"(?:(20\d\d)[.\-/년]\s*)?(\d{1,2})[.\-/월]\s*(\d{1,2})", after)
+        if m2:
+            try:
+                end = date(int(m2.group(1) or y), int(m2.group(2)), int(m2.group(3)))
+                if end < start:
+                    end = date(end.year + 1, end.month, end.day)
+            except ValueError:
+                pass
+    return start.isoformat(), end.isoformat()
+
+
+# ------------------------------------------------------------------ 청년안심주택 (서울시)
+def fetch_youth_home() -> list[dict]:
+    today = today_kst()
+    out = []
+    for page in (1, 2, 3):
+        text = http_raw(YOUTH_HOME_JSON, {"bbsId": "BMSR00015", "pageIndex": str(page), "searchAdresGu": "",
+                                          "searchCondition": "", "searchKeyword": "", "optn2": "", "optn5": ""})
+        try:
+            data = json.loads(text)
+        except ValueError:
+            raise ApiError("청년안심주택 목록이 알 수 없는 형식으로 왔어요: " + clean(text[:120]))
+        rows = data.get("resultList") or []
+        if not rows:
+            break
+        stop = False
+        for r in rows:
+            title = clean(r.get("nttSj"))
+            posted = ymd(r.get("optn1"))
+            start, end = dates_in(str(r.get("optn4") or ""))
+            if posted and posted < (today - timedelta(days=60)).isoformat():
+                stop = True  # 두 달 넘은 공고부터는 더 보지 않아요
+            if end and end < today.isoformat():
+                continue
+            if not end and (not posted or posted < (today - timedelta(days=30)).isoformat()):
+                continue
+            kind = {"1": "공공", "2": "민간"}.get(str(r.get("optn2")), "")
+            extra = {"1": "최초", "2": "추가"}.get(str(r.get("optn5")), "")
+            out.append({
+                "id": f"youthhome-{r.get('boardId')}", "title": title, "source": "청년안심주택",
+                "agency": clean(r.get("optn3")) or "서울시", "type": " ".join(x for x in ("청년안심주택", kind, extra) if x),
+                "category": "청년안심주택(서울)", "regionText": "서울특별시", "sido": ["서울"],
+                "noticeDate": posted, "start": start, "end": end, "status": "",
+                "url": YOUTH_HOME_VIEW.format(id=r.get("boardId")),
+            })
+        if stop:
+            break
+    return out
+
+
+# ------------------------------------------------------------------ SH (서울주거포털)
+def fetch_sh() -> list[dict]:
+    out, pages_ok = [], 0
+    for code in SH_CODES:
+        try:
+            t = http_raw(SH_LIST.format(code=code))
+        except ApiError:
+            continue
+        if "<tbody" not in t:
+            continue
+        pages_ok += 1
+        tbody = t[t.find("<tbody"):t.find("</tbody>")]
+        for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", tbody, re.S):
+            tr = re.sub(r"<!--.*?-->", "", tr, flags=re.S)
+            tds = [strip_tags(td) for td in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+            if len(tds) < 7:
+                continue
+            _, kind, title, posted, announce, status = tds[:6]
+            if status != "모집중":
+                continue
+            link = re.search(r'href="(https?://[^"]+)"', tr)
+            out.append({
+                "id": "sh-" + code + "-" + hashlib.md5(title.encode()).hexdigest()[:10], "title": title, "source": "SH", "agency": "SH",
+                "type": kind, "category": category_of(kind, title), "regionText": "서울특별시", "sido": ["서울"],
+                "noticeDate": ymd(posted), "start": None, "end": None, "winnerDate": ymd(announce),
+                "status": "모집중", "url": link.group(1) if link else SH_LIST.format(code=code),
+            })
+    if not pages_ok:
+        raise ApiError("SH 공고 목록 페이지를 하나도 읽지 못했어요")
+    return out
+
+
+# ------------------------------------------------------------------ GH (경기주택도시공사)
+def fetch_gh() -> list[dict]:
+    today = today_kst()
+    found, pages_ok = {}, 0
+    for url in GH_PAGES:
+        try:
+            t = http_raw(url)
+        except ApiError:
+            continue
+        hits = list(re.finditer(r'<a [^>]*data-pbancNo="(\d+)"[^>]*>(.*?)</a>', t, re.S))
+        if hits:
+            pages_ok += 1
+        for m in hits:
+            no, tag, body = m.group(1), m.group(0), m.group(2)
+            if no in found:
+                continue
+            biz = re.search(r'data-bizTyNm="([^"]*)"', tag)
+            title = re.search(r'<p class="leading-6[^"]*">(.*?)</p>', body, re.S)
+            period = re.search(r"신청기간\s*([0-9.\-]*)\s*~\s*([0-9.\-]*)", body)
+            st = re.search(r'status-[a-z]+[^>]*>\s*([^<]*?)\s*<', body)
+            found[no] = (clean(biz.group(1)) if biz else "", strip_tags(title.group(1)) if title else "",
+                         period.groups() if period else ("", ""), clean(st.group(1)) if st else "")
+    if not pages_ok:
+        raise ApiError("GH 공고 목록을 읽지 못했어요")
+    out = []
+    for no, (biz, title, (s1, s2), status) in found.items():
+        start, end = ymd(s1), ymd(s2) or ymd(s1)
+        if "마감" in status or (end and end < today.isoformat()):
+            continue
+        if not end and status != "공고중":
+            continue
+        out.append({
+            "id": f"gh-{no}", "title": title, "source": "GH", "agency": "GH", "type": biz,
+            "category": category_of(biz, title), "regionText": "경기도", "sido": ["경기"],
+            "noticeDate": None, "start": start, "end": ymd(s2), "status": status, "url": GH_LIST_URL,
+        })
+    return out
+
+
+def remove_sample_pages():
+    """1단계에서 임시로 저장한 페이지 복사본을 지워요."""
+    if os.path.isdir(SAMPLE_DIR):
+        import shutil
+        shutil.rmtree(SAMPLE_DIR, ignore_errors=True)
+        try:
+            subprocess.run(["git", "rm", "-r", "-q", "--cached", "--ignore-unmatch", SAMPLE_DIR], check=False, capture_output=True)
+        except Exception:
+            pass
+
+
+SOURCES = (("LH", None), ("마이홈", None), ("청년안심주택", fetch_youth_home), ("SH", fetch_sh), ("GH", fetch_gh))
 
 
 def main():
-    try:
-        save_sample_pages()
-    except Exception as e:
-        print("  (페이지 저장은 건너뜀:", e, ")")
+    remove_sample_pages()
     key = get_key()
     try:
         old = json.load(open(OUT, encoding="utf-8"))
     except Exception:
         old = {"notices": [], "sources": {}}
-    old_by_src = {"LH": [], "마이홈": []}
+    names = [n for n, _ in SOURCES]
+    old_by_src = {n: [] for n in names}
     for n in old.get("notices", []):
-        for s in ("LH", "마이홈"):
-            if s in n.get("source", ""):
+        for s in names:
+            if s in n.get("source", "").split("·"):
                 old_by_src[s].append(n)
 
     now = datetime.now(KST).isoformat(timespec="minutes")
     sources, results = {}, {}
-    for name, fn in (("LH", fetch_lh), ("마이홈", fetch_myhome)):
+    for name, fn in SOURCES:
         try:
-            results[name] = fn(key)
-            sources[name] = {"ok": True, "count": len(results[name]), "checkedAt": now}
+            if name == "LH":
+                results[name] = fetch_lh(key)
+            elif name == "마이홈":
+                results[name] = fetch_myhome(key)
+            else:
+                results[name] = fn()
+            sources[name] = {"ok": True, "count": len(results[name]), "checkedAt": now, "lastOkAt": now}
             print(f"{name}: 공고 {len(results[name])}건")
         except Exception as e:
             msg = hide(str(e), key)
@@ -424,19 +554,17 @@ def main():
             sources[name] = {"ok": False, "error": msg, "checkedAt": now, "lastOkAt": prev.get("lastOkAt")}
             results[name] = [n for n in old_by_src[name] if (n.get("end") or "9999") >= today_kst().isoformat()]
             print(f"{name}: 실패 → 지난 데이터 {len(results[name])}건 유지 ({msg})")
-        if sources[name]["ok"]:
-            sources[name]["lastOkAt"] = now
 
-    if not any(s["ok"] for s in sources.values()):
-        print("두 곳 모두 받아오지 못했어요. 인증키가 맞는지, 활용신청 후 1~2시간이 지났는지 확인해 주세요.")
+    if not any(sources[n]["ok"] for n in names):
+        print("모든 곳에서 받아오지 못했어요. 인증키와 인터넷 연결을 확인해 주세요.")
 
-    notices = merge(results["LH"], results["마이홈"])
+    notices = finalize(merge(results["LH"], results["마이홈"]) + results["청년안심주택"] + results["SH"] + results["GH"])
     out = {"updatedAt": now, "sources": sources, "count": len(notices), "notices": notices}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
-    print(f"저장 완료: 공고 {len(notices)}건")
-    if not any(s["ok"] for s in sources.values()):
+    print(f"저장 완료: 서울·경기 청년임대주택 공고 {len(notices)}건")
+    if not any(sources[n]["ok"] for n in names):
         sys.exit(1)
 
 
