@@ -171,9 +171,9 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
 
 <div class="wrap">
   <header class="hero">
-    <span class="eyebrow">청년 주거 공고 알리미</span>
+    <span class="eyebrow">서울·경기 청년임대주택 알리미</span>
     <h1>청년임대주택 공고,<br><span class="hl">이제 놓치지 마세요</span></h1>
-    <p class="lead">관심 지역과 주택 종류만 고르면, 공고가 올라오는 곳과 접수 일정을 한 화면에 모아 보여드려요.</p>
+    <p class="lead">서울·경기 청년이 시세보다 싸게 들어갈 수 있는 임대주택 모집공고를, 접수 마감이 가까운 순서로 모아 보여드려요.</p>
     <div class="status-box" id="dataStatus">⏳ 최신 공고를 불러오는 중이에요…</div>
   </header>
 
@@ -198,8 +198,8 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
 
   <!-- STEP 1 입력 -->
   <section class="card" id="formCard">
-    <h2><span class="step">1</span>내 관심 조건 고르기</h2>
-    <p class="sec-desc">진짜 이름이나 연락처는 넣지 않아도 돼요. 예시 사용자로 채워서 바로 써볼 수도 있어요.</p>
+    <h2><span class="step">1</span>어떤 집을 찾고 있나요?</h2>
+    <p class="sec-desc">지역과 주택 종류를 고르면, 맞는 공고만 모아서 보여드려요. 이름은 비워 둬도 돼요.</p>
     <div class="grid2">
       <div>
         <label class="field" for="nick">부를 이름 (선택)</label>
@@ -211,9 +211,9 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
       </div>
     </div>
     <div style="margin-top:16px">
-      <span class="field" style="display:block;font-weight:700;font-size:14px;margin-bottom:8px">관심 주택 종류 (여러 개 골라도 돼요)</span>
+      <span class="field" style="display:block;font-weight:700;font-size:14px;margin-bottom:8px">청년임대주택 종류 (여러 개 골라도 돼요)</span>
       <div class="chips" id="typeChips"></div>
-      <label class="check"><input type="checkbox" id="youthOnly"> 청년 대상 공고만 보기 (행복주택, 제목에 ‘청년’이 들어간 공고)</label>
+      <p class="hint">행복주택은 청년·신혼부부 등 여러 계층을 함께 모집해요. 청년 물량은 공고문에서 확인하세요.</p>
     </div>
     <div style="margin-top:16px;max-width:320px">
       <label class="field" for="lead">접수 며칠 전부터 미리 알려줄까요?</label>
@@ -224,7 +224,7 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
       </select>
     </div>
     <div class="btns">
-      <button class="btn-primary" id="btnShow">내 맞춤 화면 보기 →</button>
+      <button class="btn-primary" id="btnShow">↓ 내 공고 보러 가기</button>
       <button class="btn-ghost" id="btnSample">🎲 예시 사용자로 채우기</button>
       <button class="btn-ai" data-ai="조건 입력 도우미">🤖 AI에게 말로 설명하기 <span class="tag">연결 예정</span></button>
     </div>
@@ -233,7 +233,7 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
   <div id="results">
     <!-- STEP 2 알림 문구 -->
     <section class="card">
-      <h2><span class="step">2</span><span id="greet">접수 알림</span></h2>
+      <h2><span class="step">2</span><span id="greet">내 조건에 맞는 공고</span></h2>
       <p class="sec-desc" id="alertDesc">접수일이 다가오는 공고부터 보여드려요.</p>
       <div class="alerts" id="alertList"></div>
       <div class="rule-note">💡 공고 이름과 날짜는 공공데이터에서 받아온 실제 정보예요. 알림 문장은 정해 둔 규칙(마감 1일 이내 → 긴급, 접수 중 → 진행, 미리 알림 기간 안 → 곧 시작, 그 밖 → 여유)에 따라 골라 쓴 거예요. LH 공고 중 일부는 접수 시작일이 데이터에 없어서 마감일만 보여요.</div>
@@ -245,8 +245,8 @@ footer{color:var(--sub);font-size:13px;padding:30px 0 50px;text-align:center}
 
     <!-- STEP 3 공고 확인처 -->
     <section class="card">
-      <h2><span class="step">3</span><span id="srcTitle">공고는 여기서 확인해요</span></h2>
-      <p class="sec-desc">파란 표시가 붙은 곳은 내가 고른 주택 종류를 다루는 곳이에요. SH·GH·지역 도시공사 공고는 자동 수집에 아직 포함되지 않으니 아래 사이트에서 직접 확인하세요.</p>
+      <h2><span class="step">3</span><span id="srcTitle">공고가 올라오는 곳 바로가기</span></h2>
+      <p class="sec-desc">파란 표시가 붙은 곳은 내가 고른 주택 종류를 다루는 곳이에요. SH·GH·청년안심주택 공고는 곧 위 목록에 자동으로 함께 보여드릴 예정이에요. 그전까지는 아래 사이트에서 확인하세요.</p>
       <div class="src-list" id="srcList"></div>
     </section>
 
@@ -300,51 +300,36 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
 function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),2400); }
 
 /* ---------- 기본 데이터 ---------- */
-const TYPES = ['행복주택','매입임대-청년','전세임대-청년','매입임대(일반)','전세임대(일반)','국민·공공임대','청년안심주택(서울)','기타'];
-const YOUTH_TYPES = ['행복주택','매입임대-청년','전세임대-청년','청년안심주택(서울)'];
+const TYPES = ['행복주택','매입임대-청년','전세임대-청년','청년안심주택(서울)','기타 청년주택'];
+const REGION_LIST = ['서울','경기'];
+const YOUTH_TYPES = TYPES;
 
 const srch = q => 'https://search.naver.com/search.naver?query=' + encodeURIComponent(q);
 
 // 전국 어디서나 보는 곳 (주소 확인: 2026.11)
 const NATIONAL = [
-  {name:'LH 청약플러스', org:'한국토지주택공사(LH)', url:'https://apply.lh.or.kr', types:['행복주택','매입임대-청년','매입임대(일반)','전세임대-청년','전세임대(일반)','국민·공공임대','기타'], tip:'전국 청년 매입·전세임대, 행복주택 공고 대부분이 올라와요. 신청도 여기(웹·앱)에서만 해요.'},
-  {name:'마이홈포털', org:'국토교통부', url:'https://www.myhome.go.kr', types:['행복주택','매입임대-청년','매입임대(일반)','전세임대-청년','전세임대(일반)','국민·공공임대'], tip:'여러 기관 공고를 한곳에 모아 보여주고, 내가 받을 수 있는 주택 자가진단도 돼요.'},
-  {name:'온통청년', org:'청년정책 통합 플랫폼', url:'https://www.youthcenter.go.kr', types:['전세임대-청년','전세임대(일반)','기타'], tip:'주거 말고도 월세 지원 같은 청년 정책을 같이 찾아볼 수 있어요.'}
+  {name:'LH 청약플러스', org:'한국토지주택공사(LH)', url:'https://apply.lh.or.kr', types:['행복주택','매입임대-청년','전세임대-청년','기타 청년주택'], tip:'전국 청년 매입·전세임대, 행복주택 공고 대부분이 올라와요. 신청도 여기(웹·앱)에서만 해요.'},
+  {name:'마이홈포털', org:'국토교통부', url:'https://www.myhome.go.kr', types:['행복주택','매입임대-청년','전세임대-청년'], tip:'여러 기관 공고를 한곳에 모아 보여주고, 내가 받을 수 있는 주택 자가진단도 돼요.'}
 ];
 
 // 지역별로 보는 곳. verified=true는 주소를 직접 확인한 곳, 나머지는 검색으로 연결
 const REGIONS = {
   '서울':[
-    {name:'SH 인터넷청약', org:'서울주택도시공사', url:'https://www.i-sh.co.kr', verified:true, types:['행복주택','청년안심주택(서울)','국민·공공임대','매입임대-청년','매입임대(일반)'], tip:'서울 행복주택·청년안심주택(공공임대분) 공고가 올라와요.'},
+    {name:'SH 인터넷청약', org:'서울주택도시공사', url:'https://www.i-sh.co.kr', verified:true, types:['행복주택','청년안심주택(서울)','매입임대-청년'], tip:'서울 행복주택·청년안심주택(공공임대분) 공고가 올라와요.'},
     {name:'청년안심주택', org:'서울특별시', url:'https://soco.seoul.go.kr/youth/main/main.do', verified:true, types:['청년안심주택(서울)'], tip:'역세권 청년안심주택 모집공고·단지 정보·공실 정보를 볼 수 있어요.'},
-    {name:'청년몽땅정보통', org:'서울특별시', url:'https://youth.seoul.go.kr', verified:true, types:['청년안심주택(서울)','매입임대-청년','매입임대(일반)'], tip:'서울 청년 정책과 주거 공고 소식을 모아 보여줘요.'}
+    {name:'서울주거포털', org:'서울특별시', url:'https://housing.seoul.go.kr', verified:true, types:['행복주택','매입임대-청년','청년안심주택(서울)'], tip:'SH 공공임대 공고를 모집중·마감 상태와 함께 모아 보여줘요.'}
   ],
   '경기':[
-    {name:'GH 주택청약·임대센터', org:'경기주택도시공사(GH)', url:'https://apply.gh.or.kr', verified:true, types:['행복주택','국민·공공임대','매입임대-청년','매입임대(일반)'], tip:'경기행복주택·매입임대 공고. 단지가 있는 시·군 거주자에게 우선순위를 주는 공고가 많아요.'}
-  ],
-  '인천':[{name:'인천도시공사(iH)', org:'인천광역시', q:'인천도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대','매입임대-청년','매입임대(일반)'], tip:'인천 지역 공공임대 공고가 올라와요.'}],
-  '부산':[{name:'부산도시공사(BMC)', org:'부산광역시', q:'부산도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대','매입임대-청년','매입임대(일반)'], tip:'부산 행복주택·매입임대 공고가 올라와요.'}],
-  '대구':[{name:'대구도시개발공사', org:'대구광역시', q:'대구도시개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'대구 지역 공공임대 공고가 올라와요.'}],
-  '광주':[{name:'광주도시공사', org:'광주광역시', q:'광주도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'광주 지역 공공임대 공고가 올라와요.'}],
-  '대전':[{name:'대전도시공사', org:'대전광역시', q:'대전도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대','매입임대-청년','매입임대(일반)'], tip:'대전 지역 공공임대 공고가 올라와요.'}],
-  '울산':[{name:'울산도시공사', org:'울산광역시', q:'울산도시공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'울산 지역 공공임대 공고가 올라와요.'}],
-  '세종':[{name:'LH 세종특별본부', org:'한국토지주택공사', q:'LH 세종 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'세종 공고는 대부분 LH 청약플러스에서 지역을 세종으로 골라 보면 돼요.'}],
-  '강원':[{name:'강원개발공사', org:'강원특별자치도', q:'강원개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'강원 지역 공공임대 공고가 올라와요.'}],
-  '충북':[{name:'충북개발공사', org:'충청북도', q:'충북개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'충북 지역 공공임대 공고가 올라와요.'}],
-  '충남':[{name:'충남개발공사', org:'충청남도', q:'충남개발공사 행복주택 모집공고', types:['행복주택','국민·공공임대'], tip:'충남 지역 공공임대 공고가 올라와요.'}],
-  '전북':[{name:'전북개발공사', org:'전북특별자치도', q:'전북개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'전북 지역 공공임대 공고가 올라와요.'}],
-  '전남':[{name:'전남개발공사', org:'전라남도', q:'전남개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'전남 지역 공공임대 공고가 올라와요.'}],
-  '경북':[{name:'경북개발공사', org:'경상북도', q:'경북개발공사 임대주택 모집공고', types:['행복주택','국민·공공임대'], tip:'경북 지역 공공임대 공고가 올라와요.'}],
-  '경남':[{name:'경남개발공사', org:'경상남도', q:'경남개발공사 행복주택 모집공고', types:['행복주택','국민·공공임대'], tip:'경남 지역 공공임대 공고가 올라와요.'}],
-  '제주':[{name:'제주 공공임대 공고', org:'제주특별자치도', q:'제주 행복주택 모집공고', types:['행복주택','국민·공공임대'], tip:'제주 공고는 LH 청약플러스와 도청 공고를 함께 확인하세요.'}]
+    {name:'GH 주택청약·임대센터', org:'경기주택도시공사(GH)', url:'https://apply.gh.or.kr', verified:true, types:['행복주택','매입임대-청년'], tip:'경기행복주택·매입임대 공고. 단지가 있는 시·군 거주자에게 우선순위를 주는 공고가 많아요.'}
+  ]
 };
 
 // 가짜 예시 사용자 (실존 인물 아님)
 const SAMPLE_USERS = [
   {nick:'김예시', region:'서울', types:['청년안심주택(서울)','매입임대-청년','행복주택'], lead:7},
   {nick:'박샘플', region:'경기', types:['행복주택','매입임대-청년'], lead:14},
-  {nick:'이테스트', region:'부산', types:['행복주택','전세임대-청년'], lead:7},
-  {nick:'최가짜', region:'대전', types:['매입임대-청년','전세임대-청년','국민·공공임대'], lead:3}
+  {nick:'이테스트', region:'서울', types:['행복주택','전세임대-청년'], lead:7},
+  {nick:'최가짜', region:'경기', types:['매입임대-청년','전세임대-청년'], lead:3}
 ];
 
 function today0(){ const d=new Date(); d.setHours(0,0,0,0); return d; }
@@ -365,19 +350,26 @@ async function loadData(){
   }catch(e){ DATA_ERR = e; DATA = null; }
   renderStatus(); render(true);
 }
-function isYouth(n){ return n.youth || /청년/.test(n.title + ' ' + (n.lhType||'')); }
+// 청년임대주택만: 행복주택(청년계층 포함) + 제목이나 LH 세부유형에 '청년'이 들어간 공고
+const EXCLUDE = /기관공급|기업체|신혼부부|신혼희망|신생아|고령자|다자녀|분양|상가/;
 function catOf(n){
-  const young = /청년/.test(n.title + ' ' + (n.lhType||''));
-  if (n.category === '매입임대') return young ? '매입임대-청년' : '매입임대(일반)';
-  if (n.category === '전세임대') return young ? '전세임대-청년' : '전세임대(일반)';
-  return n.category;
+  const s = n.title + ' ' + (n.lhType||'');
+  const young = /청년/.test(s);
+  if (!young && EXCLUDE.test(s)) return null;   // 청년이 지원할 수 없는 공고는 빼요
+  if (!(n.sido||[]).some(x => REGION_LIST.includes(x) || x === '전국')) return null;
+  if (n.category === '행복주택') return '행복주택';
+  if (!young) return null;
+  if (n.category === '매입임대') return '매입임대-청년';
+  if (n.category === '전세임대') return '전세임대-청년';
+  if (/안심주택|역세권/.test(n.title)) return '청년안심주택(서울)';
+  return '기타 청년주택';
 }
+function youthNotices(){ return DATA ? DATA.notices.filter(n => catOf(n)) : []; }
 function noticesFor(p){
   if (!DATA) return [];
-  return DATA.notices.filter(n =>
+  return youthNotices().filter(n =>
     (n.sido.includes(p.region) || n.sido.includes('전국')) &&
-    (p.types.includes(catOf(n))) &&
-    (!p.youthOnly || isYouth(n)));
+    p.types.includes(catOf(n)));
 }
 function fmtTime(iso){ if(!iso) return '-'; const d=new Date(iso); return `${d.getMonth()+1}월 ${d.getDate()}일 ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; }
 function renderStatus(){
@@ -396,7 +388,7 @@ function renderStatus(){
       : `<span class="src-bad" title="${esc(v.error||'')}">● ${esc(k)} 확인 실패${v.lastOkAt?` (${fmtTime(v.lastOkAt)} 데이터 표시 중)`:''}</span>`).join(' ');
   const stale = (Date.now() - new Date(DATA.updatedAt)) > 2*DAY;
   box.className = 'status-box' + (stale ? ' warn' : '');
-  box.innerHTML = `🔄 <b>마지막 업데이트 ${fmtTime(DATA.updatedAt)}</b> · 공공데이터(LH·마이홈포털)에서 하루 4번 자동으로 받아와요 · 진행 중 공고 ${DATA.count}건<br><span class="src-line">${src}</span>`
+  box.innerHTML = `🔄 <b>마지막 업데이트 ${fmtTime(DATA.updatedAt)}</b> · 공공데이터(LH·마이홈포털)에서 하루 4번 자동으로 받아와요 · 진행 중인 서울·경기 청년임대주택 공고 ${youthNotices().length}건<br><span class="src-line">${src}</span>`
     + (stale ? '<br>⚠️ 이틀 넘게 업데이트가 안 됐어요. 기관 사이트에서 직접 확인해 주세요.' : '');
 }
 
@@ -435,8 +427,9 @@ function classify(n, lead){
   const n2 = (key==='open' && toEnd!==null) ? toEnd+1 : (toStart===null ? toEnd : toStart);
   const msg = pick(PHRASES[key], n.id).replace('{n}', n2)
     .replace('{end}', n.endD ? fmt(n.endD) : '마감일').replace('{start}', n.startD ? fmt(n.startD) : '시작일');
-  return {lv, msg, badge, order, sortKey: toStart ?? toEnd ?? 999};
+  return {lv, msg, badge, order, sortKey: toEnd ?? toStart ?? 999};   // 같은 단계 안에서는 마감이 가까운 순
 }
+function regionLabel(n){ return (n.sido||[]).length >= 10 ? '전국' : (n.regionText||''); }
 function period(n){
   if (n.startD && n.endD) return `${fmt(n.startD)} ~ ${fmt(n.endD)}`;
   if (n.endD) return `${fmt(n.endD)} 마감 (시작일은 공고문 확인)`;
@@ -445,9 +438,9 @@ function period(n){
 
 /* ---------- 화면 그리기 ---------- */
 function buildForm(){
-  $('#region').innerHTML = Object.keys(REGIONS).map(r=>`<option>${r}</option>`).join('');
+  $('#region').innerHTML = REGION_LIST.map(r=>`<option>${r}</option>`).join('');
   $('#typeChips').innerHTML = TYPES.map((t,i)=>`<label class="chip"><input type="checkbox" value="${esc(t)}" ${YOUTH_TYPES.includes(t)?'checked':''}><span>${esc(t)}</span></label>`).join('');
-  const saved = store.get('yh_prefs', null);
+  const saved = store.get('yh_prefs2', null);
   if (saved){ applyPrefs(saved); }
 }
 function getPrefs(){
@@ -455,27 +448,27 @@ function getPrefs(){
     nick: $('#nick').value.trim(),
     region: $('#region').value,
     types: [...document.querySelectorAll('#typeChips input:checked')].map(i=>i.value),
-    lead: +$('#lead').value,
-    youthOnly: $('#youthOnly').checked
+    lead: +$('#lead').value
   };
 }
 function applyPrefs(p){
-  const MAP = {'매입임대':['매입임대-청년','매입임대(일반)'], '전세임대':['전세임대-청년','전세임대(일반)']};
-  p = {...p, types: (p.types||[]).flatMap(t => MAP[t] || [t]).filter(t => TYPES.includes(t))};
+  const MAP = {'매입임대':['매입임대-청년'], '전세임대':['전세임대-청년'], '기타':['기타 청년주택']};
+  let types = (p.types||[]).flatMap(t => MAP[t] || [t]).filter(t => TYPES.includes(t));
+  if (!types.length) types = TYPES.slice();
+  p = {...p, types, region: REGION_LIST.includes(p.region) ? p.region : '서울'};
   $('#nick').value = p.nick || '';
   $('#region').value = p.region;
   document.querySelectorAll('#typeChips input').forEach(i=> i.checked = p.types.includes(i.value));
   $('#lead').value = String(p.lead);
-  $('#youthOnly').checked = !!p.youthOnly;
 }
 
 function render(silent){
   const p = getPrefs();
-  store.set('yh_prefs', p);
-  if (!p.types.length) p.types = TYPES.slice();   // 아무것도 안 고르면 모든 종류를 보여줘요
-  const who = p.nick ? esc(p.nick)+'님' : '회원님';
-  $('#greet').textContent = `${p.nick ? p.nick+'님' : '회원님'}의 ${p.region} 접수 알림`;
-  $('#srcTitle').textContent = `${p.region} 공고는 여기서 확인해요`;
+  store.set('yh_prefs2', p);
+  if (!p.types.length) p.types = TYPES.slice();   // 아무것도 안 고르면 청년임대주택 전체를 보여줘요
+  const who = p.nick ? esc(p.nick)+'님이 ' : '';
+  $('#greet').textContent = '내 조건에 맞는 공고';
+  $('#srcTitle').textContent = '공고가 올라오는 곳 바로가기';
 
   // 알림
   const notices = noticesFor(p);
@@ -488,14 +481,14 @@ function render(silent){
     $('#alertList').innerHTML = '';
   } else {
     $('#alertDesc').innerHTML = rows.length
-      ? `${who}이 고른 조건에 맞는 진행 중 공고 ${rows.length}건 중 <b>${urgentCount}건</b>이 지금 챙겨야 할 공고예요. (미리 알림: ${p.lead}일 전부터)`
-      : `${esc(p.region)}에서 고른 조건에 맞는 진행 중 공고가 지금은 없어요. 새 공고가 올라오면 여기에 나타나요. 주택 종류를 더 골라 보거나 아래 확인처도 살펴보세요.`;
+      ? `마감이 가까운 순서로 보여드려요. ${who}고른 조건에 맞는 ${esc(p.region)} 청년임대주택 공고 ${rows.length}건 중 <b>${urgentCount}건</b>이 지금 챙겨야 할 공고예요. (미리 알림: ${p.lead}일 전부터)`
+      : `${esc(p.region)}에서 고른 조건에 맞는 진행 중인 청년임대주택 공고가 지금은 없어요. 새 공고가 올라오면 여기에 나타나요. 주택 종류를 더 골라 보거나 아래 바로가기도 살펴보세요.`;
     $('#alertList').innerHTML = rows.slice(0, MAX).map(({n,c}) => `
       <div class="alert lv-${c.lv}">
         <div class="badge">${esc(c.badge)}</div>
         <div style="flex:1">
           <div class="msg">${esc(c.msg)}</div>
-          <div class="meta">${esc(n.title)} · ${esc(n.agency)} · ${esc(n.regionText||'')} · 접수 ${period(n)}</div>
+          <div class="meta">${esc(n.title)} · ${esc(n.agency)} · ${esc(regionLabel(n))} · 접수 ${period(n)}</div>
           <div class="acts">
             ${n.url ? `<a class="btn-ghost btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">📄 공고문 보기 ↗</a>` : ''}
             ${n.endD ? `<button class="btn-ghost btn-sm" data-ics="${esc(n.id)}">📅 내 달력에 넣기</button>` : ''}
@@ -525,7 +518,7 @@ function render(silent){
   // 일정표
   $('#schedTbl').innerHTML = rows.length
     ? `<tr><th>공고</th><th>종류</th><th>지역</th><th>접수 기간</th><th>상태</th></tr>` +
-      rows.map(({n,c})=>`<tr><td>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}<br><span style="color:var(--sub);font-size:12.5px">${esc(n.agency)} · ${esc(n.source)}</span></td><td>${esc(catOf(n))}${n.type && !catOf(n).startsWith(n.type) ? `<br><span style="color:var(--sub);font-size:12.5px">${esc(n.type)}</span>` : ''}</td><td>${esc(n.regionText||'')}</td><td>${period(n)}</td><td><b>${esc(c.badge)}</b></td></tr>`).join('')
+      rows.map(({n,c})=>`<tr><td>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}<br><span style="color:var(--sub);font-size:12.5px">${esc(n.agency)} · ${esc(n.source)}</span></td><td>${esc(catOf(n))}${n.type && !catOf(n).startsWith(n.type) ? `<br><span style="color:var(--sub);font-size:12.5px">${esc(n.type)}</span>` : ''}</td><td>${esc(regionLabel(n))}</td><td>${period(n)}</td><td><b>${esc(c.badge)}</b></td></tr>`).join('')
     : `<tr><td class="empty">${DATA ? '조건에 맞는 진행 중 공고가 없어요.' : '공고 데이터를 기다리는 중이에요.'}</td></tr>`;
 
   $('#results').classList.remove('hidden');
@@ -670,7 +663,6 @@ loadData();     // 실제 공고 불러오기
 ['#region','#lead'].forEach(s=> $(s).addEventListener('change', ()=> render(true)));
 $('#nick').addEventListener('input', ()=> render(true));
 $('#typeChips').addEventListener('change', ()=> render(true));
-$('#youthOnly').addEventListener('change', ()=> render(true));
 videoEmbed(store.get('yh_video', '') || MY_VIDEO_URL);
 $('#videoUrl').value = store.get('yh_video', '') || MY_VIDEO_URL;
 
