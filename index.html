@@ -98,6 +98,8 @@ button,.btn{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:1
 .src-line{font-size:12.5px;color:var(--sub)}
 .src-ok{color:var(--ok);font-weight:700}.src-bad{color:var(--danger);font-weight:700}
 .alert .meta a{font-weight:700}
+.alert .acts{align-items:center}
+.elig{font-size:12.5px;color:var(--sub)}
 .check{display:inline-flex;align-items:center;gap:8px;font-size:14px;margin-top:14px;cursor:pointer}
 .check input{width:18px;height:18px;accent-color:var(--brand)}
 .rule-note{font-size:12.5px;color:var(--sub);background:var(--mute-soft);padding:8px 12px;border-radius:10px;margin-top:12px}
@@ -497,6 +499,7 @@ function render(silent){
           <div class="acts">
             ${n.url ? `<a class="btn-ghost btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">📄 공고문 보기 ↗</a>` : ''}
             ${n.endD ? `<button class="btn-ghost btn-sm" data-ics="${esc(n.id)}">📅 내 달력에 넣기</button>` : ''}
+            <span class="elig">신청 자격(나이·소득·무주택)은 공고문에서 확인하세요</span>
           </div>
         </div>
       </div>`).join('') + (rows.length > MAX ? `<div class="empty">그 밖에 ${rows.length-MAX}건은 아래 일정표에서 볼 수 있어요.</div>` : '');
