@@ -1,21 +1,75 @@
 {
- "updatedAt": "2026-11-10T12:22+09:00",
+ "updatedAt": "2026-11-10T12:35+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 52,
-   "checkedAt": "2026-11-10T12:22+09:00",
-   "lastOkAt": "2026-11-10T12:22+09:00"
+   "checkedAt": "2026-11-10T12:35+09:00",
+   "lastOkAt": "2026-11-10T12:35+09:00"
   },
   "마이홈": {
    "ok": true,
    "count": 77,
-   "checkedAt": "2026-11-10T12:22+09:00",
-   "lastOkAt": "2026-11-10T12:22+09:00"
+   "checkedAt": "2026-11-10T12:35+09:00",
+   "lastOkAt": "2026-11-10T12:35+09:00"
+  },
+  "청년안심주택": {
+   "ok": true,
+   "count": 2,
+   "checkedAt": "2026-11-10T12:35+09:00",
+   "lastOkAt": "2026-11-10T12:35+09:00"
+  },
+  "SH": {
+   "ok": true,
+   "count": 1,
+   "checkedAt": "2026-11-10T12:35+09:00",
+   "lastOkAt": "2026-11-10T12:35+09:00"
+  },
+  "GH": {
+   "ok": true,
+   "count": 6,
+   "checkedAt": "2026-11-10T12:35+09:00",
+   "lastOkAt": "2026-11-10T12:35+09:00"
   }
  },
- "count": 4,
+ "count": 6,
  "notices": [
+  {
+   "id": "youthhome-6719",
+   "title": "[민간임대] 송정역 케이제이타워 최초모집공고",
+   "source": "청년안심주택",
+   "agency": "(주)케이제이",
+   "type": "청년안심주택 민간 최초",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-03",
+   "start": "2026-11-11",
+   "end": "2026-11-11",
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6718",
+   "title": "[민간임대] 효창공원앞역 해링턴 플레이스 용산 리버뷰 최초모집공고",
+   "source": "청년안심주택",
+   "agency": "(주)이지스용산청년주택위탁관리부동산투자회사",
+   "type": "청년안심주택 민간 최초",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-03",
+   "start": "2026-11-12",
+   "end": "2026-11-12",
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6718&menuNo=400008",
+   "youth": true
+  },
   {
    "id": "myhome-21483",
    "panId": "2015122300020960",
