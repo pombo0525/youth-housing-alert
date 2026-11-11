@@ -1,57 +1,39 @@
 {
- "updatedAt": "2026-11-11T19:04+09:00",
+ "updatedAt": "2026-11-12T00:56+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 57,
-   "checkedAt": "2026-11-11T19:04+09:00",
-   "lastOkAt": "2026-11-11T19:04+09:00"
+   "checkedAt": "2026-11-12T00:56+09:00",
+   "lastOkAt": "2026-11-12T00:56+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 84,
-   "checkedAt": "2026-11-11T19:04+09:00",
-   "lastOkAt": "2026-11-11T19:04+09:00"
+   "count": 81,
+   "checkedAt": "2026-11-12T00:56+09:00",
+   "lastOkAt": "2026-11-12T00:56+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 2,
-   "checkedAt": "2026-11-11T19:04+09:00",
-   "lastOkAt": "2026-11-11T19:04+09:00"
+   "count": 1,
+   "checkedAt": "2026-11-12T00:56+09:00",
+   "lastOkAt": "2026-11-12T00:56+09:00"
   },
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-11T19:04+09:00",
-   "lastOkAt": "2026-11-11T19:04+09:00"
+   "checkedAt": "2026-11-12T00:56+09:00",
+   "lastOkAt": "2026-11-12T00:56+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-11T19:04+09:00",
-   "lastOkAt": "2026-11-11T19:04+09:00"
+   "checkedAt": "2026-11-12T00:56+09:00",
+   "lastOkAt": "2026-11-12T00:56+09:00"
   }
  },
- "count": 6,
+ "count": 5,
  "notices": [
-  {
-   "id": "youthhome-6719",
-   "title": "[민간임대] 송정역 케이제이타워 최초모집공고",
-   "source": "청년안심주택",
-   "agency": "(주)케이제이",
-   "type": "청년안심주택 민간 최초",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-03",
-   "start": "2026-11-11",
-   "end": "2026-11-11",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
-   "youth": true
-  },
   {
    "id": "youthhome-6718",
    "title": "[민간임대] 효창공원앞역 해링턴 플레이스 용산 리버뷰 최초모집공고",
@@ -154,6 +136,8 @@
     "전남",
     "광주",
     "대구",
+    "울산",
+    "경남",
     "충북",
     "경기",
     "인천",
@@ -162,8 +146,6 @@
     "대전",
     "부산",
     "강원",
-    "울산",
-    "경남",
     "서울"
    ],
    "noticeDate": "2026-02-24",
@@ -173,7 +155,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "경상북도 / 전북특별자치도 / 세종특별자치시 / 전남광주통합특별시 / 대구광역시 / 충청북도 / 경기도 / 인천광역시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 울산광역시 / 경상남도 / 서울특별시",
+   "regionText": "경상북도 / 전북특별자치도 / 세종특별자치시 / 전남광주통합특별시 / 대구광역시 / 울산광역시 / 경상남도 / 충청북도 / 경기도 / 인천광역시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
    "youth": true
   }
  ]
