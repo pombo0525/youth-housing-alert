@@ -501,6 +501,8 @@ def fetch_youth_home() -> list[dict]:
                 missed.append({"id": r.get("boardId"), "near": f"상세 페이지 접속 실패: {e}"[:160]})
         if end and end < today.isoformat():
             continue
+        if not end and start and start < (today - timedelta(days=7)).isoformat():
+            continue  # 마감일을 모르는 공고는 시작 7일 뒤 목록에서 빼요(청년안심주택 접수는 보통 2~5일)
         kind = {"1": "공공", "2": "민간"}.get(str(r.get("optn2")), "")
         extra = {"1": "최초", "2": "추가"}.get(str(r.get("optn5")), "")
         out.append({
