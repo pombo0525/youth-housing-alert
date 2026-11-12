@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-12T22:47+09:00",
+ "updatedAt": "2026-11-12T23:09+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 61,
-   "checkedAt": "2026-11-12T22:47+09:00",
-   "lastOkAt": "2026-11-12T22:47+09:00"
+   "count": 58,
+   "checkedAt": "2026-11-12T23:09+09:00",
+   "lastOkAt": "2026-11-12T23:09+09:00"
   },
   "마이홈": {
    "ok": true,
    "count": 89,
-   "checkedAt": "2026-11-12T22:47+09:00",
-   "lastOkAt": "2026-11-12T22:47+09:00"
+   "checkedAt": "2026-11-12T23:09+09:00",
+   "lastOkAt": "2026-11-12T23:09+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 17,
-   "checkedAt": "2026-11-12T22:47+09:00",
-   "lastOkAt": "2026-11-12T22:47+09:00",
+   "count": 10,
+   "checkedAt": "2026-11-12T23:09+09:00",
+   "lastOkAt": "2026-11-12T23:09+09:00",
    "periodFound": 16,
    "periodMissed": [
     {
@@ -65,17 +65,17 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-12T22:47+09:00",
-   "lastOkAt": "2026-11-12T22:47+09:00"
+   "checkedAt": "2026-11-12T23:09+09:00",
+   "lastOkAt": "2026-11-12T23:09+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-12T22:47+09:00",
-   "lastOkAt": "2026-11-12T22:47+09:00"
+   "checkedAt": "2026-11-12T23:09+09:00",
+   "lastOkAt": "2026-11-12T23:09+09:00"
   }
  },
- "count": 21,
+ "count": 14,
  "notices": [
   {
    "id": "myhome-21483",
@@ -296,63 +296,6 @@
    "youth": true
   },
   {
-   "id": "youthhome-6714",
-   "title": "[민간임대] 강변역 비바힐스강변 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "정지량 외 6명",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-29",
-   "start": "2026-11-02",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6714&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6708",
-   "title": "[민간임대] 노량진역 더써밋타워 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "코레이트노량진역청년주택 유한회사",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-29",
-   "start": "2026-11-02",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6708&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6709",
-   "title": "[민간임대] 노량진역 한강더퍼스트타워 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "주식회사 문배",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-29",
-   "start": "2026-11-02",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6709&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
    "id": "youthhome-6730",
    "title": "[민간임대] 동묘앞역 청계로벤하임 추가모집공고",
    "source": "청년안심주택",
@@ -368,25 +311,6 @@
    "end": null,
    "status": "",
    "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6730&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6704",
-   "title": "[민간임대] 상봉역 상봉동양엔파트 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "김대용",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-22",
-   "start": "2026-10-26",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6704&menuNo=400008",
    "periodFrom": "시작일만",
    "youth": true
   },
@@ -429,44 +353,6 @@
    "youth": true
   },
   {
-   "id": "youthhome-6717",
-   "title": "[민간임대] 연신내역 루미노816 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "㈜에이치엔비개발",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-29",
-   "start": "2026-11-02",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6717&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6711",
-   "title": "[민간임대] 영등포구청역 포레나당산 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "당산동청년주택피에프브이 주식회사",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-29",
-   "start": "2026-11-02",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6711&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
    "id": "youthhome-6726",
    "title": "[민간임대] 종암경찰서역(예정) 라온프라이빗 종암 추가모집공고",
    "source": "청년안심주택",
@@ -482,25 +368,6 @@
    "end": null,
    "status": "",
    "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6726&menuNo=400008",
-   "periodFrom": "시작일만",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6707",
-   "title": "[민간임대] 청량리역 퀸즈W 청량리역 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "(주)우리대성문위탁관리부동산투자회사",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-22",
-   "start": "2026-10-26",
-   "end": null,
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6707&menuNo=400008",
    "periodFrom": "시작일만",
    "youth": true
   }
