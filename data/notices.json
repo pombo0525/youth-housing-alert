@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-12T23:09+09:00",
+ "updatedAt": "2026-11-13T01:06+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 58,
-   "checkedAt": "2026-11-12T23:09+09:00",
-   "lastOkAt": "2026-11-12T23:09+09:00"
+   "count": 57,
+   "checkedAt": "2026-11-13T01:06+09:00",
+   "lastOkAt": "2026-11-13T01:06+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 89,
-   "checkedAt": "2026-11-12T23:09+09:00",
-   "lastOkAt": "2026-11-12T23:09+09:00"
+   "count": 82,
+   "checkedAt": "2026-11-13T01:06+09:00",
+   "lastOkAt": "2026-11-13T01:06+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 10,
-   "checkedAt": "2026-11-12T23:09+09:00",
-   "lastOkAt": "2026-11-12T23:09+09:00",
+   "checkedAt": "2026-11-13T01:06+09:00",
+   "lastOkAt": "2026-11-13T01:06+09:00",
    "periodFound": 16,
    "periodMissed": [
     {
@@ -65,62 +65,18 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-12T23:09+09:00",
-   "lastOkAt": "2026-11-12T23:09+09:00"
+   "checkedAt": "2026-11-13T01:06+09:00",
+   "lastOkAt": "2026-11-13T01:06+09:00"
   },
   "GH": {
-   "ok": true,
-   "count": 6,
-   "checkedAt": "2026-11-12T23:09+09:00",
+   "ok": false,
+   "error": "GH 공고 목록을 읽지 못했어요",
+   "checkedAt": "2026-11-13T01:06+09:00",
    "lastOkAt": "2026-11-12T23:09+09:00"
   }
  },
- "count": 14,
+ "count": 12,
  "notices": [
-  {
-   "id": "myhome-21483",
-   "panId": "2015122300020960",
-   "title": "과천지식정보타운 S12블록 행복주택 입주자 모집공고",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-28",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2027-03-24",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21483&houseSn=1",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020960&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 과천시",
-   "youth": true
-  },
-  {
-   "id": "myhome-21480",
-   "panId": "2015122300020958",
-   "title": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증](‘26.10.27.)",
-   "source": "마이홈",
-   "agency": "LH",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "경기"
-   ],
-   "noticeDate": "2026-10-27",
-   "start": "2026-11-10",
-   "end": "2026-11-12",
-   "winnerDate": "2026-12-09",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21480&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-   "regionText": "경기도 화성시 동탄구",
-   "youth": true
-  },
   {
    "id": "myhome-21471",
    "panId": null,
@@ -268,22 +224,22 @@
    "houseType": "아파트",
    "sido": [
     "경북",
-    "울산",
-    "경남",
     "전북",
-    "서울",
-    "강원",
-    "부산",
-    "대전",
-    "충남",
-    "제주",
-    "인천",
-    "경기",
     "세종",
     "전남",
     "광주",
     "대구",
-    "충북"
+    "울산",
+    "경남",
+    "충북",
+    "경기",
+    "인천",
+    "제주",
+    "충남",
+    "대전",
+    "부산",
+    "강원",
+    "서울"
    ],
    "noticeDate": "2026-02-24",
    "start": "2026-02-24",
@@ -292,7 +248,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "경상북도 / 울산광역시 / 경상남도 / 전북특별자치도 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시 / 충청남도 / 제주특별자치도 / 인천광역시 / 경기도 / 세종특별자치시 / 전남광주통합특별시 / 대구광역시 / 충청북도",
+   "regionText": "경상북도 / 전북특별자치도 / 세종특별자치시 / 전남광주통합특별시 / 대구광역시 / 울산광역시 / 경상남도 / 충청북도 / 경기도 / 인천광역시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
    "youth": true
   },
   {
