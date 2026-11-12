@@ -399,9 +399,60 @@ def dates_in(text: str) -> tuple[str | None, str | None]:
 
 
 # ------------------------------------------------------------------ 청년안심주택 (서울시)
+# 목록의 '청약신청일' 칸에는 접수 시작일 하나만 적혀 있어요(2026.11 확인).
+# 그래서 실제 접수 기간은 공고 상세 페이지에서 읽고, 못 읽으면 시작일만 보여줘요(마감일을 짐작하지 않아요).
+PERIOD_WORDS = ("청약신청", "청약 신청", "청약접수", "청약 접수", "신청접수", "신청 접수", "접수기간", "접수 기간",
+                "신청기간", "신청 기간", "모집기간", "모집 기간", "청약기간", "청약 기간", "청약일정", "인터넷청약", "인터넷 청약")
+_D = r"(?:(20\d\d)\s*[.\-/년]\s*)?(\d{1,2})\s*[.\-/월]\s*(\d{1,2})\s*일?"
+_SEP = r"\s*\.?\s*(?:\([^)]{1,4}\))?\s*(?:\d{1,2}:\d{2}\s*)?(?:[~∼〜～\-–]|부터)\s*"
+RANGE_RE = re.compile(_D + _SEP + _D)
+RANGE_DAY_RE = re.compile(_D + _SEP + r"(\d{1,2})\s*일?(?![\d.\-/월:])")   # '11.12(목)~15(일)'처럼 끝에 날짜만
+
+
+def _mkdate(y, m, d, fallback_year):
+    try:
+        return date(int(y or fallback_year), int(m), int(d))
+    except ValueError:
+        return None
+
+
+def find_period(text: str, start_hint: str | None, year: int) -> tuple[str | None, str | None, str]:
+    """상세 페이지 글에서 '청약신청 2026.11.12(목) ~ 11.15(일)' 같은 접수 기간을 찾아요. (시작, 마감, 근거 문장)"""
+    best = None
+    hits = [(m, False) for m in RANGE_RE.finditer(text)] + [(m, True) for m in RANGE_DAY_RE.finditer(text)]
+    hits.sort(key=lambda h: h[0].start())
+    for m, day_only in hits:
+        s = _mkdate(m.group(1), m.group(2), m.group(3), year)
+        if not s:
+            continue
+        if day_only:
+            e = _mkdate(s.year, s.month, m.group(4), s.year)
+        else:
+            e = _mkdate(m.group(4) or s.year, m.group(5), m.group(6), s.year)
+        if not e:
+            continue
+        if e < s:
+            e = _mkdate(e.year + 1, e.month, e.day, e.year + 1)
+        if not e or (e - s).days > 31:
+            continue
+        before = text[max(0, m.start() - 70):m.start()]
+        keyword = any(w in before for w in PERIOD_WORDS)
+        hint = start_hint is not None and s.isoformat() == start_hint
+        score = (2 if hint else 0) + (1 if keyword else 0)
+        if score == 0:
+            continue
+        if best is None or score > best[0]:
+            best = (score, s.isoformat(), e.isoformat(), clean(text[max(0, m.start() - 30):m.end()])[:120])
+            if score == 3:
+                break
+    if best:
+        return best[1], best[2], best[3]
+    return None, None, ""
+
+
 def fetch_youth_home() -> list[dict]:
     today = today_kst()
-    out = []
+    cand = []
     for page in (1, 2, 3):
         text = http_raw(YOUTH_HOME_JSON, {"bbsId": "BMSR00015", "pageIndex": str(page), "searchAdresGu": "",
                                           "searchCondition": "", "searchKeyword": "", "optn2": "", "optn5": ""})
@@ -414,27 +465,56 @@ def fetch_youth_home() -> list[dict]:
             break
         stop = False
         for r in rows:
-            title = clean(r.get("nttSj"))
             posted = ymd(r.get("optn1"))
-            start, end = dates_in(str(r.get("optn4") or ""))
             if posted and posted < (today - timedelta(days=60)).isoformat():
                 stop = True  # 두 달 넘은 공고부터는 더 보지 않아요
-            if end and end < today.isoformat():
+            raw = str(r.get("optn4") or "")
+            start, list_end = dates_in(raw)
+            if list_end == start and "~" not in raw:
+                list_end = None          # 날짜가 하나뿐이면 시작일로만 써요
+            if list_end and list_end < today.isoformat():
                 continue
-            if not end and (not posted or posted < (today - timedelta(days=30)).isoformat()):
-                continue
-            kind = {"1": "공공", "2": "민간"}.get(str(r.get("optn2")), "")
-            extra = {"1": "최초", "2": "추가"}.get(str(r.get("optn5")), "")
-            out.append({
-                "id": f"youthhome-{r.get('boardId')}", "title": title, "source": "청년안심주택",
-                "agency": clean(r.get("optn3")) or "서울시", "type": " ".join(x for x in ("청년안심주택", kind, extra) if x),
-                "category": "청년안심주택(서울)", "regionText": "서울특별시", "sido": ["서울"],
-                "noticeDate": posted, "start": start, "end": end, "status": "",
-                "url": YOUTH_HOME_VIEW.format(id=r.get("boardId")),
-            })
+            if not list_end:
+                ref = start or posted
+                if not ref or ref < (today - timedelta(days=21)).isoformat():
+                    continue             # 3주 넘게 지난 공고는 이미 끝났을 가능성이 커서 빼요
+            cand.append((r, posted, start, list_end))
         if stop:
             break
+
+    out, found, missed = [], 0, []
+    for r, posted, start, end in cand:
+        url = YOUTH_HOME_VIEW.format(id=r.get("boardId"))
+        evidence = ""
+        if not end:
+            try:
+                page_text = strip_tags(http_raw(url))
+                year = int((start or posted or today.isoformat())[:4])
+                s2, e2, evidence = find_period(page_text, start, year)
+                if e2:
+                    start, end = s2, e2
+                    found += 1
+                else:
+                    i = max(page_text.find("청약"), 0)
+                    missed.append({"id": r.get("boardId"), "near": page_text[i:i + 160]})
+            except ApiError as e:
+                missed.append({"id": r.get("boardId"), "near": f"상세 페이지 접속 실패: {e}"[:160]})
+        if end and end < today.isoformat():
+            continue
+        kind = {"1": "공공", "2": "민간"}.get(str(r.get("optn2")), "")
+        extra = {"1": "최초", "2": "추가"}.get(str(r.get("optn5")), "")
+        out.append({
+            "id": f"youthhome-{r.get('boardId')}", "title": clean(r.get("nttSj")), "source": "청년안심주택",
+            "agency": clean(r.get("optn3")) or "서울시", "type": " ".join(x for x in ("청년안심주택", kind, extra) if x),
+            "category": "청년안심주택(서울)", "regionText": "서울특별시", "sido": ["서울"],
+            "noticeDate": posted, "start": start, "end": end, "status": "", "url": url,
+            "periodFrom": "상세 페이지" if evidence else ("목록" if end else "시작일만"),
+        })
+    YOUTH_DETAIL_REPORT.update({"periodFound": found, "periodMissed": missed[:10]})
     return out
+
+
+YOUTH_DETAIL_REPORT: dict = {}
 
 
 # ------------------------------------------------------------------ SH (서울주거포털)
@@ -547,6 +627,8 @@ def main():
             else:
                 results[name] = fn()
             sources[name] = {"ok": True, "count": len(results[name]), "checkedAt": now, "lastOkAt": now}
+            if name == "청년안심주택":
+                sources[name].update(YOUTH_DETAIL_REPORT)   # 접수 기간을 몇 건 읽었는지(확인용)
             print(f"{name}: 공고 {len(results[name])}건")
         except Exception as e:
             msg = hide(str(e), key)
