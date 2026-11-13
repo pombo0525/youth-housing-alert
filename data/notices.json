@@ -1,24 +1,24 @@
 {
- "updatedAt": "2026-11-13T19:05+09:00",
+ "updatedAt": "2026-11-14T00:55+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 58,
-   "checkedAt": "2026-11-13T19:05+09:00",
-   "lastOkAt": "2026-11-13T19:05+09:00"
+   "count": 40,
+   "checkedAt": "2026-11-14T00:55+09:00",
+   "lastOkAt": "2026-11-14T00:55+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 83,
-   "checkedAt": "2026-11-13T19:05+09:00",
-   "lastOkAt": "2026-11-13T19:05+09:00"
+   "count": 65,
+   "checkedAt": "2026-11-14T00:55+09:00",
+   "lastOkAt": "2026-11-14T00:55+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 10,
-   "checkedAt": "2026-11-13T19:05+09:00",
-   "lastOkAt": "2026-11-13T19:05+09:00",
-   "periodFound": 16,
+   "checkedAt": "2026-11-14T00:55+09:00",
+   "lastOkAt": "2026-11-14T00:55+09:00",
+   "periodFound": 14,
    "periodMissed": [
     {
      "id": 6730,
@@ -65,40 +65,18 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-13T19:05+09:00",
-   "lastOkAt": "2026-11-13T19:05+09:00"
+   "checkedAt": "2026-11-14T00:55+09:00",
+   "lastOkAt": "2026-11-14T00:55+09:00"
   },
   "GH": {
    "ok": true,
    "count": 7,
-   "checkedAt": "2026-11-13T19:05+09:00",
-   "lastOkAt": "2026-11-13T19:05+09:00"
+   "checkedAt": "2026-11-14T00:55+09:00",
+   "lastOkAt": "2026-11-14T00:55+09:00"
   }
  },
- "count": 12,
+ "count": 11,
  "notices": [
-  {
-   "id": "myhome-21471",
-   "panId": null,
-   "title": "나라키움영등포복합청사 예비입주자 모집공고(21형)",
-   "source": "마이홈",
-   "agency": "한국자산관리공사",
-   "type": "행복주택",
-   "category": "행복주택",
-   "houseType": "아파트",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-10-28",
-   "start": "2026-11-09",
-   "end": "2026-11-13",
-   "winnerDate": "2027-03-05",
-   "status": "일반공고",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21471&houseSn=1",
-   "agencyUrl": "https://www.kohom.or.kr/web/mainComm/HM001002002.do?mode=view&p_idx=16068",
-   "regionText": "서울특별시 영등포구",
-   "youth": true
-  },
   {
    "id": "youthhome-6719",
    "title": "[민간임대] 송정역 케이제이타워 최초모집공고",
