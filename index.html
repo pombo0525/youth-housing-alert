@@ -153,7 +153,7 @@ button,.btn,.btn-ghost,.btn-primary{font:inherit;font-weight:600;font-size:15px;
 .summary b{color:var(--ink)}
 @media (max-width:600px){.summary{margin-left:0}}
 .tl-wrap{overflow-x:auto;border:1px solid var(--rule);border-radius:var(--radius);background:var(--surface);margin-bottom:26px}
-.tl{--days:21;display:grid;grid-template-columns:minmax(150px,230px) repeat(var(--days),minmax(28px,1fr));min-width:820px;font-size:12.5px}
+.tl{--days:14;display:grid;grid-template-columns:minmax(300px,1fr) repeat(var(--days),36px);min-width:820px;font-size:12.5px}
 .tl .h{padding:8px 0 6px;text-align:center;color:var(--muted);border-bottom:1px solid var(--rule);line-height:1.25}
 .tl .h b{display:block;font-size:13.5px;color:var(--ink);font-weight:600}
 .tl .h.wk{background:var(--weekend)}
@@ -162,8 +162,9 @@ button,.btn,.btn-ghost,.btn-primary{font:inherit;font-weight:600;font-size:15px;
 .tl .h.corner{text-align:left;padding-left:14px;font-weight:600;color:var(--ink)}
 .tl .lab{padding:9px 10px 9px 14px;border-bottom:1px solid var(--rule);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13.5px;align-self:stretch;display:flex;align-items:center}
 .tl .lab a{color:var(--ink);text-decoration:none;overflow:hidden;text-overflow:ellipsis}
+.srctag{flex:none;font-size:11.5px;font-weight:600;color:var(--blue);border:1px solid var(--rule-strong);border-radius:3px;padding:0 5px;margin-right:8px;line-height:18px}
 .tl .lab a:hover{text-decoration:underline}
-.tl .lane{border-bottom:1px solid var(--rule);position:relative;display:grid;grid-template-columns:repeat(var(--days),minmax(28px,1fr));align-items:center}
+.tl .lane{border-bottom:1px solid var(--rule);position:relative;display:grid;grid-template-columns:subgrid;align-items:center}
 .tl .lane .bg{grid-row:1;align-self:stretch}
 .tl .lane .bg.wk{background:var(--weekend)}
 .tl .lane .bg.today{background:var(--blue-soft)}
@@ -183,7 +184,7 @@ button,.btn,.btn-ghost,.btn-primary{font:inherit;font-weight:600;font-size:15px;
 .bar.noend.lv-later{border-left:5px solid var(--blue)}
 .bar.later-out{background:none;color:var(--muted);font-weight:500;justify-content:flex-end}
 .tl-note{font-size:12.5px;color:var(--muted);padding:8px 14px}
-@media (max-width:600px){.tl{grid-template-columns:minmax(110px,130px) repeat(var(--days),minmax(28px,1fr));min-width:760px}}
+@media (max-width:600px){.tl{grid-template-columns:minmax(230px,1fr) repeat(var(--days),32px);min-width:690px}}
 
 /* ---------- 2. 공고 목록 ---------- */
 .notices{border-top:1px solid var(--rule-strong)}
@@ -334,7 +335,7 @@ footer p{margin:0 0 6px;max-width:60em}
     <section class="block">
       <div class="block-head"><span class="step">2</span><h2 class="block-title" id="greet">내 조건에 맞는 공고</h2></div>
       <p class="summary" id="alertDesc">접수일이 다가오는 공고부터 보여드려요.</p>
-      <div class="tl-wrap" id="schedWrap"><div id="schedTbl" role="table" aria-label="앞으로 3주 접수 일정"></div></div>
+      <div class="tl-wrap" id="schedWrap"><div id="schedTbl" role="table" aria-label="앞으로 2주 접수 일정"></div></div>
       <div class="notices" id="alertList"></div>
       <p class="rule-note">공고 이름과 날짜는 각 기관에서 받아온 실제 정보예요. 알림 문장은 정해 둔 규칙(마감 1일 이내는 긴급, 접수 중, 미리 알림 기간 안은 곧 시작, 그 밖은 여유)에 따라 골라 썼어요. LH 공고 일부는 접수 시작일이 없어서 마감일만, SH 공고는 접수 기간 대신 모집중 여부만 보여요.</p>
       <div class="btns ai-row">
@@ -533,6 +534,24 @@ function classify(n, lead){
     .replace('{end}', n.endD ? fmt(n.endD) : '마감일').replace('{start}', n.startD ? fmt(n.startD) : '시작일');
   return {lv, msg, badge, order, sortKey: toEnd ?? toStart ?? 999};   // 같은 단계 안에서는 마감이 가까운 순
 }
+// 어느 사이트의 공고인지: 출처 이름과 달력용 짧은 표시, 공고문 링크가 열리는 사이트 이름
+function srcInfo(n){
+  const s = n.source || '';
+  if (s.includes('청년안심주택')) return {name:'서울시 청년안심주택', tag:'청년안심'};
+  if (s === 'SH') return {name:'SH 서울주택도시공사', tag:'SH'};
+  if (s === 'GH') return {name:'GH 경기주택도시공사', tag:'GH'};
+  if (s.includes('LH')) return {name:'LH 한국토지주택공사', tag:'LH'};
+  return {name: (n.agency && n.agency !== '-' ? `${n.agency} (마이홈포털)` : '마이홈포털'), tag:'마이홈'};
+}
+function siteOf(url){
+  const u = url || '';
+  if (u.includes('myhome.go.kr')) return '마이홈포털';
+  if (u.includes('lh.or.kr')) return 'LH 청약플러스';
+  if (u.includes('soco.seoul.go.kr')) return '청년안심주택 홈페이지';
+  if (u.includes('housing.seoul.go.kr') || u.includes('i-sh.co.kr')) return 'SH 홈페이지';
+  if (u.includes('gh.or.kr')) return 'GH 청약센터';
+  return '기관 사이트';
+}
 function regionLabel(n){ return (n.sido||[]).length >= 10 ? '전국' : (n.regionText||''); }
 function period(n){
   if (n.startD && n.endD && +n.startD === +n.endD) return `${fmt(n.startD)} 하루`;
@@ -613,11 +632,12 @@ function render(silent){
           <dl class="facts">
             <div><dt>접수</dt><dd class="tnum">${period(n)}</dd></div>
             <div><dt>종류</dt><dd>${esc(catOf(n)||n.type||'')}</dd></div>
-            <div><dt>기관</dt><dd>${esc(n.agency)}</dd></div>
+            <div><dt>출처</dt><dd>${esc(srcInfo(n).name)}</dd></div>
+            ${n.agency && !srcInfo(n).name.includes(n.agency) && n.agency !== '-' ? `<div><dt>운영</dt><dd>${esc(n.agency)}</dd></div>` : ''}
             <div><dt>지역</dt><dd>${esc(regionLabel(n))}</dd></div>
           </dl>
           <div class="acts">
-            ${n.url ? `<a class="btn-ghost btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">공고문 보기 ↗</a>` : ''}
+            ${n.url ? `<a class="btn-ghost btn-sm" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(siteOf(n.url))}에서 공고문 보기 ↗</a>` : ''}
             ${(n.endD || n.startD) ? `<button class="btn-ghost btn-sm" data-ics="${esc(n.id)}">내 달력에 넣기</button>` : ''}
             <span class="elig">신청 자격(나이·소득·무주택)은 공고문에서 확인하세요</span>
           </div>
@@ -654,7 +674,7 @@ function renderTimeline(rows){
   const box = $('#schedTbl'), wrap = $('#schedWrap');
   if (!rows.length){ wrap.classList.add('hidden'); box.innerHTML=''; return; }
   wrap.classList.remove('hidden');
-  const N = 21, t0 = today0();
+  const N = 14, t0 = today0();
   const days = [...Array(N)].map((_,i)=>addDays(t0,i));
   const wk = d => d.getDay()===0 || d.getDay()===6;
   const W = '일월화수목금토';
@@ -667,7 +687,7 @@ function renderTimeline(rows){
     if (s===null && e===null){
       bar = `<span class="bar unknown" style="grid-column:1 / ${N+1}">모집중, 기간은 공고문 확인</span>`;
     } else if (s!==null && s>=N){
-      bar = `<span class="bar later-out" style="grid-column:${N-6} / ${N+1}">${n.startD.getMonth()+1}월 ${n.startD.getDate()}일 시작 →</span>`;
+      bar = `<span class="bar later-out" style="grid-column:${N-5} / ${N+1}">${n.startD.getMonth()+1}월 ${n.startD.getDate()}일 시작 →</span>`;
     } else {
       const from = Math.max(s===null?0:s, 0), to = Math.min(e===null?N-1:e, N-1);
       const cls = ['bar','lv-'+c.lv]; if ((s===null||s<0)) cls.push('open-left'); if (e===null||e>N-1) cls.push('open-right');
@@ -676,7 +696,7 @@ function renderTimeline(rows){
       const label = (e===null && s!==null) ? (span>=6 ? '마감일은 공고문 확인' : '') : span>=4 ? (n.startD&&n.endD&&+n.startD===+n.endD ? '하루' : (e!==null && e<=N-1 ? `~${n.endD.getMonth()+1}/${n.endD.getDate()}` : '')) : '';
       bar = `<span class="${cls.join(' ')}" style="grid-column:${from+1} / ${to+2}" title="${esc(period(n))}">${label}</span>`;
     }
-    h += `<div class="lab" role="rowheader" title="${esc(n.title)}">${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}</div>`
+    h += `<div class="lab" role="rowheader" title="${esc(srcInfo(n).name)}: ${esc(n.title)}"><span class="srctag">${esc(srcInfo(n).tag)}</span>${n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>`:esc(n.title)}</div>`
        + `<div class="lane" role="cell" style="grid-column:2 / ${N+2}">${bgs}${bar}</div>`;
   }
   box.className = 'tl';
