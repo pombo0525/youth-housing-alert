@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-15T18:53+09:00",
+ "updatedAt": "2026-11-16T00:46+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 39,
-   "checkedAt": "2026-11-15T18:53+09:00",
-   "lastOkAt": "2026-11-15T18:53+09:00"
+   "checkedAt": "2026-11-16T00:46+09:00",
+   "lastOkAt": "2026-11-16T00:46+09:00"
   },
   "마이홈": {
    "ok": true,
    "count": 65,
-   "checkedAt": "2026-11-15T18:53+09:00",
-   "lastOkAt": "2026-11-15T18:53+09:00"
+   "checkedAt": "2026-11-16T00:46+09:00",
+   "lastOkAt": "2026-11-16T00:46+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 10,
-   "checkedAt": "2026-11-15T18:53+09:00",
-   "lastOkAt": "2026-11-15T18:53+09:00",
+   "count": 8,
+   "checkedAt": "2026-11-16T00:46+09:00",
+   "lastOkAt": "2026-11-16T00:46+09:00",
    "periodFound": 14,
    "periodMissed": [
     {
@@ -65,56 +65,18 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-15T18:53+09:00",
-   "lastOkAt": "2026-11-15T18:53+09:00"
+   "checkedAt": "2026-11-16T00:46+09:00",
+   "lastOkAt": "2026-11-16T00:46+09:00"
   },
   "GH": {
-   "ok": false,
-   "error": "GH 공고 목록을 읽지 못했어요",
-   "checkedAt": "2026-11-15T18:53+09:00",
-   "lastOkAt": "2026-11-15T12:57+09:00"
+   "ok": true,
+   "count": 7,
+   "checkedAt": "2026-11-16T00:46+09:00",
+   "lastOkAt": "2026-11-16T00:46+09:00"
   }
  },
- "count": 11,
+ "count": 9,
  "notices": [
-  {
-   "id": "youthhome-6719",
-   "title": "[민간임대] 송정역 케이제이타워 최초모집공고",
-   "source": "청년안심주택",
-   "agency": "(주)케이제이",
-   "type": "청년안심주택 민간 최초",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-03",
-   "start": "2026-11-11",
-   "end": "2026-11-15",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6719&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6718",
-   "title": "[민간임대] 효창공원앞역 해링턴 플레이스 용산 리버뷰 최초모집공고",
-   "source": "청년안심주택",
-   "agency": "(주)이지스용산청년주택위탁관리부동산투자회사",
-   "type": "청년안심주택 민간 최초",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-03",
-   "start": "2026-11-12",
-   "end": "2026-11-15",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6718&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
   {
    "id": "youthhome-6731",
    "title": "[민간임대] 상봉역 상봉생활 추가모집공고",
