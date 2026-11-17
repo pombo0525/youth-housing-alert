@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-17T19:14+09:00",
+ "updatedAt": "2026-11-18T01:00+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 81,
-   "checkedAt": "2026-11-17T19:14+09:00",
-   "lastOkAt": "2026-11-17T19:14+09:00"
+   "count": 80,
+   "checkedAt": "2026-11-18T01:00+09:00",
+   "lastOkAt": "2026-11-18T01:00+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 111,
-   "checkedAt": "2026-11-17T19:14+09:00",
-   "lastOkAt": "2026-11-17T19:14+09:00"
+   "count": 107,
+   "checkedAt": "2026-11-18T01:00+09:00",
+   "lastOkAt": "2026-11-18T01:00+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 8,
-   "checkedAt": "2026-11-17T19:14+09:00",
-   "lastOkAt": "2026-11-17T19:14+09:00",
+   "count": 6,
+   "checkedAt": "2026-11-18T01:00+09:00",
+   "lastOkAt": "2026-11-18T01:00+09:00",
    "periodFound": 13,
    "periodMissed": [
     {
@@ -61,56 +61,18 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-17T19:14+09:00",
-   "lastOkAt": "2026-11-17T19:14+09:00"
+   "checkedAt": "2026-11-18T01:00+09:00",
+   "lastOkAt": "2026-11-18T01:00+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-17T19:14+09:00",
-   "lastOkAt": "2026-11-17T19:14+09:00"
+   "checkedAt": "2026-11-18T01:00+09:00",
+   "lastOkAt": "2026-11-18T01:00+09:00"
   }
  },
- "count": 9,
+ "count": 7,
  "notices": [
-  {
-   "id": "youthhome-6731",
-   "title": "[민간임대] 상봉역 상봉생활 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "(주)상봉대한제42호위탁관리부동산투자회사",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-12",
-   "start": "2026-11-16",
-   "end": "2026-11-17",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6731&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6728",
-   "title": "[민간임대] 숭곡초교역(예정) 성북펠릭스 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "꿈꾸는 이상(주)",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-12",
-   "start": "2026-11-16",
-   "end": "2026-11-17",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6728&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
   {
    "id": "youthhome-6732",
    "title": "[민간임대] 공덕역 e·seo(이서) 추가모집공고",
