@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-18T19:11+09:00",
+ "updatedAt": "2026-11-19T01:07+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 81,
-   "checkedAt": "2026-11-18T19:11+09:00",
-   "lastOkAt": "2026-11-18T19:11+09:00"
+   "checkedAt": "2026-11-19T01:07+09:00",
+   "lastOkAt": "2026-11-19T01:07+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 110,
-   "checkedAt": "2026-11-18T19:11+09:00",
-   "lastOkAt": "2026-11-18T19:11+09:00"
+   "count": 106,
+   "checkedAt": "2026-11-19T01:07+09:00",
+   "lastOkAt": "2026-11-19T01:07+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 6,
-   "checkedAt": "2026-11-18T19:11+09:00",
-   "lastOkAt": "2026-11-18T19:11+09:00",
+   "count": 5,
+   "checkedAt": "2026-11-19T01:07+09:00",
+   "lastOkAt": "2026-11-19T01:07+09:00",
    "periodFound": 13,
    "periodMissed": [
     {
@@ -61,37 +61,18 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-18T19:11+09:00",
-   "lastOkAt": "2026-11-18T19:11+09:00"
+   "checkedAt": "2026-11-19T01:07+09:00",
+   "lastOkAt": "2026-11-19T01:07+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-18T19:11+09:00",
-   "lastOkAt": "2026-11-18T19:11+09:00"
+   "checkedAt": "2026-11-19T01:07+09:00",
+   "lastOkAt": "2026-11-19T01:07+09:00"
   }
  },
- "count": 8,
+ "count": 7,
  "notices": [
-  {
-   "id": "youthhome-6732",
-   "title": "[민간임대] 공덕역 e·seo(이서) 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "(주)엠지하우징",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-12",
-   "start": "2026-11-16",
-   "end": "2026-11-18",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6732&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
   {
    "id": "youthhome-6727",
    "title": "[민간임대] 화곡역 보눔하우스 화곡 추가모집공고",
