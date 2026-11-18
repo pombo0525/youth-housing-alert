@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-18T13:00+09:00",
+ "updatedAt": "2026-11-18T19:11+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 82,
-   "checkedAt": "2026-11-18T13:00+09:00",
-   "lastOkAt": "2026-11-18T13:00+09:00"
+   "count": 81,
+   "checkedAt": "2026-11-18T19:11+09:00",
+   "lastOkAt": "2026-11-18T19:11+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 108,
-   "checkedAt": "2026-11-18T13:00+09:00",
-   "lastOkAt": "2026-11-18T13:00+09:00"
+   "count": 110,
+   "checkedAt": "2026-11-18T19:11+09:00",
+   "lastOkAt": "2026-11-18T19:11+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-18T13:00+09:00",
-   "lastOkAt": "2026-11-18T13:00+09:00",
+   "checkedAt": "2026-11-18T19:11+09:00",
+   "lastOkAt": "2026-11-18T19:11+09:00",
    "periodFound": 13,
    "periodMissed": [
     {
@@ -61,17 +61,17 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-18T13:00+09:00",
-   "lastOkAt": "2026-11-18T13:00+09:00"
+   "checkedAt": "2026-11-18T19:11+09:00",
+   "lastOkAt": "2026-11-18T19:11+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-18T13:00+09:00",
-   "lastOkAt": "2026-11-18T13:00+09:00"
+   "checkedAt": "2026-11-18T19:11+09:00",
+   "lastOkAt": "2026-11-18T19:11+09:00"
   }
  },
- "count": 7,
+ "count": 8,
  "notices": [
   {
    "id": "youthhome-6732",
@@ -109,6 +109,26 @@
    "status": "",
    "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6727&menuNo=400008",
    "periodFrom": "상세 페이지",
+   "youth": true
+  },
+  {
+   "id": "lh-2015122300021108",
+   "panId": "2015122300021108",
+   "title": "수원당수 1, 2단지 행복주택 입주자격완화 동호지정 입주자 모집[선계약/후검증]('26.11.18.)",
+   "source": "LH",
+   "agency": "LH",
+   "type": "행복주택",
+   "lhType": "행복주택",
+   "category": "행복주택",
+   "regionText": "경기도",
+   "sido": [
+    "경기"
+   ],
+   "noticeDate": "2026-11-18",
+   "start": null,
+   "end": "2026-12-02",
+   "status": "공고중",
+   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021108&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "youth": true
   },
   {
