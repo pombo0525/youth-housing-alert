@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-19T19:14+09:00",
+ "updatedAt": "2026-11-20T01:08+09:00",
  "sources": {
   "LH": {
    "ok": true,
    "count": 88,
-   "checkedAt": "2026-11-19T19:14+09:00",
-   "lastOkAt": "2026-11-19T19:14+09:00"
+   "checkedAt": "2026-11-20T01:08+09:00",
+   "lastOkAt": "2026-11-20T01:08+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 117,
-   "checkedAt": "2026-11-19T19:14+09:00",
-   "lastOkAt": "2026-11-19T19:14+09:00"
+   "count": 115,
+   "checkedAt": "2026-11-20T01:08+09:00",
+   "lastOkAt": "2026-11-20T01:08+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 16,
-   "checkedAt": "2026-11-19T19:14+09:00",
-   "lastOkAt": "2026-11-19T19:14+09:00",
+   "count": 15,
+   "checkedAt": "2026-11-20T01:08+09:00",
+   "lastOkAt": "2026-11-20T01:08+09:00",
    "periodFound": 16,
    "periodMissed": [
     {
@@ -65,37 +65,18 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-19T19:14+09:00",
-   "lastOkAt": "2026-11-19T19:14+09:00"
+   "checkedAt": "2026-11-20T01:08+09:00",
+   "lastOkAt": "2026-11-20T01:08+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-19T19:14+09:00",
-   "lastOkAt": "2026-11-19T19:14+09:00"
+   "checkedAt": "2026-11-20T01:08+09:00",
+   "lastOkAt": "2026-11-20T01:08+09:00"
   }
  },
- "count": 19,
+ "count": 18,
  "notices": [
-  {
-   "id": "youthhome-6727",
-   "title": "[민간임대] 화곡역 보눔하우스 화곡 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "장의종",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-12",
-   "start": "2026-11-18",
-   "end": "2026-11-19",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6727&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
   {
    "id": "youthhome-6797",
    "title": "[민간임대] 왕십리역 라봄성동 추가모집공고",
@@ -228,18 +209,18 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
-    "대구",
+    "경기",
+    "충북",
+    "제주",
     "전남",
     "광주",
-    "인천",
+    "세종",
     "전북",
     "경북",
     "울산",
+    "인천",
     "경남",
-    "충북",
-    "경기",
-    "세종",
-    "제주",
+    "대구",
     "충남",
     "대전",
     "부산",
@@ -253,7 +234,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "대구광역시 / 전남광주통합특별시 / 인천광역시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 충청북도 / 경기도 / 세종특별자치시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
+   "regionText": "경기도 / 충청북도 / 제주특별자치도 / 전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 인천광역시 / 경상남도 / 대구광역시 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
    "youth": true
   },
   {
