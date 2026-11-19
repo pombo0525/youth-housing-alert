@@ -1,25 +1,53 @@
 {
- "updatedAt": "2026-11-19T13:02+09:00",
+ "updatedAt": "2026-11-19T19:14+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 82,
-   "checkedAt": "2026-11-19T13:02+09:00",
-   "lastOkAt": "2026-11-19T13:02+09:00"
+   "count": 88,
+   "checkedAt": "2026-11-19T19:14+09:00",
+   "lastOkAt": "2026-11-19T19:14+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 106,
-   "checkedAt": "2026-11-19T13:02+09:00",
-   "lastOkAt": "2026-11-19T13:02+09:00"
+   "count": 117,
+   "checkedAt": "2026-11-19T19:14+09:00",
+   "lastOkAt": "2026-11-19T19:14+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 5,
-   "checkedAt": "2026-11-19T13:02+09:00",
-   "lastOkAt": "2026-11-19T13:02+09:00",
-   "periodFound": 13,
+   "count": 16,
+   "checkedAt": "2026-11-19T19:14+09:00",
+   "lastOkAt": "2026-11-19T19:14+09:00",
+   "periodFound": 16,
    "periodMissed": [
+    {
+     "id": 6806,
+     "near": "청약신청일 2026-11-23 카테고리 노원구 첨부파일 민간_261119_광운대역_현대프라힐스_청년안심주택 추가모집공고문.pdf 광운대역 현대프라힐스 청년안심주택 공공지원민간임대 입주자 추가모집공고를 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다. [단지개요] ■"
+    },
+    {
+     "id": 6805,
+     "near": "청약신청일 2026-11-23 카테고리 종로구 첨부파일 민간_261119_동묘앞역_청계로벤하임_청년안심주택 추가모집공고문.pdf 동묘앞역 청계로벤하임 청 년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다"
+    },
+    {
+     "id": 6804,
+     "near": "청약신청일 2026-11-23 카테고리 중랑구 첨부파일 민간_261119_상봉역_제이스타상봉_청년안심주택 추가모집공고문.pdf 상봉역 제이스타상봉 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다. ["
+    },
+    {
+     "id": 6803,
+     "near": "청약신청일 2026-11-25 카테고리 도봉구 첨부파일 민간_261119_쌍문역_인히어쌍문_청년안심주택 추가모집공고문.pdf 쌍문역 인히어쌍문 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다. [단지"
+    },
+    {
+     "id": 6802,
+     "near": "청약신청일 2026-11-23 카테고리 관악구 첨부파일 민간_261119_구로디지털단지역_유벤투스240_청년안심주택 추가모집공고문.pdf 구로디지털단지역 유벤투스 240 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 "
+    },
+    {
+     "id": 6800,
+     "near": "청약신청일 2026-11-23 카테고리 서초구 첨부파일 민간_261119_서초역_서초꽃마을주얼리_청년안심주택 추가모집공고문.pdf 서초역 서초꽃마을 주얼리 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍"
+    },
+    {
+     "id": 6799,
+     "near": "청약신청일 2026-11-23 카테고리 광진구 첨부파일 민간_261119_강변역_비바힐스강변_청년안심주택 추가모집공고문.pdf 강변역 비바힐스강변 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다. ["
+    },
     {
      "id": 6730,
      "near": "청약신청일 2026-11-16 카테고리 종로구 첨부파일 민간_261112_동묘앞역_청계로벤하임_청년안심주택 추가모집공고문.pdf 동묘앞역 청계로벤하임 청 년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다"
@@ -31,47 +59,23 @@
     {
      "id": 6726,
      "near": "청약신청일 2026-11-16 카테고리 성북구 첨부파일 민간_261112_종암경찰서역_라온프라이빗종암_청년안심주택 추가모집공고문.pdf 종암경찰서역 라온프라이빗 종암 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인"
-    },
-    {
-     "id": 6725,
-     "near": "청약신청일 2026-11-16 카테고리 관악구 첨부파일 민간_261112_서울대입구역_bx201_청년안심주택 추가모집공고문.pdf 서울대입구역 BX201 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니"
-    },
-    {
-     "id": 6717,
-     "near": "청약신청일 2026-11-02 카테고리 은평구 첨부파일 민간_261029_연신내역_루미노816_청년안심주택 추가모집공고문.pdf 연신내역 루미노816 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다."
-    },
-    {
-     "id": 6714,
-     "near": "청약신청일 2026-11-02 카테고리 광진구 첨부파일 민간_261029_강변역_비바힐스강변_청년안심주택 추가모집공고문.pdf 강변역 비바힐스강변 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다. ["
-    },
-    {
-     "id": 6711,
-     "near": "청약신청일 2026-11-02 카테고리 영등포구 첨부파일 민간_261029_영등포구청역_포레나당산_청년안심주택 추가모집공고문.pdf 영등포구청역 포레나당산 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍"
-    },
-    {
-     "id": 6709,
-     "near": "청약신청일 2026-11-02 카테고리 동작구 첨부파일 민간_261029_노량진역_한강더퍼스트타워_청년안심주택 추가모집공고문.pdf 노량진역 한강더퍼스트타워 청년안심주택 입주자 추모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍"
-    },
-    {
-     "id": 6708,
-     "near": "청약신청일 2026-11-02 카테고리 동작구 첨부파일 민간_261029_노량진역_더써밋타워_청년안심주택 추가모집공고문.pdf 노량진 역 더써밋타워 청년안심주택 입주자 추가모집공고문(공공지원민간임대)을 붙임과 같이 게시합니다. 자세한 내용은 첨부파일의 모집공고문을 확인하시기 바랍니다. "
     }
    ]
   },
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-19T13:02+09:00",
-   "lastOkAt": "2026-11-19T13:02+09:00"
+   "checkedAt": "2026-11-19T19:14+09:00",
+   "lastOkAt": "2026-11-19T19:14+09:00"
   },
   "GH": {
    "ok": true,
    "count": 6,
-   "checkedAt": "2026-11-19T13:02+09:00",
-   "lastOkAt": "2026-11-19T13:02+09:00"
+   "checkedAt": "2026-11-19T19:14+09:00",
+   "lastOkAt": "2026-11-19T19:14+09:00"
   }
  },
- "count": 7,
+ "count": 19,
  "notices": [
   {
    "id": "youthhome-6727",
@@ -93,23 +97,125 @@
    "youth": true
   },
   {
-   "id": "lh-2015122300021108",
-   "panId": "2015122300021108",
-   "title": "수원당수 1, 2단지 행복주택 입주자격완화 동호지정 입주자 모집[선계약/후검증]('26.11.18.)",
-   "source": "LH",
+   "id": "youthhome-6797",
+   "title": "[민간임대] 왕십리역 라봄성동 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "인트러스제1호전문투자형사모부동산투자(유)",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-20",
+   "end": "2026-11-23",
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6797&menuNo=400008",
+   "periodFrom": "상세 페이지",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6801",
+   "title": "[민간임대] 개봉역 세이지움 개봉 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "개봉아이알디피에프브이(주)",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": "2026-11-24",
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6801&menuNo=400008",
+   "periodFrom": "상세 페이지",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6796",
+   "title": "[민간임대] 장한평역 유니트125(UNIT125) 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "김수미",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": "2026-11-24",
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6796&menuNo=400008",
+   "periodFrom": "상세 페이지",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6798",
+   "title": "[민간임대] 미아사거리역 미아 헤리츠타워 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "㈜하월곡동대한제43호위탁관리부동산투자회사",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": "2026-11-25",
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6798&menuNo=400008",
+   "periodFrom": "상세 페이지",
+   "youth": true
+  },
+  {
+   "id": "myhome-21591",
+   "panId": "2015122300021098",
+   "title": "서울삼전,강동천호,LH수서1,LH수서2 행복주택 예비입주자 모집공고",
+   "source": "LH·마이홈",
    "agency": "LH",
    "type": "행복주택",
-   "lhType": "행복주택",
    "category": "행복주택",
-   "regionText": "경기도",
+   "houseType": "아파트",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-30",
+   "end": "2026-12-01",
+   "winnerDate": "2027-03-26",
+   "status": "공고중",
+   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21591&houseSn=4",
+   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021098&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+   "regionText": "서울특별시 송파구, 강동구, 강남구",
+   "lhType": "행복주택",
+   "youth": true
+  },
+  {
+   "id": "myhome-21592",
+   "panId": "2015122300021119",
+   "title": "수원당수 1, 2단지 행복주택 입주자격완화 동호지정 입주자 모집[선계약/후검증](‘26.11.18.)",
+   "source": "LH·마이홈",
+   "agency": "LH",
+   "type": "행복주택",
+   "category": "행복주택",
+   "houseType": "아파트",
    "sido": [
     "경기"
    ],
    "noticeDate": "2026-11-18",
-   "start": null,
+   "start": "2026-11-30",
    "end": "2026-12-02",
+   "winnerDate": "2026-12-04",
    "status": "공고중",
-   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021108&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21592&houseSn=1",
+   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021119&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+   "regionText": "경기도 수원시 권선구",
+   "lhType": "행복주택",
    "youth": true
   },
   {
@@ -122,17 +228,17 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
-    "경북",
-    "전북",
-    "세종",
+    "대구",
     "전남",
     "광주",
-    "대구",
+    "인천",
+    "전북",
+    "경북",
     "울산",
     "경남",
     "충북",
     "경기",
-    "인천",
+    "세종",
     "제주",
     "충남",
     "대전",
@@ -147,7 +253,83 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "경상북도 / 전북특별자치도 / 세종특별자치시 / 전남광주통합특별시 / 대구광역시 / 울산광역시 / 경상남도 / 충청북도 / 경기도 / 인천광역시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
+   "regionText": "대구광역시 / 전남광주통합특별시 / 인천광역시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 충청북도 / 경기도 / 세종특별자치시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6799",
+   "title": "[민간임대] 강변역 비바힐스강변 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "정지량 외 6명",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6799&menuNo=400008",
+   "periodFrom": "시작일만",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6806",
+   "title": "[민간임대] 광운대역 현대프라힐스 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "현대아산(주)",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6806&menuNo=400008",
+   "periodFrom": "시작일만",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6802",
+   "title": "[민간임대] 구로디지털단지역 유벤투스 240 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "우리자산신탁 주식회사",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6802&menuNo=400008",
+   "periodFrom": "시작일만",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6805",
+   "title": "[민간임대] 동묘앞역 청계로벤하임 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "이승은 외 3인",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6805&menuNo=400008",
+   "periodFrom": "시작일만",
    "youth": true
   },
   {
@@ -189,6 +371,25 @@
    "youth": true
   },
   {
+   "id": "youthhome-6804",
+   "title": "[민간임대] 상봉역 제이스타상봉 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "(주)대원교역상사",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6804&menuNo=400008",
+   "periodFrom": "시작일만",
+   "youth": true
+  },
+  {
    "id": "youthhome-6725",
    "title": "[민간임대] 서울대입구역 BX201 추가모집공고",
    "source": "청년안심주택",
@@ -204,6 +405,44 @@
    "end": null,
    "status": "",
    "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6725&menuNo=400008",
+   "periodFrom": "시작일만",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6800",
+   "title": "[민간임대] 서초역 서초꽃마을 주얼리 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "서초꽃마을 주얼리 황인 외 3명",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-23",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6800&menuNo=400008",
+   "periodFrom": "시작일만",
+   "youth": true
+  },
+  {
+   "id": "youthhome-6803",
+   "title": "[민간임대] 쌍문역 인히어쌍문 추가모집공고",
+   "source": "청년안심주택",
+   "agency": "주식회사 케이티앤지",
+   "type": "청년안심주택 민간 추가",
+   "category": "청년안심주택(서울)",
+   "regionText": "서울특별시",
+   "sido": [
+    "서울"
+   ],
+   "noticeDate": "2026-11-19",
+   "start": "2026-11-25",
+   "end": null,
+   "status": "",
+   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6803&menuNo=400008",
    "periodFrom": "시작일만",
    "youth": true
   },
