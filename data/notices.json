@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-20T06:56+09:00",
+ "updatedAt": "2026-11-20T12:59+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 88,
-   "checkedAt": "2026-11-20T06:56+09:00",
-   "lastOkAt": "2026-11-20T06:56+09:00"
+   "count": 89,
+   "checkedAt": "2026-11-20T12:59+09:00",
+   "lastOkAt": "2026-11-20T12:59+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 115,
-   "checkedAt": "2026-11-20T06:56+09:00",
-   "lastOkAt": "2026-11-20T06:56+09:00"
+   "count": 116,
+   "checkedAt": "2026-11-20T12:59+09:00",
+   "lastOkAt": "2026-11-20T12:59+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 15,
-   "checkedAt": "2026-11-20T06:56+09:00",
-   "lastOkAt": "2026-11-20T06:56+09:00",
+   "checkedAt": "2026-11-20T12:59+09:00",
+   "lastOkAt": "2026-11-20T12:59+09:00",
    "periodFound": 16,
    "periodMissed": [
     {
@@ -65,13 +65,13 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-20T06:56+09:00",
-   "lastOkAt": "2026-11-20T06:56+09:00"
+   "checkedAt": "2026-11-20T12:59+09:00",
+   "lastOkAt": "2026-11-20T12:59+09:00"
   },
   "GH": {
-   "ok": true,
-   "count": 6,
-   "checkedAt": "2026-11-20T06:56+09:00",
+   "ok": false,
+   "error": "GH 공고 목록을 읽지 못했어요",
+   "checkedAt": "2026-11-20T12:59+09:00",
    "lastOkAt": "2026-11-20T06:56+09:00"
   }
  },
@@ -209,18 +209,18 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
-    "경기",
-    "충북",
-    "제주",
+    "대구",
     "전남",
     "광주",
-    "세종",
+    "인천",
     "전북",
     "경북",
     "울산",
-    "인천",
     "경남",
-    "대구",
+    "충북",
+    "경기",
+    "세종",
+    "제주",
     "충남",
     "대전",
     "부산",
@@ -234,7 +234,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "경기도 / 충청북도 / 제주특별자치도 / 전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 인천광역시 / 경상남도 / 대구광역시 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
+   "regionText": "대구광역시 / 전남광주통합특별시 / 인천광역시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 충청북도 / 경기도 / 세종특별자치시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
    "youth": true
   },
   {
