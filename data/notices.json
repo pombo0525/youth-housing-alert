@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-23T13:12+09:00",
+ "updatedAt": "2026-11-23T19:19+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 86,
-   "checkedAt": "2026-11-23T13:12+09:00",
-   "lastOkAt": "2026-11-23T13:12+09:00"
+   "count": 88,
+   "checkedAt": "2026-11-23T19:19+09:00",
+   "lastOkAt": "2026-11-23T19:19+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 111,
-   "checkedAt": "2026-11-23T13:12+09:00",
-   "lastOkAt": "2026-11-23T13:12+09:00"
+   "count": 113,
+   "checkedAt": "2026-11-23T19:19+09:00",
+   "lastOkAt": "2026-11-23T19:19+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 15,
-   "checkedAt": "2026-11-23T13:12+09:00",
-   "lastOkAt": "2026-11-23T13:12+09:00",
+   "checkedAt": "2026-11-23T19:19+09:00",
+   "lastOkAt": "2026-11-23T19:19+09:00",
    "periodFound": 16,
    "periodMissed": [
     {
@@ -65,17 +65,17 @@
   "SH": {
    "ok": true,
    "count": 0,
-   "checkedAt": "2026-11-23T13:12+09:00",
-   "lastOkAt": "2026-11-23T13:12+09:00"
+   "checkedAt": "2026-11-23T19:19+09:00",
+   "lastOkAt": "2026-11-23T19:19+09:00"
   },
   "GH": {
    "ok": true,
    "count": 2,
-   "checkedAt": "2026-11-23T13:12+09:00",
-   "lastOkAt": "2026-11-23T13:12+09:00"
+   "checkedAt": "2026-11-23T19:19+09:00",
+   "lastOkAt": "2026-11-23T19:19+09:00"
   }
  },
- "count": 18,
+ "count": 19,
  "notices": [
   {
    "id": "youthhome-6797",
@@ -154,8 +154,8 @@
    "youth": true
   },
   {
-   "id": "myhome-21591",
-   "panId": "2015122300021098",
+   "id": "myhome-21598",
+   "panId": "2015122300021131",
    "title": "서울삼전,강동천호,LH수서1,LH수서2 행복주택 예비입주자 모집공고",
    "source": "LH·마이홈",
    "agency": "LH",
@@ -170,8 +170,8 @@
    "end": "2026-12-01",
    "winnerDate": "2027-03-26",
    "status": "공고중",
-   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21591&houseSn=4",
-   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021098&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21598&houseSn=4",
+   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021131&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
    "regionText": "서울특별시 송파구, 강동구, 강남구",
    "lhType": "행복주택",
    "youth": true
@@ -200,6 +200,29 @@
    "youth": true
   },
   {
+   "id": "myhome-21599",
+   "panId": "2015122300021130",
+   "title": "수원시지역 호매실21단지, 고등2단지 행복주택 입주자격완화[선계약 후검증] 입주자 모집(2026.11.23)",
+   "source": "LH·마이홈",
+   "agency": "LH",
+   "type": "행복주택",
+   "category": "행복주택",
+   "houseType": "아파트",
+   "sido": [
+    "경기"
+   ],
+   "noticeDate": "2026-11-23",
+   "start": "2026-12-03",
+   "end": "2026-12-04",
+   "winnerDate": "2026-12-22",
+   "status": "공고중",
+   "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=21599&houseSn=1",
+   "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021130&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+   "regionText": "경기도 수원시 권선구, 수원시 팔달구",
+   "lhType": "행복주택",
+   "youth": true
+  },
+  {
    "id": "myhome-19631",
    "panId": "2015122300019376",
    "title": "2026년 청년 전세임대 1순위 입주자 수시모집",
@@ -209,22 +232,22 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
-    "경북",
-    "전북",
-    "세종",
     "전남",
     "광주",
-    "강원",
-    "부산",
-    "대전",
-    "충남",
-    "제주",
-    "인천",
+    "세종",
+    "전북",
     "경기",
-    "충북",
     "울산",
     "경남",
     "대구",
+    "충북",
+    "경북",
+    "인천",
+    "제주",
+    "충남",
+    "대전",
+    "부산",
+    "강원",
     "서울"
    ],
    "noticeDate": "2026-02-24",
@@ -234,7 +257,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "경상북도 / 전북특별자치도 / 세종특별자치시 / 전남광주통합특별시 / 강원특별자치도 / 부산광역시 / 대전광역시 / 충청남도 / 제주특별자치도 / 인천광역시 / 경기도 / 충청북도 / 울산광역시 / 경상남도 / 대구광역시 / 서울특별시",
+   "regionText": "전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경기도 / 울산광역시 / 경상남도 / 대구광역시 / 충청북도 / 경상북도 / 인천광역시 / 제주특별자치도 / 충청남도 / 대전광역시 / 부산광역시 / 강원특별자치도 / 서울특별시",
    "youth": true
   },
   {
