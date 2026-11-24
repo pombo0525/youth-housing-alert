@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-24T19:17+09:00",
+ "updatedAt": "2026-11-25T01:19+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 91,
-   "checkedAt": "2026-11-24T19:17+09:00",
-   "lastOkAt": "2026-11-24T19:17+09:00"
+   "count": 90,
+   "checkedAt": "2026-11-25T01:19+09:00",
+   "lastOkAt": "2026-11-25T01:19+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 118,
-   "checkedAt": "2026-11-24T19:17+09:00",
-   "lastOkAt": "2026-11-24T19:17+09:00"
+   "count": 117,
+   "checkedAt": "2026-11-25T01:19+09:00",
+   "lastOkAt": "2026-11-25T01:19+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 11,
-   "checkedAt": "2026-11-24T19:17+09:00",
-   "lastOkAt": "2026-11-24T19:17+09:00",
+   "count": 9,
+   "checkedAt": "2026-11-25T01:19+09:00",
+   "lastOkAt": "2026-11-25T01:19+09:00",
    "periodFound": 15,
    "periodMissed": [
     {
@@ -65,56 +65,18 @@
   "SH": {
    "ok": true,
    "count": 0,
-   "checkedAt": "2026-11-24T19:17+09:00",
-   "lastOkAt": "2026-11-24T19:17+09:00"
+   "checkedAt": "2026-11-25T01:19+09:00",
+   "lastOkAt": "2026-11-25T01:19+09:00"
   },
   "GH": {
-   "ok": false,
-   "error": "GH 공고 목록을 읽지 못했어요",
-   "checkedAt": "2026-11-24T19:17+09:00",
-   "lastOkAt": "2026-11-24T13:06+09:00"
+   "ok": true,
+   "count": 1,
+   "checkedAt": "2026-11-25T01:19+09:00",
+   "lastOkAt": "2026-11-25T01:19+09:00"
   }
  },
- "count": 15,
+ "count": 13,
  "notices": [
-  {
-   "id": "youthhome-6801",
-   "title": "[민간임대] 개봉역 세이지움 개봉 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "개봉아이알디피에프브이(주)",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-19",
-   "start": "2026-11-23",
-   "end": "2026-11-24",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6801&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
-  {
-   "id": "youthhome-6796",
-   "title": "[민간임대] 장한평역 유니트125(UNIT125) 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "김수미",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-19",
-   "start": "2026-11-23",
-   "end": "2026-11-24",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6796&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
   {
    "id": "youthhome-6798",
    "title": "[민간임대] 미아사거리역 미아 헤리츠타워 추가모집공고",
@@ -232,6 +194,7 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
+    "제주",
     "인천",
     "경기",
     "충북",
@@ -243,12 +206,11 @@
     "경북",
     "울산",
     "경남",
-    "제주",
+    "충남",
     "서울",
     "강원",
     "부산",
-    "대전",
-    "충남"
+    "대전"
    ],
    "noticeDate": "2026-02-24",
    "start": "2026-02-24",
@@ -257,7 +219,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "인천광역시 / 경기도 / 충청북도 / 대구광역시 / 전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 제주특별자치도 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시 / 충청남도",
+   "regionText": "제주특별자치도 / 인천광역시 / 경기도 / 충청북도 / 대구광역시 / 전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 충청남도 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시",
    "youth": true
   },
   {
