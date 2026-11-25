@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-25T19:18+09:00",
+ "updatedAt": "2026-11-26T01:17+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 90,
-   "checkedAt": "2026-11-25T19:18+09:00",
-   "lastOkAt": "2026-11-25T19:18+09:00"
+   "count": 88,
+   "checkedAt": "2026-11-26T01:17+09:00",
+   "lastOkAt": "2026-11-26T01:17+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 125,
-   "checkedAt": "2026-11-25T19:18+09:00",
-   "lastOkAt": "2026-11-25T19:18+09:00"
+   "count": 118,
+   "checkedAt": "2026-11-26T01:17+09:00",
+   "lastOkAt": "2026-11-26T01:17+09:00"
   },
   "청년안심주택": {
    "ok": true,
-   "count": 9,
-   "checkedAt": "2026-11-25T19:18+09:00",
-   "lastOkAt": "2026-11-25T19:18+09:00",
+   "count": 8,
+   "checkedAt": "2026-11-26T01:17+09:00",
+   "lastOkAt": "2026-11-26T01:17+09:00",
    "periodFound": 15,
    "periodMissed": [
     {
@@ -64,38 +64,19 @@
   },
   "SH": {
    "ok": true,
-   "count": 0,
-   "checkedAt": "2026-11-25T19:18+09:00",
-   "lastOkAt": "2026-11-25T19:18+09:00"
+   "count": 1,
+   "checkedAt": "2026-11-26T01:17+09:00",
+   "lastOkAt": "2026-11-26T01:17+09:00"
   },
   "GH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-25T19:18+09:00",
-   "lastOkAt": "2026-11-25T19:18+09:00"
+   "checkedAt": "2026-11-26T01:17+09:00",
+   "lastOkAt": "2026-11-26T01:17+09:00"
   }
  },
- "count": 14,
+ "count": 13,
  "notices": [
-  {
-   "id": "youthhome-6798",
-   "title": "[민간임대] 미아사거리역 미아 헤리츠타워 추가모집공고",
-   "source": "청년안심주택",
-   "agency": "㈜하월곡동대한제43호위탁관리부동산투자회사",
-   "type": "청년안심주택 민간 추가",
-   "category": "청년안심주택(서울)",
-   "regionText": "서울특별시",
-   "sido": [
-    "서울"
-   ],
-   "noticeDate": "2026-11-19",
-   "start": "2026-11-23",
-   "end": "2026-11-25",
-   "status": "",
-   "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6798&menuNo=400008",
-   "periodFrom": "상세 페이지",
-   "youth": true
-  },
   {
    "id": "myhome-21598",
    "panId": "2015122300021131",
@@ -212,23 +193,23 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
+    "경기",
+    "충북",
+    "대구",
+    "전남",
+    "광주",
     "세종",
     "전북",
     "경북",
     "울산",
     "경남",
-    "전남",
-    "광주",
+    "인천",
     "서울",
     "강원",
     "부산",
     "대전",
     "충남",
-    "제주",
-    "인천",
-    "경기",
-    "충북",
-    "대구"
+    "제주"
    ],
    "noticeDate": "2026-02-24",
    "start": "2026-02-24",
@@ -237,7 +218,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 전남광주통합특별시 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시 / 충청남도 / 제주특별자치도 / 인천광역시 / 경기도 / 충청북도 / 대구광역시",
+   "regionText": "경기도 / 충청북도 / 대구광역시 / 전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 인천광역시 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시 / 충청남도 / 제주특별자치도",
    "youth": true
   },
   {
