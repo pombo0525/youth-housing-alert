@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-25T13:13+09:00",
+ "updatedAt": "2026-11-25T19:18+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 94,
-   "checkedAt": "2026-11-25T13:13+09:00",
-   "lastOkAt": "2026-11-25T13:13+09:00"
+   "count": 90,
+   "checkedAt": "2026-11-25T19:18+09:00",
+   "lastOkAt": "2026-11-25T19:18+09:00"
   },
   "마이홈": {
    "ok": true,
-   "count": 117,
-   "checkedAt": "2026-11-25T13:13+09:00",
-   "lastOkAt": "2026-11-25T13:13+09:00"
+   "count": 125,
+   "checkedAt": "2026-11-25T19:18+09:00",
+   "lastOkAt": "2026-11-25T19:18+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 9,
-   "checkedAt": "2026-11-25T13:13+09:00",
-   "lastOkAt": "2026-11-25T13:13+09:00",
+   "checkedAt": "2026-11-25T19:18+09:00",
+   "lastOkAt": "2026-11-25T19:18+09:00",
    "periodFound": 15,
    "periodMissed": [
     {
@@ -65,17 +65,17 @@
   "SH": {
    "ok": true,
    "count": 0,
-   "checkedAt": "2026-11-25T13:13+09:00",
-   "lastOkAt": "2026-11-25T13:13+09:00"
+   "checkedAt": "2026-11-25T19:18+09:00",
+   "lastOkAt": "2026-11-25T19:18+09:00"
   },
   "GH": {
    "ok": true,
-   "count": 0,
-   "checkedAt": "2026-11-25T13:13+09:00",
-   "lastOkAt": "2026-11-25T13:13+09:00"
+   "count": 1,
+   "checkedAt": "2026-11-25T19:18+09:00",
+   "lastOkAt": "2026-11-25T19:18+09:00"
   }
  },
- "count": 13,
+ "count": 14,
  "notices": [
   {
    "id": "youthhome-6798",
@@ -185,6 +185,24 @@
    "youth": true
   },
   {
+   "id": "gh-844",
+   "title": "안양냉천 경기행복주택 입주자 모집 공고",
+   "source": "GH",
+   "agency": "GH",
+   "type": "행복주택",
+   "category": "행복주택",
+   "regionText": "경기도",
+   "sido": [
+    "경기"
+   ],
+   "noticeDate": null,
+   "start": "2026-12-07",
+   "end": "2026-12-09",
+   "status": "공고중",
+   "url": "https://apply.gh.or.kr/sb/sr/sr7150/selectPbancRentHouseList.do",
+   "youth": true
+  },
+  {
    "id": "myhome-19631",
    "panId": "2015122300019376",
    "title": "2026년 청년 전세임대 1순위 입주자 수시모집",
@@ -194,23 +212,23 @@
    "category": "전세임대",
    "houseType": "아파트",
    "sido": [
-    "제주",
-    "인천",
-    "경기",
-    "충북",
-    "대구",
-    "전남",
-    "광주",
     "세종",
     "전북",
     "경북",
     "울산",
     "경남",
-    "충남",
+    "전남",
+    "광주",
     "서울",
     "강원",
     "부산",
-    "대전"
+    "대전",
+    "충남",
+    "제주",
+    "인천",
+    "경기",
+    "충북",
+    "대구"
    ],
    "noticeDate": "2026-02-24",
    "start": "2026-02-24",
@@ -219,7 +237,7 @@
    "status": "일반공고",
    "url": "https://www.myhome.go.kr/hws/portal/sch/selectRsdtRcritNtcDetailView.do?pblancId=19631",
    "agencyUrl": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019376&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=17&mi=1026",
-   "regionText": "제주특별자치도 / 인천광역시 / 경기도 / 충청북도 / 대구광역시 / 전남광주통합특별시 / 세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 충청남도 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시",
+   "regionText": "세종특별자치시 / 전북특별자치도 / 경상북도 / 울산광역시 / 경상남도 / 전남광주통합특별시 / 서울특별시 / 강원특별자치도 / 부산광역시 / 대전광역시 / 충청남도 / 제주특별자치도 / 인천광역시 / 경기도 / 충청북도 / 대구광역시",
    "youth": true
   },
   {
