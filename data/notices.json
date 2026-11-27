@@ -1,23 +1,23 @@
 {
- "updatedAt": "2026-11-27T13:12+09:00",
+ "updatedAt": "2026-11-27T19:15+09:00",
  "sources": {
   "LH": {
    "ok": true,
-   "count": 82,
-   "checkedAt": "2026-11-27T13:12+09:00",
-   "lastOkAt": "2026-11-27T13:12+09:00"
+   "count": 77,
+   "checkedAt": "2026-11-27T19:15+09:00",
+   "lastOkAt": "2026-11-27T19:15+09:00"
   },
   "마이홈": {
    "ok": true,
    "count": 112,
-   "checkedAt": "2026-11-27T13:12+09:00",
-   "lastOkAt": "2026-11-27T13:12+09:00"
+   "checkedAt": "2026-11-27T19:15+09:00",
+   "lastOkAt": "2026-11-27T19:15+09:00"
   },
   "청년안심주택": {
    "ok": true,
    "count": 16,
-   "checkedAt": "2026-11-27T13:12+09:00",
-   "lastOkAt": "2026-11-27T13:12+09:00",
+   "checkedAt": "2026-11-27T19:15+09:00",
+   "lastOkAt": "2026-11-27T19:15+09:00",
    "periodFound": 15,
    "periodMissed": [
     {
@@ -65,17 +65,17 @@
   "SH": {
    "ok": true,
    "count": 1,
-   "checkedAt": "2026-11-27T13:12+09:00",
-   "lastOkAt": "2026-11-27T13:12+09:00"
+   "checkedAt": "2026-11-27T19:15+09:00",
+   "lastOkAt": "2026-11-27T19:15+09:00"
   },
   "GH": {
    "ok": true,
-   "count": 1,
-   "checkedAt": "2026-11-27T13:12+09:00",
-   "lastOkAt": "2026-11-27T13:12+09:00"
+   "count": 2,
+   "checkedAt": "2026-11-27T19:15+09:00",
+   "lastOkAt": "2026-11-27T19:15+09:00"
   }
  },
- "count": 21,
+ "count": 22,
  "notices": [
   {
    "id": "youthhome-6883",
@@ -257,6 +257,24 @@
    "status": "",
    "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6886&menuNo=400008",
    "periodFrom": "상세 페이지",
+   "youth": true
+  },
+  {
+   "id": "gh-855",
+   "title": "26년 2차 청년 매입임대주택 예비입주자 모집공고",
+   "source": "GH",
+   "agency": "GH",
+   "type": "매입임대",
+   "category": "매입임대",
+   "regionText": "경기도",
+   "sido": [
+    "경기"
+   ],
+   "noticeDate": null,
+   "start": "2026-12-09",
+   "end": "2026-12-11",
+   "status": "공고중",
+   "url": "https://apply.gh.or.kr/sb/sr/sr7150/selectPbancRentHouseList.do",
    "youth": true
   },
   {
